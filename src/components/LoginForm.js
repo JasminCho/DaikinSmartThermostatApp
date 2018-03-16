@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TextInput, Button, KeyboardAvoidingView, TouchableHighlight} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, KeyboardAvoidingView, TouchableOpacity} from 'react-native';
 
 export default class LoginForm extends Component<{}> {
   render() {
@@ -7,12 +7,12 @@ export default class LoginForm extends Component<{}> {
     return(
       <KeyboardAvoidingView style={styles.container} behavior="padding">
         <TextInput style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' placeholder="email" placeholderTextColor='#03a9f4'/>
-        <TextInput style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' placeholder="password" placeholderTextColor='#03a9f4'/>
-        <TouchableHighlight style={styles.button} onPress={handlePress}>
+        <TextInput style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' placeholder="password" secureTextEntry={true} placeholderTextColor='#03a9f4'/>
+        <TouchableOpacity style={styles.button} onPress={handlePress}>
           <View>
             <Text style={{fontSize:16, color: 'white'}}>login</Text>
           </View>
-        </TouchableHighlight>
+        </TouchableOpacity>
       </KeyboardAvoidingView>
     )
   }

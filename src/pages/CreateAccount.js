@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar,  } from 'react-native';
+import SignupForm from '../components/SignupForm';
 import Name from '../components/Name';
 import Email from '../components/Email';
 import Password from '../components/Password';
@@ -8,7 +9,8 @@ export default class Start extends Component<{}> {
   render() {
     return(
       <View style={styles.container}>
-        <Name/>
+        <SignupForm/>
+        {/* <Name/> */}
         {/* <Email/> */}
         {/* <Password/> */}
       </View>
