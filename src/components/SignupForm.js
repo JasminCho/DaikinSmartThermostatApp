@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity } from 'react-native';
+import { Icon } from 'react-native-elements';
 
 export default class SignupForm extends Component<{}> {
   render() {
@@ -8,7 +9,20 @@ export default class SignupForm extends Component<{}> {
       <View style={styles.container} behavior="padding">
         <Text style={styles.header}>create account</Text>
         <Text style={styles.title}>account owner</Text>
-
+        <View style={styles.top}>
+          <Text style={{color:'white'}}>name</Text>
+          <Text style={{color:'white'}}>not entered</Text>
+          <Icon name='rowing' color='white'/>
+        </View>
+        <View style={styles.steps}>
+          <Text style={{color:'white'}}>email</Text>
+          <Text style={{color:'white'}}>not entered</Text>
+        </View>
+        <View style={styles.steps}>
+          <Text style={{color:'white'}}>account password</Text>
+          <Text style={{color:'white'}}>not entered</Text>
+        </View>
+        <Text style={styles.footer}>next step</Text>
       </View>
     )
   }
@@ -26,24 +40,27 @@ const styles = StyleSheet.create({
   },
   title : {
     color: 'white',
-    marginTop: 20,
+    //marginTop: 20,
   },
-  // inputBox : {
-  //   color: '#03a9f4',
-  //   marginVertical: 5,
-  //   alignSelf: 'stretch',
-  //   height: 50,
-  //   backgroundColor: 'rgba(250,250,250,0.9)',
-  //   paddingHorizontal: 25,
-  //   fontSize: 16,
-  // },
-  // button : {
-  //   alignSelf: 'stretch',
-  //   height: 50,
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   marginVertical: 5,
-  //   paddingHorizontal: 25,
-  //   backgroundColor: 'rgba(3,169,244,0.5)',
-  // }
+  top: {
+    borderTopWidth: 1,
+    flexDirection: 'row',
+    alignSelf: 'stretch',
+    borderColor:'white',
+    borderBottomWidth:1,
+    marginLeft: 10,
+  },
+  steps: {
+    flexDirection: 'row',
+    alignSelf: 'stretch',
+    borderColor:'white',
+    borderBottomWidth:1,
+    marginLeft: 10,
+  },
+  footer: {
+    color: 'white',
+    alignSelf: 'flex-end'
+  },
+  button : {
+  },
 });
