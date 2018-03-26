@@ -5,6 +5,7 @@ import Name from '../components/Name';
 import Email from '../components/Email';
 import Password from '../components/Password';
 
+import PageControl from 'react-native-page-control';
 import { Icon } from 'react-native-elements';
 
 export default class Start extends Component<{}> {
@@ -58,13 +59,8 @@ export default class Start extends Component<{}> {
         </View>
 
         <View style={styles.footer}>
+          <PageControl numberOfPages={4}  />
           <Text style={styles.footerText}>next step</Text>
-          <View>
-            
-          </View>
-          <View>
-
-          </View>
         </View>
       </View>
     )
