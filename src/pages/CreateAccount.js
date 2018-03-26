@@ -5,7 +5,8 @@ import Name from '../components/Name';
 import Email from '../components/Email';
 import Password from '../components/Password';
 
-import { Icon } from 'react-native-elements';
+// import { Icon } from 'react-native-elements';
+import { Icon } from 'react-native-vector-icons';
 
 export default class Start extends Component<{}> {
   render() {
@@ -18,29 +19,35 @@ export default class Start extends Component<{}> {
       // </View>
       <View style={styles.container} behavior="padding">
         <View style={styles.header}>
-          <Text style={styles.text}>create account</Text>
+          <Text style={styles.headerText}>create account</Text>
         </View>
 
         <View style={styles.title}>
-          <Text style={styles.text}>account owner</Text>
+          <Text style={styles.titleText}>account owner</Text>
         </View>
 
         <View style={styles.steps}>
-          <Text style={{color:'white'}}>name</Text>
-          <Text style={{color:'white'}}>not entered</Text>
-          <Icon name='chevron-right' color='white'/>
+          <View style={styles.step}>
+            <Text style={styles.stepText}>name</Text>
+            <Text style={styles.stepStatus}>not entered</Text>
+            <Icon name='chevron-thin-right' size={26} color='#bdbdbd'/>
+          </View>
 
-          <Text style={{color:'white'}}>email</Text>
-          <Text style={{color:'white'}}>not entered</Text>
-          <Icon name='chevron-right' color='white'/>
+          <View style={styles.step}>
+            <Text style={styles.stepText}>email</Text>
+            <Text style={styles.stepStatus}>not entered</Text>
+            <Icon name='chevron-right' size={26} color='#bdbdbd'/>
+          </View>
 
-          <Text style={{color:'white'}}>account password</Text>
-          <Text style={{color:'white'}}>not entered</Text>
-          <Icon name='chevron-right' color='white'/>
+          <View style={styles.step}>
+            <Text style={styles.stepText}>account password</Text>
+            <Text style={styles.stepStatus}>not entered</Text>
+            <Icon name='chevron-right' size={26} color='#bdbdbd'/>
+          </View>
         </View>
 
         <View style={styles.footer}>
-          <Text style={styles.text}>next step</Text>
+          <Text style={styles.footerText}>next step</Text>
         </View>
       </View>
     )
@@ -50,22 +57,55 @@ export default class Start extends Component<{}> {
 const styles = StyleSheet.create({
   header: {
     flex: .5,
-    backgroundColor: 'blue',
+    marginTop: 10,
+    paddingLeft: 10,
+  },
+  headerText: {
+    color: '#bdbdbd',
+    fontSize: 18,
+    marginLeft: 10,
   },
   title: {
     flex: 1,
-    backgroundColor: 'red',
+    paddingLeft: 10,
+    marginTop: 10,
+    marginBottom: 10,
+    alignItems: 'flex-start',
+  },
+  titleText: {
+    color: 'white',
+    fontSize: 26,
+    alignItems: 'center',
+    marginLeft: 10,
   },
   steps: {
     flex: 10,
-    backgroundColor: 'gray',
+    flexDirection: 'column',
+    marginLeft: 20,
   },
-  text: {
-    color: 'white',
+  step: {
+    flexDirection: 'row',
+    alignSelf: 'flex-end',
+    borderTopWidth: 2,
+    borderColor: '#bdbdbd',
+    padding: 10,
+  },
+  stepText: {
+    color: '#bdbdbd',
+    fontSize: 16,
+    flex: 1,
+  },
+  stepStatus: {
+    color: '#bdbdbd',
+    fontSize: 18,
   },
   footer: {
     flex: 1,
+    padding: 10,
     backgroundColor: 'yellow',
+  },
+  footerText: {
+    color: '#bdbdbd',
   },
   container: {
     flex: 1,
