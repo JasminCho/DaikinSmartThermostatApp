@@ -12,15 +12,17 @@ export default class SignupForm extends Component<{}> {
         <View style={styles.top}>
           <Text style={{color:'white'}}>name</Text>
           <Text style={{color:'white'}}>not entered</Text>
-          <Icon name='rowing' color='white'/>
+          <Icon name='chevron-right' color='white'/>
         </View>
         <View style={styles.steps}>
           <Text style={{color:'white'}}>email</Text>
           <Text style={{color:'white'}}>not entered</Text>
+          <Icon name='chevron-right' color='white'/>
         </View>
         <View style={styles.steps}>
           <Text style={{color:'white'}}>account password</Text>
           <Text style={{color:'white'}}>not entered</Text>
+          <Icon name='chevron-right' color='white'/>
         </View>
         <Text style={styles.footer}>next step</Text>
       </View>
@@ -43,7 +45,6 @@ const styles = StyleSheet.create({
     //marginTop: 20,
   },
   top: {
-    borderTopWidth: 1,
     flexDirection: 'row',
     alignSelf: 'stretch',
     borderColor:'white',
