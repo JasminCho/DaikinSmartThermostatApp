@@ -5,8 +5,7 @@ import Name from '../components/Name';
 import Email from '../components/Email';
 import Password from '../components/Password';
 
-// import { Icon } from 'react-native-elements';
-import { Icon } from 'react-native-vector-icons';
+import { Icon } from 'react-native-elements';
 
 export default class Start extends Component<{}> {
   render() {
@@ -30,24 +29,42 @@ export default class Start extends Component<{}> {
           <View style={styles.step}>
             <Text style={styles.stepText}>name</Text>
             <Text style={styles.stepStatus}>not entered</Text>
-            <Icon name='chevron-thin-right' size={26} color='#bdbdbd'/>
+            <Icon name='chevron-right'
+                  size={30}
+                  color='#bdbdbd'
+                  underlayColor='black'
+                  onPress={() => console.log('name field')}/>
           </View>
 
           <View style={styles.step}>
             <Text style={styles.stepText}>email</Text>
             <Text style={styles.stepStatus}>not entered</Text>
-            <Icon name='chevron-right' size={26} color='#bdbdbd'/>
+            <Icon name='chevron-right'
+                  size={30}
+                  color='#bdbdbd'
+                  underlayColor='black'
+                  onPress={() => console.log('email field')}/>
           </View>
 
           <View style={styles.step}>
             <Text style={styles.stepText}>account password</Text>
             <Text style={styles.stepStatus}>not entered</Text>
-            <Icon name='chevron-right' size={26} color='#bdbdbd'/>
+            <Icon name='chevron-right'
+                  size={30}
+                  color='#bdbdbd'
+                  underlayColor='black'
+                  onPress={() => console.log('password field')}/>
           </View>
         </View>
 
         <View style={styles.footer}>
           <Text style={styles.footerText}>next step</Text>
+          <View>
+            
+          </View>
+          <View>
+
+          </View>
         </View>
       </View>
     )
@@ -89,6 +106,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 2,
     borderColor: '#bdbdbd',
     padding: 10,
+    alignItems: 'center',
   },
   stepText: {
     color: '#bdbdbd',
