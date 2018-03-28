@@ -5,7 +5,7 @@ export default class LoginForm extends Component<{}> {
   render() {
     const handlePress = () => false
     return(
-      <KeyboardAvoidingView style={styles.container} behavior="padding">
+      <KeyboardAvoidingView style={styles.container} behavior="padding" keyboardVerticalOffset={150}>
         <TextInput style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' placeholder="email" placeholderTextColor='#03a9f4'/>
         <TextInput style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' placeholder="password" secureTextEntry={true} placeholderTextColor='#03a9f4'/>
         <TouchableOpacity style={styles.button} onPress={handlePress}>

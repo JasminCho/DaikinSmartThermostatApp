@@ -8,12 +8,12 @@ export default class StartForm extends Component<{}> {
       <KeyboardAvoidingView style={styles.container} behavior="padding">
         <TouchableHighlight style={styles.button} onPress={handlePress}>
           <View>
-            <Text style={{fontSize:16, color: 'white'}}>login</Text>
+            <Text style={{fontSize:16, color: 'rgba(3,169,244,0.5)'}}>login</Text>
           </View>
         </TouchableHighlight>
         <TouchableHighlight style={styles.button} onPress={handlePress}>
           <View>
-            <Text style={{fontSize:16, color: 'white'}}>create account</Text>
+            <Text style={{fontSize:16, color: 'rgba(3,169,244,0.5)'}}>create account</Text>
           </View>
         </TouchableHighlight>
       </KeyboardAvoidingView>
@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginVertical: 5,
     paddingHorizontal: 25,
-    backgroundColor: 'rgba(3,169,244,0.5)',
+    backgroundColor: 'white',
   }
 });

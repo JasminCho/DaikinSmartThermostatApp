@@ -8,20 +8,9 @@ import Password from '../components/Password';
 import PageControl from 'react-native-page-control';
 import { Icon } from 'react-native-elements';
 import { Pages } from 'react-native-pages';
+import { StackNavigator } from 'react-navigation';
 
-export default class Start extends Component<{}> {
-  constructor(props) {
-    super(props);
-  }
-  gotoNamePage = () => {
-    () => console.log('name field')
-  }
-  gotoEmailPage = () => {
-    () => console.log('email field')
-  }
-  gotoPasswordPage = () => {
-    () => console.log('password field')
-  }
+class Start extends Component<{}> {
   render() {
     return(
       // <View style={styles.container}>
@@ -81,9 +70,15 @@ export default class Start extends Component<{}> {
                 onPress={() => console.log('go to next page')}/>
         </View>
       </View>
-    )
+    );
   }
 }
+
+export default StackNavigator({
+  Start: {
+    screen: Start,
+  },
+});
 
 const styles = StyleSheet.create({
   header: {

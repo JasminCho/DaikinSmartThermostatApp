@@ -30,7 +30,7 @@
     "react-native-page-control": "^1.1.1",
     "react-native-pages": "^0.7.0",
     "react-native-vector-icons": "^4.5.0",
-    "react-navigation": "^1.0.0-beta.7",
+    "react-navigation": "^1.5.8",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2"
   }
