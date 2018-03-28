@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, StatusBar,  } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Button } from 'react-native';
 import SignupForm from '../components/SignupForm';
 import Name from '../components/Name';
 import Email from '../components/Email';
@@ -7,8 +7,21 @@ import Password from '../components/Password';
 
 import PageControl from 'react-native-page-control';
 import { Icon } from 'react-native-elements';
+import { Pages } from 'react-native-pages';
 
 export default class Start extends Component<{}> {
+  constructor(props) {
+    super(props);
+  }
+  gotoNamePage = () => {
+    () => console.log('name field')
+  }
+  gotoEmailPage = () => {
+    () => console.log('email field')
+  }
+  gotoPasswordPage = () => {
+    () => console.log('password field')
+  }
   render() {
     return(
       // <View style={styles.container}>
@@ -34,7 +47,7 @@ export default class Start extends Component<{}> {
                   size={30}
                   color='#bdbdbd'
                   underlayColor='black'
-                  onPress={() => console.log('name field')}/>
+                  onPress={() => this.goToNamePage()}/>
           </View>
 
           <View style={styles.step}>
@@ -44,7 +57,7 @@ export default class Start extends Component<{}> {
                   size={30}
                   color='#bdbdbd'
                   underlayColor='black'
-                  onPress={() => console.log('email field')}/>
+                  onPress={this.goToEmailPage}/>
           </View>
 
           <View style={styles.step}>
@@ -54,13 +67,18 @@ export default class Start extends Component<{}> {
                   size={30}
                   color='#bdbdbd'
                   underlayColor='black'
-                  onPress={() => console.log('password field')}/>
+                  onPress={this.gotoPasswordPage}/>
           </View>
         </View>
 
         <View style={styles.footer}>
-          <PageControl numberOfPages={4}  />
+          <PageControl style={styles.footerPages} numberOfPages={4}  />
           <Text style={styles.footerText}>next step</Text>
+          <Icon name='arrow-forward'
+                size={26}
+                color='#bdbdbd'
+                underlayColor='black'
+                onPress={() => console.log('go to next page')}/>
         </View>
       </View>
     )
@@ -114,12 +132,20 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   footer: {
-    flex: 1,
+    flex: .5,
+    flexDirection: 'row',
+    alignSelf: 'flex-end',
+    borderTopWidth: 2,
+    borderColor: '#bdbdbd',
+    marginLeft: 20,
     padding: 10,
-    backgroundColor: 'yellow',
+  },
+  footerPages: {
+    flex: 2,
   },
   footerText: {
-    color: '#bdbdbd',
+    color: 'white',
+    alignSelf: 'center',
   },
   container: {
     flex: 1,
