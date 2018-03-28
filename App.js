@@ -8,7 +8,7 @@ import { StackNavigator } from 'react-navigation';
 
 // TODO: Work on navigation between screens and button functionalities
 // import { StackNavigator, } from 'react-navigation';
-//
+// TODO: get createAccount pages done
 const RootStack = StackNavigator({
   Start: {
     screen: Start
