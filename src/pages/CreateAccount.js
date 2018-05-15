@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Button } from 'react-native';
+
 import SignupForm from '../components/SignupForm';
 import Name from '../components/Name';
 import Email from '../components/Email';
 import Password from '../components/Password';
+import CreateAccounthome from '../components/CreateAccountHome';
 
 import PageControl from 'react-native-page-control';
 import { Icon } from 'react-native-elements';
@@ -61,7 +63,7 @@ class CreateAccount extends React.Component {
             size={26}
             color='#bdbdbd'
             underlayColor='black'
-            onPress={() => console.log('go to next page')}/>
+            onPress={() => this.props.navigation.navigate('CreateAccountHome')}/>
         </View>
       </View>
     );

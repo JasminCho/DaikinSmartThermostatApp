@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, StatusBar, Button } from 'react-native';
 
 import Messages from '../components/Messages';
 import AddHome from '../components/AddHome';
+import Thermostats from '../pages/Thermostats';
 
 import PageControl from 'react-native-page-control';
 import { Icon } from 'react-native-elements';

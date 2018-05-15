@@ -6,6 +6,7 @@ import Login from './src/pages/Login';
 import Start from './src/pages/Start';
 import CreateAccount from './src/pages/CreateAccount';
 import Homes from './src/pages/Homes';
+import Thermostats from './src/pages/Thermostats';
 
 //Components
 import Name from './src/components/Name';
@@ -15,6 +16,12 @@ import Messages from './src/components/Messages';
 import AddHome from './src/components/AddHome';
 import HomeName from './src/components/HomeName';
 import Address from './src/components/Address';
+import AddThermostat from './src/components/AddThermostat';
+import ThermostatCode from './src/components/ThermostatCode';
+import CreateAccountHome from './src/components/CreateAccountHome';
+import CreateAccountThermostat from './src/components/CreateAccountThermostat';
+import AccountCreated from './src/components/AccountCreated';
+import AccountCreatedLogin from './src/components/AccountCreatedLogin';
 
 // TODO: Work on navigation between screens and button functionalities
 // import { StackNavigator, } from 'react-navigation';
@@ -44,6 +51,10 @@ const RootStack = StackNavigator({
   Start: { screen: Start },
   Login: { screen: Login },
   CreateAccount: { screen: CreateAccount },
+  CreateAccountHome: { screen: CreateAccountHome },
+  CreateAccountThermostat: { screen: CreateAccountThermostat },
+  AccountCreated: { screen: AccountCreated },
+  AccountCreatedLogin: { screen: AccountCreatedLogin },
   Homes: { screen: Homes },
   NamePage: { screen: Name },
   EmailPage: { screen: Email },
@@ -51,7 +62,10 @@ const RootStack = StackNavigator({
   Messages: { screen: Messages },
   AddHome: { screen: AddHome },
   HomeName: { screen: HomeName },
-  Address: { screen: Address }},  
+  Address: { screen: Address },
+  Thermostats: { screen: Thermostats },
+  AddThermostat: { screen: AddThermostat },
+  ThermostatCode: { screen: ThermostatCode }},
   { headerMode: 'none' }
 );
 
