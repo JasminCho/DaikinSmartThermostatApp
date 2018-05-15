@@ -6,6 +6,11 @@ import Login from './src/pages/Login';
 import Start from './src/pages/Start';
 import CreateAccount from './src/pages/CreateAccount';
 
+//Components
+import Name from './src/components/Name';
+import Email from './src/components/Email';
+import Password from './src/components/Password';
+
 // TODO: Work on navigation between screens and button functionalities
 // import { StackNavigator, } from 'react-navigation';
 // TODO: get createAccount pages done
@@ -33,7 +38,10 @@ export default class App extends React.Component {
 const RootStack = StackNavigator({
   Start: { screen: Start },
   Login: { screen: Login },
-  CreateAccount: { screen: CreateAccount }},
+  CreateAccount: { screen: CreateAccount },
+  NamePage: { screen: Name },
+  EmailPage: { screen: Email },
+  Password: { screen: Password}},
   { headerMode: 'none' }
 );
 
