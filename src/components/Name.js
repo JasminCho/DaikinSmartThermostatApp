@@ -19,8 +19,8 @@ const Name = ({ navigation }) => (
       </View>
     </View>
 
-    <TextInput style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' placeholder="first name" placeholderTextColor='#bdbdbd'/>
-    <TextInput style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' placeholder="last name" placeholderTextColor='#bdbdbd'/>
+    <TextInput style={styles.inputBox} underlineColorAndroid={'transparent'} placeholder="first name" placeholderTextColor='#bdbdbd'/>
+    <TextInput style={styles.inputBox} underlineColorAndroid={'transparent'} placeholder="last name" placeholderTextColor='#bdbdbd'/>
   </KeyboardAvoidingView>
 );
 

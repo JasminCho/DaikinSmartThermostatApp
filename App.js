@@ -5,11 +5,16 @@ import { StackNavigator } from 'react-navigation';
 import Login from './src/pages/Login';
 import Start from './src/pages/Start';
 import CreateAccount from './src/pages/CreateAccount';
+import Homes from './src/pages/Homes';
 
 //Components
 import Name from './src/components/Name';
 import Email from './src/components/Email';
 import Password from './src/components/Password';
+import Messages from './src/components/Messages';
+import AddHome from './src/components/AddHome';
+import HomeName from './src/components/HomeName';
+import Address from './src/components/Address';
 
 // TODO: Work on navigation between screens and button functionalities
 // import { StackNavigator, } from 'react-navigation';
@@ -39,9 +44,14 @@ const RootStack = StackNavigator({
   Start: { screen: Start },
   Login: { screen: Login },
   CreateAccount: { screen: CreateAccount },
+  Homes: { screen: Homes },
   NamePage: { screen: Name },
   EmailPage: { screen: Email },
-  Password: { screen: Password}},
+  Password: { screen: Password },
+  Messages: { screen: Messages },
+  AddHome: { screen: AddHome },
+  HomeName: { screen: HomeName },
+  Address: { screen: Address }},  
   { headerMode: 'none' }
 );
 

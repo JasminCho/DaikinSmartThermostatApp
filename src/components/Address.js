@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, Button, KeyboardAvoidingView, } from 'react-native';
 import { Icon } from 'react-native-elements';
 
-const Email = ({ navigation }) => (
+const Address = ({ navigation }) => (
   <KeyboardAvoidingView style={styles.container} behavior="padding">
     <View style={styles.header}>
-      <Text style={styles.headerText}>Daikin Smart Thermostat</Text>
+      <Text style={styles.headerText}>add home</Text>
     </View>
 
     <View style={styles.step}>
@@ -15,28 +15,16 @@ const Email = ({ navigation }) => (
         underlayColor='black'
         onPress={() => navigation.goBack()}/>
       <View style={styles.title}>
-        <Text style={styles.titleText}>email</Text>
+        <Text style={styles.titleText}>address</Text>
       </View>
     </View>
 
-    <TextInput style={styles.inputBox} underlineColorAndroid={'transparent'} placeholder="email@address.com" placeholderTextColor='#bdbdbd'/>
-    <TextInput style={styles.inputBox} underlineColorAndroid={'transparent'} placeholder="confirm email@address.com" placeholderTextColor='#bdbdbd'/>
+    <TextInput style={styles.inputBox} underlineColorAndroid={'transparent'} placeholder="street" placeholderTextColor='#bdbdbd'/>
+    <TextInput style={styles.inputBox} underlineColorAndroid={'transparent'} placeholder="zip code" placeholderTextColor='#bdbdbd'/>
   </KeyboardAvoidingView>
 );
 
-export default Email;
-
-// export default class Email extends Component<{}> {
-//   render() {
-//     return(
-//       <KeyboardAvoidingView style={styles.container} behavior="padding">
-//         <Text>email</Text>
-//         <TextInput style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' placeholder="email address" placeholderTextColor='#03a9f4'/>
-//         <TextInput style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' placeholder="confirm email" placeholderTextColor='#03a9f4'/>
-//       </KeyboardAvoidingView>
-//     )
-//   }
-// }
+export default Address;
 
 const styles = StyleSheet.create({
   header: {

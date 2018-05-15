@@ -8,7 +8,7 @@ class Login extends React.Component {
     return(
       <ImageBackground source={require('../images/background_image.jpg')} style={styles.container}>
         <Logo />
-        <LoginForm />
+        <LoginForm navigation={this.props.navigation}/>
       </ImageBackground>
     )
   }

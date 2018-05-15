@@ -1,22 +1,52 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, Button, KeyboardAvoidingView, TouchableOpacity} from 'react-native';
 
-export default class LoginForm extends Component<{}> {
-  render() {
-    const handlePress = () => false
-    return(
-      <KeyboardAvoidingView style={styles.container} behavior="padding" keyboardVerticalOffset={150}>
-        <TextInput style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' placeholder="email" placeholderTextColor='#03a9f4'/>
-        <TextInput style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' placeholder="password" secureTextEntry={true} placeholderTextColor='#03a9f4'/>
-        <TouchableOpacity style={styles.button} onPress={handlePress}>
-          <View>
-            <Text style={{fontSize:16, color: 'white'}}>login</Text>
-          </View>
-        </TouchableOpacity>
-      </KeyboardAvoidingView>
-    )
-  }
-}
+import Homes from '../pages/Homes';
+
+const LoginForm = ({ navigation }) => (
+  <KeyboardAvoidingView style={styles.container} behavior="padding" keyboardVerticalOffset={150}>
+    <TextInput style={styles.inputBox} underlineColorAndroid={'transparent'} placeholder="email" placeholderTextColor='#03a9f4'/>
+    <TextInput style={styles.inputBox} underlineColorAndroid={'transparent'} placeholder="password" secureTextEntry={true} placeholderTextColor='#03a9f4'/>
+
+    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Homes')}>
+      <View>
+        <Text style={{fontSize:16, color: 'white'}}>login</Text>
+      </View>
+    </TouchableOpacity>
+
+    <TouchableOpacity style={styles.button} onPress={() => console.log('An email with a temporary password has been sent to you.')}>
+      <View>
+        <Text style={{fontSize:16, color: 'white'}}>forgot password</Text>
+      </View>
+    </TouchableOpacity>
+  </KeyboardAvoidingView>
+);
+
+export default LoginForm;
+
+// export default class LoginForm extends Component<{}> {
+//   render() {
+//     const handlePress = () => false
+//     return(
+//       <KeyboardAvoidingView style={styles.container} behavior="padding" keyboardVerticalOffset={150}>
+//         <TextInput style={styles.inputBox} underlineColorAndroid={'transparent'} placeholder="email" placeholderTextColor='#03a9f4'/>
+//         <TextInput style={styles.inputBox} underlineColorAndroid={'transparent'} placeholder="password" secureTextEntry={true} placeholderTextColor='#03a9f4'/>
+//
+//         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Homes')}>
+//           <View>
+//             <Text style={{fontSize:16, color: 'white'}}>login</Text>
+//           </View>
+//         </TouchableOpacity>
+//
+//         <TouchableOpacity style={styles.button} onPress={() => console.log('An email with a temporary password has been sent to you.')}>
+//           <View>
+//             <Text style={{fontSize:16, color: 'white'}}>forgot password</Text>
+//           </View>
+//         </TouchableOpacity>
+//       </KeyboardAvoidingView>
+//     )
+//   }
+// }
 
 const styles = StyleSheet.create({
   container : {

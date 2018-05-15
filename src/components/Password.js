@@ -24,14 +24,15 @@ const Password = ({ navigation }) => (
       value={this.state.password}
       onChangeText={ (password) => this.setState({ password }) }
     /> */}
-    
+
     <TextInput
       style={styles.inputBox}
-      underlineColorAndroid='rgba(0,0,0,0)'
+      underlineColorAndroid={'transparent'}
+      secureTextEntry={true}
       placeholder="password"
       placeholderTextColor='gray'
     />
-    <TextInput style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' placeholder="confirm password" placeholderTextColor='gray'/>
+    <TextInput style={styles.inputBox} underlineColorAndroid={'transparent'} secureTextEntry={true} placeholder="confirm password" placeholderTextColor='gray'/>
 
   </KeyboardAvoidingView>
 );
