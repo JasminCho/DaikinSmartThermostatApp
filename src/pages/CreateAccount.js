@@ -1,35 +1,20 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Button } from 'react-native';
+
 import SignupForm from '../components/SignupForm';
 import Name from '../components/Name';
 import Email from '../components/Email';
 import Password from '../components/Password';
+import CreateAccounthome from '../components/CreateAccountHome';
 
 import PageControl from 'react-native-page-control';
 import { Icon } from 'react-native-elements';
 import { Pages } from 'react-native-pages';
+import { StackNavigator } from 'react-navigation';
 
-export default class Start extends Component<{}> {
-  constructor(props) {
-    super(props);
-  }
-  gotoNamePage = () => {
-    () => console.log('name field')
-  }
-  gotoEmailPage = () => {
-    () => console.log('email field')
-  }
-  gotoPasswordPage = () => {
-    () => console.log('password field')
-  }
+class CreateAccount extends React.Component {
   render() {
     return(
-      // <View style={styles.container}>
-      //   {/* <SignupForm/> */}
-      //   {/* <Name/> */}
-      //   {/* <Email/> */}
-      //   {/* <Password/> */}
-      // </View>
       <View style={styles.container} behavior="padding">
         <View style={styles.header}>
           <Text style={styles.headerText}>create account</Text>
@@ -44,30 +29,30 @@ export default class Start extends Component<{}> {
             <Text style={styles.stepText}>name</Text>
             <Text style={styles.stepStatus}>not entered</Text>
             <Icon name='chevron-right'
-                  size={30}
-                  color='#bdbdbd'
-                  underlayColor='black'
-                  onPress={() => this.goToNamePage()}/>
+              size={30}
+              color='#bdbdbd'
+              underlayColor='black'
+              onPress={() => this.props.navigation.navigate('NamePage')}/>
           </View>
 
           <View style={styles.step}>
             <Text style={styles.stepText}>email</Text>
             <Text style={styles.stepStatus}>not entered</Text>
             <Icon name='chevron-right'
-                  size={30}
-                  color='#bdbdbd'
-                  underlayColor='black'
-                  onPress={this.goToEmailPage}/>
+              size={30}
+              color='#bdbdbd'
+              underlayColor='black'
+              onPress={() => this.props.navigation.navigate('EmailPage')}/>
           </View>
 
           <View style={styles.step}>
             <Text style={styles.stepText}>account password</Text>
             <Text style={styles.stepStatus}>not entered</Text>
             <Icon name='chevron-right'
-                  size={30}
-                  color='#bdbdbd'
-                  underlayColor='black'
-                  onPress={this.gotoPasswordPage}/>
+              size={30}
+              color='#bdbdbd'
+              underlayColor='black'
+              onPress={() => this.props.navigation.navigate('Password')}/>
           </View>
         </View>
 
@@ -75,20 +60,22 @@ export default class Start extends Component<{}> {
           <PageControl style={styles.footerPages} numberOfPages={4}  />
           <Text style={styles.footerText}>next step</Text>
           <Icon name='arrow-forward'
-                size={26}
-                color='#bdbdbd'
-                underlayColor='black'
-                onPress={() => console.log('go to next page')}/>
+            size={26}
+            color='#bdbdbd'
+            underlayColor='black'
+            onPress={() => this.props.navigation.navigate('CreateAccountHome')}/>
         </View>
       </View>
-    )
+    );
   }
 }
+
+export default CreateAccount;
 
 const styles = StyleSheet.create({
   header: {
     flex: .5,
-    marginTop: 10,
+    marginTop: 20,
     paddingLeft: 10,
   },
   headerText: {
