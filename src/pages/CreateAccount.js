@@ -10,7 +10,7 @@ import { Icon } from 'react-native-elements';
 import { Pages } from 'react-native-pages';
 import { StackNavigator } from 'react-navigation';
 
-class Start extends Component<{}> {
+class CreateAccount extends React.Component {
   render() {
     return(
       // <View style={styles.container}>
@@ -74,11 +74,7 @@ class Start extends Component<{}> {
   }
 }
 
-export default StackNavigator({
-  Start: {
-    screen: Start,
-  },
-});
+export default CreateAccount;
 
 const styles = StyleSheet.create({
   header: {

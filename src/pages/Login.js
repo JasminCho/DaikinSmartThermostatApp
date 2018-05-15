@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, StatusBar, ImageBackground } from 'react-native
 import Logo from '../components/Logo';
 import LoginForm from '../components/LoginForm';
 
-export default class Login extends Component<{}> {
+class Login extends React.Component {
   render() {
     return(
       <ImageBackground source={require('../images/background_image.jpg')} style={styles.container}>
@@ -13,6 +13,8 @@ export default class Login extends Component<{}> {
     )
   }
 }
+
+export default Login;
 
 const styles = StyleSheet.create({
   container: {
