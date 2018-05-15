@@ -13,12 +13,6 @@ import { StackNavigator } from 'react-navigation';
 class CreateAccount extends React.Component {
   render() {
     return(
-      // <View style={styles.container}>
-      //   {/* <SignupForm/> */}
-      //   {/* <Name/> */}
-      //   {/* <Email/> */}
-      //   {/* <Password/> */}
-      // </View>
       <View style={styles.container} behavior="padding">
         <View style={styles.header}>
           <Text style={styles.headerText}>create account</Text>

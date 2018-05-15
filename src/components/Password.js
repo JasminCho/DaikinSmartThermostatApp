@@ -1,18 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TextInput, Button, KeyboardAvoidingView, Switch } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, KeyboardAvoidingView } from 'react-native';
 import { Icon } from 'react-native-elements';
-
-constructor(props) {
-  super(props);
-  this.toggleSwitch = this.toggleSwitch.bind(this);
-  this.state = {
-    showPassword: true,
-  }
-}
-
-toggleSwitch() {
-  this.setState({ showPassword: !this.state.showPassword });
-}
+import { PasswordInputText } from 'react-native-hide-show-password-input';
 
 const Password = ({ navigation }) => (
   <KeyboardAvoidingView style={styles.container} behavior="padding">
@@ -31,19 +20,19 @@ const Password = ({ navigation }) => (
       </View>
     </View>
 
+    {/* <PasswordInputText
+      value={this.state.password}
+      onChangeText={ (password) => this.setState({ password }) }
+    /> */}
+    
     <TextInput
       style={styles.inputBox}
       underlineColorAndroid='rgba(0,0,0,0)'
       placeholder="password"
       placeholderTextColor='gray'
-      secureTextEntry={this.state.showPassword}
-      onChangeText={(password) => this.setState({ password })}
     />
     <TextInput style={styles.inputBox} underlineColorAndroid='rgba(0,0,0,0)' placeholder="confirm password" placeholderTextColor='gray'/>
-    <Switch
-      onValueChange={this.toggleSwitch}
-      value={!this.state.showPassword}
-    />
+
   </KeyboardAvoidingView>
 );
 
