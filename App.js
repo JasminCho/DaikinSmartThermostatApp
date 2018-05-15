@@ -21,9 +21,9 @@ export default class App extends Component<{}> {
           <StatusBar translucent backgroundColor="black"/>
         </View>
         <View style={styles.content}>
-          {/* <Start/> */}
+          <Start/>
           {/* <Login/> */}
-          <CreateAccount/>
+          {/* <CreateAccount/> */}
         </View>
       </View>
     );
