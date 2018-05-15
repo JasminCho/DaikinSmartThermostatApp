@@ -13,7 +13,7 @@ import CreateAccount from './src/pages/CreateAccount';
 export default class App extends React.Component {
   render() {
     return (
-      <RootStack />
+      <RootStack/>
     );
     // return (
     //   <View style={styles.container}>
@@ -33,8 +33,9 @@ export default class App extends React.Component {
 const RootStack = StackNavigator({
   Start: { screen: Start },
   Login: { screen: Login },
-  CreateAccount: { screen: CreateAccount }
-});
+  CreateAccount: { screen: CreateAccount }},
+  { headerMode: 'none' }
+);
 
 AppRegistry.registerComponent('testProject', () => RootStack);
 
