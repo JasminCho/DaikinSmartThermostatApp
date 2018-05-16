@@ -10,7 +10,6 @@ class Start extends React.Component {
     return (
       <ImageBackground source={require('../images/background_image.jpg')} style={styles.container}>
         <Logo />
-        {/* <StartForm/> */}
         <StartForm navigation={this.props.navigation}/>
       </ImageBackground>
     );

@@ -18,32 +18,17 @@ import HomeName from './src/components/HomeName';
 import Address from './src/components/Address';
 import AddThermostat from './src/components/AddThermostat';
 import ThermostatCode from './src/components/ThermostatCode';
+import CreateAccountOwner from './src/components/CreateAccountOwner';
 import CreateAccountHome from './src/components/CreateAccountHome';
 import CreateAccountThermostat from './src/components/CreateAccountThermostat';
 import AccountCreated from './src/components/AccountCreated';
 import AccountCreatedLogin from './src/components/AccountCreatedLogin';
-
-// TODO: Work on navigation between screens and button functionalities
-// import { StackNavigator, } from 'react-navigation';
-// TODO: get createAccount pages done
 
 export default class App extends React.Component {
   render() {
     return (
       <RootStack/>
     );
-    // return (
-    //   <View style={styles.container}>
-    //     <View style={styles.statusBar}>
-    //       <StatusBar translucent backgroundColor="black"/>
-    //     </View>
-    //     <View style={styles.content}>
-    //       <Start/>
-    //       {/* <Login/> */}
-    //       {/* <CreateAccount/> */}
-    //     </View>
-    //   </View>
-    // );
   }
 }
 
@@ -51,6 +36,7 @@ const RootStack = StackNavigator({
   Start: { screen: Start },
   Login: { screen: Login },
   CreateAccount: { screen: CreateAccount },
+  CreateAccountOwner: { screen: CreateAccountOwner },
   CreateAccountHome: { screen: CreateAccountHome },
   CreateAccountThermostat: { screen: CreateAccountThermostat },
   AccountCreated: { screen: AccountCreated },
