@@ -24,14 +24,14 @@ class CreateAccount extends React.Component {
         <View style={styles.header}>
           <Text style={styles.headerText}>create account</Text>
         </View>
-
-        <Pages style={styles.pages}>
+        <CreateAccountOwner navigation={this.props.navigation}/>
+        {/* <Pages style={styles.pages}>
           <CreateAccountOwner navigation={this.props.navigation}/>
           <CreateAccountHome navigation={this.props.navigation}/>
           <CreateAccountThermostat navigation={this.props.navigation}/>
           <AccountCreated navigation={this.props.navigation}/>
-          {/* <AccountCreatedLogin navigation={this.props.navigation}/> */}
-        </Pages>
+          {/* <AccountCreatedLogin navigation={this.props.navigation}/> 
+        </Pages> */}
 
         {/* TODO: Make footer a component to share and uses list of navigation */}
       </View>
