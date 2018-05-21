@@ -32,6 +32,79 @@ export default class App extends React.Component {
   }
 }
 
+/*
+TODO: Recreate the navigation
+
+Overall App navigation
+1)Main Page
+  Login -> Login Page
+  Create Account (go to Stack/Switch)
+2)Create Account Stack
+  Account Owner Stack: Name, Email, Password
+  Home Stack: Name, Street/Zipcode
+  Thermostat Stack: Enter Code
+  Account Created Stack
+    Login (I agree button) -> Homes
+    Terms of Service
+    Privacy Statement
+    Other Notes
+3)Homes Stack
+  List of Homes
+    (For each home)
+    Thermostat Stack
+      List of Thermostats
+        (For each thermostat go to Thermostat Stack)
+      Add Thermostat Stack
+        Enter Code
+  Add Home Stack
+    Name, Street/Zipcode
+  My Account Stack (go to stack)
+4)Thermostat Stack
+  Top Navigation for thermostats (dropdown)
+  Navigation within Thermostat
+    Primary Screen (Main one w/ Temp)
+    Adjust Screen
+    Schedule Screen
+    Away Screen
+    Status Screen Stack
+      Air quality
+      Weather
+      Circulate
+      Settings Stack
+        System Mode
+        Schedule
+        Away Stack
+          Geofence Range***
+        Comfort
+        Air Quality
+        Efficiency
+        Configuration Stack
+          Account
+          Dealer Contract
+          Look Thermostat
+          Home and Location
+          Messages
+          System Components
+          Edit/Reset
+5)My Account Stack
+  Log out button
+    Go back to Main Page
+  Account Owner
+  List of Additional Members
+  Add Household Member
+  Legal Notices
+6)Messages Stack
+  Messages List
+    (For each message)
+  Alerts Stack
+    (For each alert)
+  Reminders Stack
+    (For each reminder)
+  Tips Stack
+    (For each tip)
+*/
+
+
 const RootStack = StackNavigator({
   Start: { screen: Start },
   Login: { screen: Login },

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Button } from 'react-native';
+import { Constants } from 'expo';
 
 import PageControl from 'react-native-page-control';
 import { Icon } from 'react-native-elements';
@@ -24,14 +25,14 @@ class CreateAccount extends React.Component {
         <View style={styles.header}>
           <Text style={styles.headerText}>create account</Text>
         </View>
-        <CreateAccountOwner navigation={this.props.navigation}/>
-        {/* <Pages style={styles.pages}>
+        {/* <CreateAccountOwner navigation={this.props.navigation}/> */}
+        <Pages style={styles.pages}>
           <CreateAccountOwner navigation={this.props.navigation}/>
           <CreateAccountHome navigation={this.props.navigation}/>
           <CreateAccountThermostat navigation={this.props.navigation}/>
           <AccountCreated navigation={this.props.navigation}/>
-          {/* <AccountCreatedLogin navigation={this.props.navigation}/> 
-        </Pages> */}
+          {/* <AccountCreatedLogin navigation={this.props.navigation}/>  */}
+        </Pages>
 
         {/* TODO: Make footer a component to share and uses list of navigation */}
       </View>
@@ -44,7 +45,7 @@ export default CreateAccount;
 const styles = StyleSheet.create({
   header: {
     flex: .5,
-    marginTop: 20,
+    paddingTop: Constants.statusBarHeight,
     paddingLeft: 10,
   },
   headerText: {
@@ -54,10 +55,12 @@ const styles = StyleSheet.create({
   },
   pages: {
     flex: 1,
+
   },
   container: {
     flex: 1,
     flexDirection: 'column',
+    alignItems: 'flex-start',
     // justifyContent: 'space-around',
     backgroundColor: 'black'
   }

@@ -58,7 +58,7 @@ const CreateAccountOwner = ({ navigation }) => (
         size={26}
         color='#bdbdbd'
         underlayColor='black'
-        onPress={() => scrollToPage('CreateAccountHome')}/>
+        onPress={() => navigation.navigate('CreateAccountHome')}/>
     </View>
   </View>
 );
