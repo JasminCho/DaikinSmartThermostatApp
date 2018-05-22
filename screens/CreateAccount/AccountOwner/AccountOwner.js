@@ -1,64 +1,68 @@
 import React, { Component } from 'react';
 import { View, KeyboardAvoidingView, StyleSheet, Text, ImageBackground, Image, Button, TouchableOpacity, TextInput } from 'react-native';
+// import Icon from 'react-native-vector-icons';
+import { Icon } from 'react-native-elements';
 
 export default class AccountOwner extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
       headerTitle: 'account owner',
       headerStyle: {
-        backgroundColor: rgba(255,255,255,0.5),
+        backgroundColor: 'black',
+        height: 30,
       },
       headerTintColor: 'white',
       headerTitleStyle: {
-        fontWeight: 'bold',
+        fontSize: 26,
       },
-
-      // headerRight: (
-      //   <Button
-      //     title="Back"
-      //     onPress={() => navigation.navigate('Main')}
-      //     color="#a41034"
-      //   />
-      // ),
-    };
+    }
   };
+
   render() {
     return(
       <View style={styles.container}>
-        <Text>This is the Account Owner Screen</Text>
-        <Button title="Back" onPress={() => this.props.navigation.navigate('Main')} />
-      </View>
 
-      // <ImageBackground source={require('../../images/background_image.jpg')} style={styles.container}>
-      //   {/* Logo */}
-      //   <View style={styles.logo}>
-      //     <Image source={require('../../images/daikin-comfort-logo-crop-u1511.png')} />
-      //     <Text style={styles.logoText}>smart thermostat</Text>
-      //   </View>
-      //   {/* Buttons */}
-      //   <KeyboardAvoidingView style={styles.buttonContainer} behavior="padding">
-      //     <TextInput
-      //       style={styles.inputBox}
-      //       underlineColorAndroid={'transparent'}
-      //       placeholder="email"
-      //       keyboardType='email-address'
-      //       placeholderTextColor='#03a9f4'
-      //     />
-      //     <TextInput
-      //       style={styles.inputBox}
-      //       underlineColorAndroid={'transparent'}
-      //       placeholder="password"
-      //       secureTextEntry={true}
-      //       placeholderTextColor='#03a9f4'
-      //     />
-      //     <TouchableOpacity style={styles.loginButton} onPress={() => {}}>
-      //       <Text style={styles.loginButtonText}>login</Text>
-      //     </TouchableOpacity>
-      //     <TouchableOpacity style={styles.button} onPress={() => console.log('An email with a temporary password has been sent to you.')}>
-      //       <Text style={styles.buttonText}>forgot password</Text>
-      //     </TouchableOpacity>
-      //   </KeyboardAvoidingView>
-      // </ImageBackground>
+        <View style={{flex:1}}>
+          <View style={styles.step}>
+            <Text style={styles.stepText}>name</Text>
+            <Text style={styles.stepStatus}>not entered</Text>
+            <Icon name='chevron-right'
+              size={36}
+              color='#bdbdbd'
+              underlayColor='black'
+              onPress={() => {this.props.navigation.navigate('Name')}}/>
+          </View>
+          <View style={styles.step}>
+            <Text style={styles.stepText}>email</Text>
+            <Text style={styles.stepStatus}>not entered</Text>
+            <Icon name='chevron-right'
+              size={36}
+              color='#bdbdbd'
+              underlayColor='black'
+              onPress={() => {}}/>
+          </View>
+          <View style={[styles.step, {borderBottomWidth: 2.5}]}>
+            <Text style={styles.stepText}>account password</Text>
+            <Text style={styles.stepStatus}>not entered</Text>
+            <Icon name='chevron-right'
+              size={36}
+              color='#bdbdbd'
+              underlayColor='black'
+              onPress={() => {}}/>
+          </View>
+        </View>
+
+        <View style={styles.footer}>
+          {/* <PageControl style={styles.footerPages} numberOfPages={4}  /> */}
+          <Text style={styles.footerText}>next step</Text>
+          <Icon name='arrow-forward'
+            size={26}
+            color='#bdbdbd'
+            underlayColor='black'
+            onPress={() => {}}/>
+        </View>
+
+      </View>
     );
   }
 }
@@ -68,49 +72,31 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     flex: 1,
     flexDirection: 'column',
-    paddingTop: 100,
-  },
-  logo : {
     paddingLeft: 30,
+    paddingTop: 30,
   },
-  logoText : {
-    fontSize: 25,
-    color: '#03a9f4',
-  },
-  buttonContainer: {
-    justifyContent: 'center',
-    paddingTop: 100,
-  },
-  button : {
-    padding: 15,
-    paddingLeft: 25,
-    marginTop: 5,
-    backgroundColor: 'white',
+  step: {
     flexDirection: 'row',
+    borderTopWidth: 2.5,
+    borderColor: '#bdbdbd',
+    paddingVertical: 5,
+    alignItems: 'center',
   },
-  loginButton: {
-    padding: 15,
-    paddingLeft: 25,
-    marginTop: 5,
+  stepText: {
+    color: '#bdbdbd',
+    flex: 1,
+  },
+  footer: {
     flexDirection: 'row',
-    backgroundColor: 'rgba(3,169,244,0.5)',
+    alignSelf: 'flex-end',
+    alignItems: 'flex-end',
+    borderTopWidth: 2,
+    borderColor: '#bdbdbd',
+    marginLeft: 20,
+    padding: 10,
   },
-  buttonText: {
-    fontSize:16,
-    color: '#03a9f4',
-    alignItems: 'flex-start',
-  },
-  loginButtonText: {
-    fontSize:16,
+  footerText: {
     color: 'white',
-    alignItems: 'flex-start',
-  },
-  inputBox : {
-    // color: '#03a9f4',
-    padding: 15,
-    paddingLeft: 25,
-    marginTop: 5,
-    backgroundColor: 'rgba(250,250,250,0.9)',
-    fontSize: 16,
+    alignSelf: 'center',
   },
 })

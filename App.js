@@ -116,25 +116,51 @@ import {
   createBottomTabNavigator,
 } from "react-navigation";
 
+// import HomeScreen from './screens/HomeScreen';
+// import LoginScreen from './screens/LoginScreen';
+// import CreateAccountScreen from './screens/CreateAccountScreen';
+// import CreateAccountName from './screens/CreateAccountName';
+// import FirstNamePage from './screens/FirstNamePage';
+// import LastNamePage from './screens/LastNamePage';
+// import CreateAccountPassword from './screens/CreateAccountPassword';
+// import CreateAccountHome from './screens/CreateAccountHome';
+// import CreateAccountThermostat from './screens/CreateAccountThermostat';
+
+// Test Thermostat App Navigation
 import StartScreen from './screens/Main/StartScreen';
 import LoginScreen from './screens/Main/LoginScreen';
 import AccountOwner from './screens/CreateAccount/AccountOwner/AccountOwner';
+import OwnerName from './screens/CreateAccount/AccountOwner/OwnerName';
 
 const OwnerStack = createStackNavigator (
   {
     AccountOwner: AccountOwner,
+    Name: OwnerName,
   },
   {
     initialRouteName: "AccountOwner",
   }
 );
 
-const CreateAccountSwitch = createSwitchNavigator (
+const CreateAccountSwitch = createStackNavigator (
   {
     Owner: OwnerStack,
     // Home: HomeStack,
     // ConnectThermostat: ConnectThermostatStack,
     // AccountCreated: AccountCreatedStack,
+  },
+  {
+    navigationOptions: {
+      headerTitle: 'create account',
+      headerStyle: {
+        backgroundColor: 'black',
+        height: 20,
+      },
+      headerTintColor: '#bdbdbd',
+      headerTitleStyle: {
+        fontSize: 18,
+      },
+    }
   }
 );
 
@@ -150,7 +176,7 @@ const AppNavigator = createStackNavigator(
   {
     headerMode: 'none',
     navigationOptions: {
-        headerVisible: false,
+      headerVisible: false,
     }
   }
 );
@@ -162,6 +188,7 @@ export default class App extends React.Component {
     );
   }
 }
+
 
 
 // const RootStack = StackNavigator({
