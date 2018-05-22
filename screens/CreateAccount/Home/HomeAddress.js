@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { View, KeyboardAvoidingView, StyleSheet, Text, ImageBackground, Image, Button, TouchableOpacity, TextInput } from 'react-native';
 import { Icon } from 'react-native-elements';
 
-export default class AccountPassword extends Component {
+export default class HomeAddress extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      headerTitle: 'account password',
+      headerTitle: 'address',
       headerStyle: {
         backgroundColor: 'black',
         height: 30,
@@ -17,7 +17,8 @@ export default class AccountPassword extends Component {
     }
   };
 
-  //TODO: Update AccountPassword state
+  //TODO: Update HomeStreet and HomeZipcode states
+  //TODO: change autoFocus to Zipcode when zipcode button pressed
 
   constructor(props) {
     super(props)
@@ -62,9 +63,8 @@ export default class AccountPassword extends Component {
             onBlur={() => this.onBlur() }
             style={[styles.inputBox, {backgroundColor: this.state.backgroundColor}]}
             underlineColorAndroid={'transparent'}
-            placeholder="password"
+            placeholder="street"
             placeholderTextColor='#666666'
-            secureTextEntry={true}
             autoFocus={true}
           />
           <TextInput
@@ -72,9 +72,8 @@ export default class AccountPassword extends Component {
             onBlur={() => this.onBlur2() }
             style={[styles.inputBox, {backgroundColor: this.state.backgroundColor2}]}
             underlineColorAndroid={'transparent'}
-            placeholder="confirm password"
+            placeholder="zip code"
             placeholderTextColor='#666666'
-            secureTextEntry={true}
           />
         </KeyboardAvoidingView>
       </View>

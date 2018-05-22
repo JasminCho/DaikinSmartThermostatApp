@@ -116,36 +116,47 @@ import {
   createBottomTabNavigator,
 } from "react-navigation";
 
-// import HomeScreen from './screens/HomeScreen';
-// import LoginScreen from './screens/LoginScreen';
-// import CreateAccountScreen from './screens/CreateAccountScreen';
-// import CreateAccountName from './screens/CreateAccountName';
-// import FirstNamePage from './screens/FirstNamePage';
-// import LastNamePage from './screens/LastNamePage';
-// import CreateAccountPassword from './screens/CreateAccountPassword';
-// import CreateAccountHome from './screens/CreateAccountHome';
-// import CreateAccountThermostat from './screens/CreateAccountThermostat';
-
-// Test Thermostat App Navigation
+/* Test Thermostat App Navigation */
 import StartScreen from './screens/Main/StartScreen';
 import LoginScreen from './screens/Main/LoginScreen';
+// Create Account
+  // Account Owner Info
 import AccountOwner from './screens/CreateAccount/AccountOwner/AccountOwner';
 import OwnerName from './screens/CreateAccount/AccountOwner/OwnerName';
+import AccountEmail from './screens/CreateAccount/AccountOwner/AccountEmail';
+import AccountPassword from './screens/CreateAccount/AccountOwner/AccountPassword';
+  // Home Info
+import HomeInfo from './screens/CreateAccount/Home/HomeInfo';
+import HomeName from './screens/CreateAccount/Home/HomeName';
+import HomeAddress from './screens/CreateAccount/Home/HomeAddress';
 
 const OwnerStack = createStackNavigator (
   {
     AccountOwner: AccountOwner,
     Name: OwnerName,
+    Email: AccountEmail,
+    Password: AccountPassword,
   },
   {
     initialRouteName: "AccountOwner",
   }
 );
 
+const HomeStack = createStackNavigator (
+  {
+    HomeInfo: HomeInfo,
+    HomeName: HomeName,
+    HomeAddress: HomeAddress,
+  },
+  {
+    initialRoutName: "HomeInfo",
+  }
+);
+
 const CreateAccountSwitch = createStackNavigator (
   {
     Owner: OwnerStack,
-    // Home: HomeStack,
+    Home: HomeStack,
     // ConnectThermostat: ConnectThermostatStack,
     // AccountCreated: AccountCreatedStack,
   },
@@ -169,9 +180,6 @@ const AppNavigator = createStackNavigator(
     Main: StartScreen,
     Login: LoginScreen,
     CreateAccount: CreateAccountSwitch,
-    // AccountPassword: CreateAccountPassword,
-    // AccountHome: CreateAccountHome,
-    // AccountThermostat: CreateAccountThermostat,
   },
   {
     headerMode: 'none',
@@ -188,6 +196,7 @@ export default class App extends React.Component {
     );
   }
 }
+
 
 
 

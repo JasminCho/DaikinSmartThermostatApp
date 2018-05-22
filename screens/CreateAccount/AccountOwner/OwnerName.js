@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, KeyboardAvoidingView, StyleSheet, Text, ImageBackground, Image, Button, TouchableOpacity, TextInput } from 'react-native';
-// import Icon from 'react-native-vector-icons';
 import { Icon } from 'react-native-elements';
 
 export default class OwnerName extends Component {
@@ -17,6 +16,8 @@ export default class OwnerName extends Component {
       },
     }
   };
+
+  //TODO: Update OwnerName state
 
   constructor(props) {
     super(props)
@@ -63,7 +64,7 @@ export default class OwnerName extends Component {
             underlineColorAndroid={'transparent'}
             placeholder="first name"
             placeholderTextColor='#666666'
-            autoFocus='true'
+            autoFocus={true}
           />
           <TextInput
             onFocus={() => this.onFocus2() }
@@ -74,17 +75,6 @@ export default class OwnerName extends Component {
             placeholderTextColor='#666666'
           />
         </KeyboardAvoidingView>
-
-        <View style={styles.footer}>
-          {/* <PageControl style={styles.footerPages} numberOfPages={4}  /> */}
-          <Text style={styles.footerText}>next step</Text>
-          <Icon name='arrow-forward'
-            size={26}
-            color='#bdbdbd'
-            underlayColor='black'
-            onPress={() => {}}/>
-        </View>
-
       </View>
     );
   }
@@ -103,18 +93,5 @@ const styles = StyleSheet.create({
     paddingLeft: 25,
     marginTop: 5,
     fontSize: 16,
-  },
-  footer: {
-    flexDirection: 'row',
-    alignSelf: 'flex-end',
-    alignItems: 'flex-end',
-    borderTopWidth: 2,
-    borderColor: '#bdbdbd',
-    marginLeft: 20,
-    padding: 10,
-  },
-  footerText: {
-    color: 'white',
-    alignSelf: 'center',
   },
 })

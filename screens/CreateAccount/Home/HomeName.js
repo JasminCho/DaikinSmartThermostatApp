@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { View, KeyboardAvoidingView, StyleSheet, Text, ImageBackground, Image, Button, TouchableOpacity, TextInput } from 'react-native';
 import { Icon } from 'react-native-elements';
 
-export default class AccountPassword extends Component {
+export default class HomeName extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      headerTitle: 'account password',
+      headerTitle: 'home name',
       headerStyle: {
         backgroundColor: 'black',
         height: 30,
@@ -17,7 +17,7 @@ export default class AccountPassword extends Component {
     }
   };
 
-  //TODO: Update AccountPassword state
+  //TODO: Update HomeName state
 
   constructor(props) {
     super(props)
@@ -33,23 +33,11 @@ export default class AccountPassword extends Component {
       backgroundColor: 'white'
     })
   }
-  onFocus2() {
-    console.log('this is focusing')
-    this.setState({
-      backgroundColor2: 'white'
-    })
-  }
 
   onBlur() {
     console.log('this is blurring')
     this.setState({
       backgroundColor: '#b3b3b3'
-    })
-  }
-  onBlur2() {
-    console.log('this is blurring')
-    this.setState({
-      backgroundColor2: '#b3b3b3'
     })
   }
 
@@ -62,19 +50,9 @@ export default class AccountPassword extends Component {
             onBlur={() => this.onBlur() }
             style={[styles.inputBox, {backgroundColor: this.state.backgroundColor}]}
             underlineColorAndroid={'transparent'}
-            placeholder="password"
+            placeholder="enter home name"
             placeholderTextColor='#666666'
-            secureTextEntry={true}
             autoFocus={true}
-          />
-          <TextInput
-            onFocus={() => this.onFocus2() }
-            onBlur={() => this.onBlur2() }
-            style={[styles.inputBox, {backgroundColor: this.state.backgroundColor2}]}
-            underlineColorAndroid={'transparent'}
-            placeholder="confirm password"
-            placeholderTextColor='#666666'
-            secureTextEntry={true}
           />
         </KeyboardAvoidingView>
       </View>

@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { View, KeyboardAvoidingView, StyleSheet, Text, ImageBackground, Image, Button, TouchableOpacity, TextInput } from 'react-native';
 import { Icon } from 'react-native-elements';
 
-export default class AccountOwner extends Component {
+export default class HomeInfo extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      headerTitle: 'account owner',
+      headerTitle: 'home',
       headerStyle: {
         backgroundColor: 'black',
         height: 30,
@@ -19,9 +19,9 @@ export default class AccountOwner extends Component {
 
   //TODO: Update all states from other pages
   state = {
-    ownerName: "not entered",
-    accountEmail: "not entered",
-    accountPassword: "not entered",
+    homeName: "not entered",
+    homeStreet: "not entered",
+    homeZipcode: "not entered",
   }
 
   render() {
@@ -29,32 +29,37 @@ export default class AccountOwner extends Component {
       <View style={styles.container}>
 
         <View style={{flex:1}}>
+          <View style={{flexDirection: 'row', paddingVertical: 10, alignItems: 'center'}}>
+            <Text style={styles.stepText}>
+              Name & addresses for this home:
+            </Text>
+          </View>
           <View style={styles.step}>
             <Text style={styles.stepText}>name</Text>
-            <Text style={styles.stepText}>{this.state.ownerName}</Text>
+            <Text style={styles.stepText}>{this.state.homeName}</Text>
             <Icon name='chevron-right'
               size={36}
               color='#bdbdbd'
               underlayColor='black'
-              onPress={() => {this.props.navigation.navigate('Name')}}/>
+              onPress={() => {this.props.navigation.navigate('HomeName')}}/>
           </View>
           <View style={styles.step}>
-            <Text style={styles.stepText}>email</Text>
-            <Text style={styles.stepText}>{this.state.accountEmail}</Text>
+            <Text style={styles.stepText}>street</Text>
+            <Text style={styles.stepText}>{this.state.homeStreet}</Text>
             <Icon name='chevron-right'
               size={36}
               color='#bdbdbd'
               underlayColor='black'
-              onPress={() => {this.props.navigation.navigate('Email')}}/>
+              onPress={() => {this.props.navigation.navigate('HomeAddress')}}/>
           </View>
           <View style={[styles.step, {borderBottomWidth: 2.5}]}>
-            <Text style={styles.stepText}>account password</Text>
-            <Text style={styles.stepText}>{this.state.accountPassword}</Text>
+            <Text style={styles.stepText}>zip code</Text>
+            <Text style={styles.stepText}>{this.state.homeZipcode}</Text>
             <Icon name='chevron-right'
               size={36}
               color='#bdbdbd'
               underlayColor='black'
-              onPress={() => {this.props.navigation.navigate('Password')}}/>
+              onPress={() => {this.props.navigation.navigate('HomeAddress')}}/>
           </View>
         </View>
 
@@ -65,7 +70,7 @@ export default class AccountOwner extends Component {
             size={26}
             color='#bdbdbd'
             underlayColor='black'
-            onPress={() => {this.props.navigation.navigate('Home')}}/>
+            onPress={() => {}}/>
         </View>
 
       </View>
