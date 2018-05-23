@@ -107,7 +107,6 @@ Overall App navigation
 */
 
 // TESTING NAVIGATION
-
 import React from "react";
 import { StatusBar, View } from "react-native";
 import {
@@ -129,6 +128,16 @@ import AccountPassword from './screens/CreateAccount/AccountOwner/AccountPasswor
 import HomeInfo from './screens/CreateAccount/Home/HomeInfo';
 import HomeName from './screens/CreateAccount/Home/HomeName';
 import HomeAddress from './screens/CreateAccount/Home/HomeAddress';
+// Connect Thermostat
+import ConnectThermostat from './screens/CreateAccount/ConnectThermostat/ConnectThermostat';
+import EnterCode from './screens/CreateAccount/ConnectThermostat/EnterCode';
+// Account Created
+import AccountCreated from './screens/CreateAccount/AccountCreated/AccountCreated';
+import AccountAgreement from './screens/CreateAccount/AccountCreated/AccountAgreement';
+  // Legal Notices
+import TermsOfService from './screens/CreateAccount/AccountCreated/TermsOfService';
+import PrivacyStatement from './screens/CreateAccount/AccountCreated/PrivacyStatement';
+import OtherNotices from './screens/CreateAccount/AccountCreated/OtherNotices';
 
 const OwnerStack = createStackNavigator (
   {
@@ -149,16 +158,65 @@ const HomeStack = createStackNavigator (
     HomeAddress: HomeAddress,
   },
   {
-    initialRoutName: "HomeInfo",
+    initialRouteName: "HomeInfo",
   }
 );
 
-const CreateAccountSwitch = createStackNavigator (
+const ConnectThermostatStack = createStackNavigator (
+  {
+    ConnectThermostat: ConnectThermostat,
+    EnterCode: EnterCode,
+  },
+  {
+    initialRouteName: "ConnectThermostat",
+  }
+);
+
+const AgreementStack = createStackNavigator (
+  {
+    AccountCreated: AccountCreated,
+    AccountAgreement: AccountAgreement,
+    TOS: TermsOfService,
+    PS: PrivacyStatement,
+    ON: OtherNotices,
+  }
+);
+
+const LegalNoticesStack = createStackNavigator (
+  {
+    TOS: TermsOfService,
+    PS: PrivacyStatement,
+    ON: OtherNotices,
+  },
+  {
+    initialRouteName: "TOS",
+  }
+)
+
+const AccountCreatedStack = createStackNavigator (
+  {
+    Agreement: AgreementStack,
+  },
+  {
+    navigationOptions: {
+      headerTitle: 'Daikin Smart Thermostat',
+      headerStyle: {
+        backgroundColor: 'black',
+        height: 20,
+      },
+      headerTintColor: '#bdbdbd',
+      headerTitleStyle: {
+        fontSize: 18,
+      },
+    },
+  }
+);
+
+const CreateAccountStack = createStackNavigator (
   {
     Owner: OwnerStack,
     Home: HomeStack,
-    // ConnectThermostat: ConnectThermostatStack,
-    // AccountCreated: AccountCreatedStack,
+    ConnectThermostat: ConnectThermostatStack,
   },
   {
     navigationOptions: {
@@ -179,7 +237,8 @@ const AppNavigator = createStackNavigator(
   {
     Main: StartScreen,
     Login: LoginScreen,
-    CreateAccount: CreateAccountSwitch,
+    CreateAccount: CreateAccountStack,
+    AccountCreated: AccountCreatedStack,
   },
   {
     headerMode: 'none',
@@ -193,6 +252,8 @@ export default class App extends React.Component {
   render() {
     return (
       <AppNavigator />
+      // <AccountCreatedStack />
+      // <PrivacyStatement />
     );
   }
 }

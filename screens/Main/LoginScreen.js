@@ -23,6 +23,7 @@ export default class LoginScreen extends Component {
             placeholder="email"
             keyboardType='email-address'
             placeholderTextColor='#03a9f4'
+            autoFocus={true}
           />
           <TextInput
             style={styles.inputBox}

@@ -69,9 +69,9 @@ const styles = StyleSheet.create({
     paddingTop: 30,
   },
   inputBox : {
-    padding: 15,
-    paddingLeft: 25,
-    marginTop: 5,
+    paddingVertical: 5,
+    paddingLeft: 10,
+    marginBottom: 10,
     fontSize: 16,
   },
 })

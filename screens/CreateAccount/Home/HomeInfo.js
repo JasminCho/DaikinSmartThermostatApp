@@ -29,8 +29,8 @@ export default class HomeInfo extends Component {
       <View style={styles.container}>
 
         <View style={{flex:1}}>
-          <View style={{flexDirection: 'row', paddingVertical: 10, alignItems: 'center'}}>
-            <Text style={styles.stepText}>
+          <View style={{flexDirection: 'row', paddingBottom: 10}}>
+            <Text style={styles.description}>
               Name & addresses for this home:
             </Text>
           </View>
@@ -70,7 +70,7 @@ export default class HomeInfo extends Component {
             size={26}
             color='#bdbdbd'
             underlayColor='black'
-            onPress={() => {}}/>
+            onPress={() => {this.props.navigation.navigate('ConnectThermostat')}}/>
         </View>
 
       </View>
@@ -85,6 +85,9 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     paddingLeft: 30,
     paddingTop: 30,
+  },
+  description: {
+    color: '#bdbdbd',
   },
   step: {
     flexDirection: 'row',
