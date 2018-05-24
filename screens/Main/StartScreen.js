@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text, ImageBackground, Image, Button, TouchableOpacity } from 'react-native';
 
 export default class StartScreen extends Component {
+
   render() {
     return(
       <ImageBackground source={require('../../images/background_image.jpg')} style={styles.container}>

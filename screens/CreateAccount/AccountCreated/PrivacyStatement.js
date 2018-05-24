@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { View, ScrollView, KeyboardAvoidingView, StyleSheet, Text, ImageBackground, Image, Button, TouchableOpacity, TextInput } from 'react-native';
 import { Icon } from 'react-native-elements';
 
+import MessageFooter from '../../Components/MessageFooter';
+
 export default class PrivacyStatement extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
@@ -16,20 +18,6 @@ export default class PrivacyStatement extends Component {
       },
     }
   };
-
-  //TODO: make this function a separate file
-  renderIf(condition, content) {
-    if (condition) {
-      return content;
-    } else {
-      return null;
-    }
-  }
-
-  //TODO: update message count
-  state = {
-    messageCount: 0,
-  }
 
   render() {
     return(
@@ -86,7 +74,7 @@ export default class PrivacyStatement extends Component {
           </Text>
         </ScrollView>
 
-        <View style={styles.footer}>
+        {/* <View style={styles.footer}>
           <TouchableOpacity style={styles.footerButton} onPress={() => {}}>
             <Text style={styles.footerButtonText}>messages</Text>
             <View style={styles.footerIcons}>
@@ -106,7 +94,9 @@ export default class PrivacyStatement extends Component {
               />
             </View>
           </TouchableOpacity>
-        </View>
+        </View> */}
+
+        <MessageFooter/>
       </View>
     );
   }
@@ -128,34 +118,34 @@ const styles = StyleSheet.create({
     color: '#bdbdbd',
     marginBottom: 10,
   },
-  footer: {
-    flexDirection: 'row',
-  },
-  footerButton: {
-    flex: 1,
-    borderTopWidth: 2,
-    borderColor: '#bdbdbd',
-    paddingVertical: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  footerButtonText: {
-    color: '#bdbdbd',
-    alignSelf: 'center',
-  },
-  footerIcons: {
-    flexDirection:'row',
-    alignSelf:'flex-end',
-    paddingRight:5,
-  },
-  notification: {
-    borderRadius:50,
-    width:20,
-    height:20,
-    marginRight:5,
-    backgroundColor:'#bdbdbd',
-    alignSelf:'center',
-    alignItems:'center',
-  },
+  // footer: {
+  //   flexDirection: 'row',
+  // },
+  // footerButton: {
+  //   flex: 1,
+  //   borderTopWidth: 2,
+  //   borderColor: '#bdbdbd',
+  //   paddingVertical: 10,
+  //   flexDirection: 'row',
+  //   justifyContent: 'space-between',
+  //   alignItems: 'center',
+  // },
+  // footerButtonText: {
+  //   color: '#bdbdbd',
+  //   alignSelf: 'center',
+  // },
+  // footerIcons: {
+  //   flexDirection:'row',
+  //   alignSelf:'flex-end',
+  //   paddingRight:5,
+  // },
+  // notification: {
+  //   borderRadius:50,
+  //   width:20,
+  //   height:20,
+  //   marginRight:5,
+  //   backgroundColor:'#bdbdbd',
+  //   alignSelf:'center',
+  //   alignItems:'center',
+  // },
 })

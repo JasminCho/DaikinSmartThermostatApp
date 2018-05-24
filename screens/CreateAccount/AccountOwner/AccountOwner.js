@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { View, KeyboardAvoidingView, StyleSheet, Text, ImageBackground, Image, Button, TouchableOpacity, TextInput } from 'react-native';
 import { Icon } from 'react-native-elements';
 
+import StepsFooter from '../../Components/StepsFooter';
+
 export default class AccountOwner extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
@@ -22,6 +24,7 @@ export default class AccountOwner extends Component {
     ownerName: "not entered",
     accountEmail: "not entered",
     accountPassword: "not entered",
+    currentPage: 1,
   }
 
   render() {
@@ -59,7 +62,6 @@ export default class AccountOwner extends Component {
         </View>
 
         <View style={styles.footer}>
-          {/* <PageControl style={styles.footerPages} numberOfPages={4}  /> */}
           <Text style={styles.footerText}>next step</Text>
           <Icon name='arrow-forward'
             size={26}
@@ -67,6 +69,8 @@ export default class AccountOwner extends Component {
             underlayColor='black'
             onPress={() => {this.props.navigation.navigate('Home')}}/>
         </View>
+
+        {/* <StepsFooter /> */}
 
       </View>
     );

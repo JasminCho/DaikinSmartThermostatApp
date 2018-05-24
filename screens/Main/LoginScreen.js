@@ -32,7 +32,7 @@ export default class LoginScreen extends Component {
             secureTextEntry={true}
             placeholderTextColor='#03a9f4'
           />
-          <TouchableOpacity style={styles.loginButton} onPress={() => {}}>
+          <TouchableOpacity style={styles.loginButton} onPress={() => {this.props.navigation.navigate('Account')}}>
             <Text style={styles.loginButtonText}>login</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={() => console.log('An email with a temporary password has been sent to you.')}>

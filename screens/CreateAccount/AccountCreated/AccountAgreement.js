@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { View, KeyboardAvoidingView, StyleSheet, Text, ImageBackground, Image, Button, TouchableOpacity, TextInput } from 'react-native';
 import { Icon } from 'react-native-elements';
 
+import AgreeFooter from '../../Components/AgreeFooter';
+
 export default class AccountAgreement extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
@@ -122,10 +124,13 @@ export default class AccountAgreement extends Component {
             <Text style={styles.footerButtonText}>cancel</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.footerButton} onPress={() => {}}>
+          <TouchableOpacity style={styles.footerButton} onPress={() => {this.props.navigation.navigate('Account')}}>
             <Text style={styles.footerButtonText}>I agree</Text>
           </TouchableOpacity>
         </View>
+
+        {/* TODO: Navigation doesn't work */}
+        {/* <AgreeFooter/> */}
 
       </View>
     );
@@ -164,10 +169,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   footer: {
-    flex: 1,
     flexDirection: 'row',
-    alignItems: 'flex-end',
-    // justifyContent: 'space-between',
   },
   footerButton: {
     flex: 1,
@@ -179,4 +181,5 @@ const styles = StyleSheet.create({
     color: '#bdbdbd',
     alignSelf: 'center',
   },
+
 })

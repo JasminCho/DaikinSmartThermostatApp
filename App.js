@@ -108,7 +108,7 @@ Overall App navigation
 
 // TESTING NAVIGATION
 import React from "react";
-import { StatusBar, View } from "react-native";
+import { StatusBar, View, StyleSheet, Text } from "react-native";
 import {
   createStackNavigator,
   createSwitchNavigator,
@@ -139,6 +139,14 @@ import TermsOfService from './screens/CreateAccount/AccountCreated/TermsOfServic
 import PrivacyStatement from './screens/CreateAccount/AccountCreated/PrivacyStatement';
 import OtherNotices from './screens/CreateAccount/AccountCreated/OtherNotices';
 
+// Account Homes
+import AccountHomes from './screens/Homes/AccountHomes';
+
+// Testing Footers
+// import MessageFooter from './screens/Components/MessageFooter';
+// import AgreeFooter from './screens/Components/AgreeFooter';
+// import StepsFooter from './screens/Components/StepsFooter';
+
 const OwnerStack = createStackNavigator (
   {
     AccountOwner: AccountOwner,
@@ -151,7 +159,7 @@ const OwnerStack = createStackNavigator (
   }
 );
 
-const HomeStack = createStackNavigator (
+const HomeInfoStack = createStackNavigator (
   {
     HomeInfo: HomeInfo,
     HomeName: HomeName,
@@ -193,6 +201,33 @@ const LegalNoticesStack = createStackNavigator (
   }
 )
 
+const AccountHomesStack = createStackNavigator (
+  {
+    AccountHomes: AccountHomes,
+    AddHome: HomeInfoStack,
+  }
+)
+
+// AccountHomeScreen navs to stacks to different homes, add home stack, account stack, and messages stack
+const AccountStack = createStackNavigator (
+  {
+    AccountHomesStack: AccountHomesStack,
+  },
+  {
+    navigationOptions: {
+      headerTitle: 'Daikin Smart Thermostat',
+      headerStyle: {
+        backgroundColor: 'black',
+        height: 20,
+      },
+      headerTintColor: '#bdbdbd',
+      headerTitleStyle: {
+        fontSize: 18,
+      },
+    },
+  }
+)
+
 const AccountCreatedStack = createStackNavigator (
   {
     Agreement: AgreementStack,
@@ -215,8 +250,9 @@ const AccountCreatedStack = createStackNavigator (
 const CreateAccountStack = createStackNavigator (
   {
     Owner: OwnerStack,
-    Home: HomeStack,
+    Home: HomeInfoStack,
     ConnectThermostat: ConnectThermostatStack,
+    Agreement: AgreementStack,
   },
   {
     navigationOptions: {
@@ -238,7 +274,8 @@ const AppNavigator = createStackNavigator(
     Main: StartScreen,
     Login: LoginScreen,
     CreateAccount: CreateAccountStack,
-    AccountCreated: AccountCreatedStack,
+    // AccountCreated: AccountCreatedStack,
+    Account: AccountStack,
   },
   {
     headerMode: 'none',
@@ -252,12 +289,37 @@ export default class App extends React.Component {
   render() {
     return (
       <AppNavigator />
-      // <AccountCreatedStack />
-      // <PrivacyStatement />
+
+
+// Testing
+  // <AccountHomesStack />
+// <AccountCreatedStack />
+// <PrivacyStatement />
+      // <View style={styles.container}>
+      //   <View style={{flex:1,}}>
+      //     <Text style={{color:'white'}}>Howdy</Text>
+      //   </View>
+      //
+      //   <StepsFooter/>
+      //
+      //   <MessageFooter />
+      //
+      //   <AgreeFooter/>
+      //
+      // </View>
     );
   }
 }
 
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'black',
+    flex: 1,
+    flexDirection: 'column',
+    paddingLeft: 30,
+    paddingTop: 30,
+  },
+})
 
 
 

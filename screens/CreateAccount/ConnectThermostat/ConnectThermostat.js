@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { View, KeyboardAvoidingView, StyleSheet, Text, ImageBackground, Image, Button, TouchableOpacity, TextInput } from 'react-native';
 import { Icon } from 'react-native-elements';
 
+import StepsFooter from '../../Components/StepsFooter';
+
 export default class HomeInfo extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
