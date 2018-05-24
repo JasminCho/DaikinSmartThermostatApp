@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Button, TextInput, TouchableHighlight } from 'react-native';
 
-
 import PageControl from 'react-native-page-control';
 import { Icon } from 'react-native-elements';
 import { Pages } from 'react-native-pages';

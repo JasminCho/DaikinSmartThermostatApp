@@ -9,9 +9,9 @@ import { StackNavigator } from 'react-navigation';
 
 const AccountCreated = ({ navigation }) => (
   <View style={styles.container} behavior="padding">
-    <View style={styles.header}>
+    {/* <View style={styles.header}>
       <Text style={styles.headerText}>create account</Text>
-    </View>
+    </View> */}
 
     <View style={styles.title}>
       <Text style={styles.titleText}>account created</Text>
@@ -35,7 +35,7 @@ const AccountCreated = ({ navigation }) => (
     </View>
 
     <View style={styles.footer}>
-      <PageControl style={styles.footerPages} numberOfPages={4}  />
+      {/* <PageControl style={styles.footerPages} numberOfPages={4}  /> */}
       <Text style={styles.footerText}>login</Text>
       <Icon name='arrow-forward'
         size={26}

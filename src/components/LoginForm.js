@@ -24,30 +24,6 @@ const LoginForm = ({ navigation }) => (
 
 export default LoginForm;
 
-// export default class LoginForm extends Component<{}> {
-//   render() {
-//     const handlePress = () => false
-//     return(
-//       <KeyboardAvoidingView style={styles.container} behavior="padding" keyboardVerticalOffset={150}>
-//         <TextInput style={styles.inputBox} underlineColorAndroid={'transparent'} placeholder="email" placeholderTextColor='#03a9f4'/>
-//         <TextInput style={styles.inputBox} underlineColorAndroid={'transparent'} placeholder="password" secureTextEntry={true} placeholderTextColor='#03a9f4'/>
-//
-//         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Homes')}>
-//           <View>
-//             <Text style={{fontSize:16, color: 'white'}}>login</Text>
-//           </View>
-//         </TouchableOpacity>
-//
-//         <TouchableOpacity style={styles.button} onPress={() => console.log('An email with a temporary password has been sent to you.')}>
-//           <View>
-//             <Text style={{fontSize:16, color: 'white'}}>forgot password</Text>
-//           </View>
-//         </TouchableOpacity>
-//       </KeyboardAvoidingView>
-//     )
-//   }
-// }
-
 const styles = StyleSheet.create({
   container : {
     flex: 1,
