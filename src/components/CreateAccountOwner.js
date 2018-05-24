@@ -1,57 +1,69 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, StatusBar, Button } from 'react-native';
 
-import ThermostatCode from '../components/ThermostatCode';
-
 import PageControl from 'react-native-page-control';
 import { Icon } from 'react-native-elements';
 import { Pages } from 'react-native-pages';
 import { StackNavigator } from 'react-navigation';
 
-const CreateAccountThermostat = ({ navigation }) => (
+import CreateAccountHome from '../components/CreateAccountHome';
+
+const CreateAccountOwner = ({ navigation }) => (
   <View style={styles.container} behavior="padding">
     {/* <View style={styles.header}>
       <Text style={styles.headerText}>create account</Text>
     </View> */}
 
+    {/* TODO: Make title a component to share and uses list of navigation */}
     <View style={styles.title}>
-      <Text style={styles.titleText}>connect to thermostat</Text>
+      <Text style={styles.titleText}>account owner</Text>
     </View>
-
-    <Text style={styles.headerText}>With wifi enabled on your thermostat, go to:
-      air quality/settings/configuration/account. Enter the six digit number
-      displayed on the account screen:
-    </Text>
 
     <View style={styles.steps}>
       <View style={styles.step}>
-        <Text style={styles.stepText}>enter code</Text>
+        <Text style={styles.stepText}>name</Text>
+        <Text style={styles.stepStatus}>not entered</Text>
         <Icon name='chevron-right'
           size={30}
           color='#bdbdbd'
           underlayColor='black'
-          onPress={() => navigation.navigate('ThermostatCode')}/>
+          onPress={() => navigation.navigate('NamePage')}/>
+      </View>
+
+      <View style={styles.step}>
+        <Text style={styles.stepText}>email</Text>
+        <Text style={styles.stepStatus}>not entered</Text>
+        <Icon name='chevron-right'
+          size={30}
+          color='#bdbdbd'
+          underlayColor='black'
+          onPress={() => navigation.navigate('EmailPage')}/>
+      </View>
+
+      <View style={styles.step}>
+        <Text style={styles.stepText}>account password</Text>
+        <Text style={styles.stepStatus}>not entered</Text>
+        <Icon name='chevron-right'
+          size={30}
+          color='#bdbdbd'
+          underlayColor='black'
+          onPress={() => navigation.navigate('Password')}/>
       </View>
     </View>
 
-    {/* <View style={styles.footer}>
-      <Icon name='arrow-back'
-        size={26}
-        color='#bdbdbd'
-        underlayColor='black'
-        onPress={() => navigation.navigate('CreateAccountHome')}/>
-      <PageControl style={styles.footerPages} numberOfPages={4}  />
+    <View style={styles.footer}>
+      {/* <PageControl style={styles.footerPages} numberOfPages={4}  /> */}
       <Text style={styles.footerText}>next step</Text>
       <Icon name='arrow-forward'
         size={26}
         color='#bdbdbd'
         underlayColor='black'
-        onPress={() => navigation.navigate('AccountCreated')}/>
-    </View> */}
+        onPress={() => navigation.navigate('CreateAccountHome')}/>
+    </View>
   </View>
 );
 
-export default CreateAccountThermostat;
+export default CreateAccountOwner;
 
 const styles = StyleSheet.create({
   // header: {

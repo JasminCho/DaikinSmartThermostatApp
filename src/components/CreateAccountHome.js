@@ -11,9 +11,9 @@ import { StackNavigator } from 'react-navigation';
 
 const CreateAccountHome = ({ navigation }) => (
   <View style={styles.container} behavior="padding">
-    <View style={styles.header}>
+    {/* <View style={styles.header}>
       <Text style={styles.headerText}>create account</Text>
-    </View>
+    </View> */}
 
     <View style={styles.title}>
       <Text style={styles.titleText}>home</Text>
@@ -54,7 +54,7 @@ const CreateAccountHome = ({ navigation }) => (
       </View>
     </View>
 
-    <View style={styles.footer}>
+    {/* <View style={styles.footer}>
       <Icon name='arrow-back'
         size={26}
         color='#bdbdbd'
@@ -67,23 +67,23 @@ const CreateAccountHome = ({ navigation }) => (
         color='#bdbdbd'
         underlayColor='black'
         onPress={() => navigation.navigate('CreateAccountThermostat')}/>
-    </View>
+    </View> */}
   </View>
 );
 
 export default CreateAccountHome;
 
 const styles = StyleSheet.create({
-  header: {
-    flex: .5,
-    marginTop: 20,
-    paddingLeft: 10,
-  },
-  headerText: {
-    color: '#bdbdbd',
-    fontSize: 18,
-    marginLeft: 10,
-  },
+  // header: {
+  //   flex: .5,
+  //   marginTop: 20,
+  //   paddingLeft: 10,
+  // },
+  // headerText: {
+  //   color: '#bdbdbd',
+  //   fontSize: 18,
+  //   marginLeft: 10,
+  // },
   title: {
     flex: 1,
     paddingLeft: 10,
