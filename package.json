@@ -1,5 +1,5 @@
 {
-  "name": "testProject",
+  "name": "DaikinSmartThermostatApp",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -33,7 +33,7 @@
     "react-native-page-control": "^1.1.1",
     "react-native-pages": "^0.7.0",
     "react-native-vector-icons": "^4.5.0",
-    "react-navigation": "^1.5.8",
+    "react-navigation": "^2.0.2",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2"
   }

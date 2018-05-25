@@ -9,20 +9,20 @@
 // import Thermostats from './src/pages/Thermostats';
 
 //Components
-import Name from './src/components/Name';
-import Email from './src/components/Email';
-import Password from './src/components/Password';
-import Messages from './src/components/Messages';
-import AddHome from './src/components/AddHome';
-import HomeName from './src/components/HomeName';
-import Address from './src/components/Address';
-import AddThermostat from './src/components/AddThermostat';
-import ThermostatCode from './src/components/ThermostatCode';
-import CreateAccountOwner from './src/components/CreateAccountOwner';
-import CreateAccountHome from './src/components/CreateAccountHome';
-import CreateAccountThermostat from './src/components/CreateAccountThermostat';
-import AccountCreated from './src/components/AccountCreated';
-import AccountCreatedLogin from './src/components/AccountCreatedLogin';
+// import Name from './src/components/Name';
+// import Email from './src/components/Email';
+// import Password from './src/components/Password';
+// import Messages from './src/components/Messages';
+// import AddHome from './src/components/AddHome';
+// import HomeName from './src/components/HomeName';
+// import Address from './src/components/Address';
+// import AddThermostat from './src/components/AddThermostat';
+// import ThermostatCode from './src/components/ThermostatCode';
+// import CreateAccountOwner from './src/components/CreateAccountOwner';
+// import CreateAccountHome from './src/components/CreateAccountHome';
+// import CreateAccountThermostat from './src/components/CreateAccountThermostat';
+// import AccountCreated from './src/components/AccountCreated';
+// import AccountCreatedLogin from './src/components/AccountCreatedLogin';
 
 // export default class App extends React.Component {
 //   render() {
@@ -346,7 +346,7 @@ const styles = StyleSheet.create({
 //   { headerMode: 'none' }
 // );
 //
-// AppRegistry.registerComponent('testProject', () => RootStack);
+// AppRegistry.registerComponent('DaikinSmartThermostatApp', () => RootStack);
 //
 // const styles = StyleSheet.create({
 //   container: {
