@@ -115,6 +115,8 @@ import {
   createBottomTabNavigator,
 } from "react-navigation";
 
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 /* Test Thermostat App Navigation */
 import StartScreen from './screens/Main/StartScreen';
 import LoginScreen from './screens/Main/LoginScreen';
@@ -289,12 +291,66 @@ const AppNavigator = createStackNavigator(
   }
 );
 
+import PrimaryThermostatScreen from './screens/Thermostat/PrimaryThermostatScreen';
+import AdjustThermostatScreen from './screens/Thermostat/AdjustThermostatScreen';
+import ScheduleThermostatScreen from './screens/Thermostat/ScheduleThermostatScreen';
+import AwayThermostatScreen from './screens/Thermostat/AwayThermostatScreen';
+import StatusThermostatScreen from './screens/Thermostat/StatusThermostatScreen';
+
+// Testing bottom tab navigation
+const ThermostatTabNavigator = createBottomTabNavigator (
+  {
+    Primary: PrimaryThermostatScreen,
+    Adjust: AdjustThermostatScreen,
+    Schedule: ScheduleThermostatScreen,
+    Away: AwayThermostatScreen,
+    Status: StatusThermostatScreen,
+  },
+  {
+    navigationOptions: ({ navigation }) => ({
+      tabBarIcon: ({ focused, tintColor }) => {
+        const { routeName } = navigation.state;
+        let iconName;
+        if (routeName === 'Primary') {
+          iconName = `home-outline`;
+        } else if (routeName === 'Adjust') {
+          iconName = `vanish`;
+        } else if (routeName === 'Schedule') {
+          iconName = `calendar-blank`;
+        } else if (routeName === 'Away') {
+          iconName = `leaf`;
+        } else if (routeName === 'Status') {
+          iconName = `waves`;
+        }
+
+        // You can return any component that you like here! We usually use an
+        // icon component from react-native-vector-icons
+        return <Icon name={iconName} size={25} color={tintColor} />;
+      },
+    }),
+    tabBarOptions: {
+      showLabel: false,
+      activeTintColor: 'white',
+      inactiveTintColor: 'gray',
+      style: {
+        backgroundColor: 'black',
+        paddingHorizontal: 60,
+      },
+    },
+  },
+  {
+    swipeEnabled: true,
+  },
+)
+
+
 export default class App extends React.Component {
   render() {
     return (
       // <AppNavigator />
       // Testing
-      <HomeThermostats />
+      // <HomeThermostats />
+      <ThermostatTabNavigator/>
 
     );
   }
@@ -309,8 +365,6 @@ const styles = StyleSheet.create({
     paddingTop: 30,
   },
 })
-
-
 
 
 // const RootStack = StackNavigator({
