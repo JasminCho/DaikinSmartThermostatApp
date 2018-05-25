@@ -147,6 +147,10 @@ import AccountHomes from './screens/Homes/AccountHomes';
 // import AgreeFooter from './screens/Components/AgreeFooter';
 // import StepsFooter from './screens/Components/StepsFooter';
 
+// Testing pages
+import Messages from './screens/Messages/Messages';
+import HomeThermostats from './screens/Homes/HomeThermostats';
+
 const OwnerStack = createStackNavigator (
   {
     AccountOwner: AccountOwner,
@@ -275,7 +279,7 @@ const AppNavigator = createStackNavigator(
     Login: LoginScreen,
     CreateAccount: CreateAccountStack,
     // AccountCreated: AccountCreatedStack,
-    Account: AccountStack,
+    // Account: AccountStack,
   },
   {
     headerMode: 'none',
@@ -288,25 +292,10 @@ const AppNavigator = createStackNavigator(
 export default class App extends React.Component {
   render() {
     return (
-      <AppNavigator />
+      // <AppNavigator />
+      // Testing
+      <HomeThermostats />
 
-
-// Testing
-  // <AccountHomesStack />
-// <AccountCreatedStack />
-// <PrivacyStatement />
-      // <View style={styles.container}>
-      //   <View style={{flex:1,}}>
-      //     <Text style={{color:'white'}}>Howdy</Text>
-      //   </View>
-      //
-      //   <StepsFooter/>
-      //
-      //   <MessageFooter />
-      //
-      //   <AgreeFooter/>
-      //
-      // </View>
     );
   }
 }
@@ -320,6 +309,7 @@ const styles = StyleSheet.create({
     paddingTop: 30,
   },
 })
+
 
 
 
