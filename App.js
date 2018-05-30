@@ -308,11 +308,15 @@ const ThermostatTabNavigator = createBottomTabNavigator (
 export default class App extends React.Component {
   render() {
     return (
-      <AppNavigator />
+      // <AppNavigator />
       // Testing
       // <HomeThermostats />
       // <ThermostatTabNavigator/>
-
+      <View>
+        <Text>
+          What
+        </Text>
+      </View>
     );
   }
 }

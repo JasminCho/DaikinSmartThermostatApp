@@ -21,10 +21,9 @@
     "test": "jest --coverage"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "jest-expo"
   },
   "dependencies": {
-    "axios": "^0.18.0",
     "expo": "^25.0.0",
     "puppeteer": "^1.1.1",
     "react": "16.2.0",
