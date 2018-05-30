@@ -2,6 +2,26 @@ import React, { Component } from 'react';
 import { View, KeyboardAvoidingView, StyleSheet, Text, ImageBackground, Image, Button, TouchableOpacity, TextInput } from 'react-native';
 
 export default class LoginScreen extends Component {
+  state = {
+    username: '',
+    password: '',
+  }
+
+  handleUsernameUpdate = username => {
+    this.setState({username})
+  }
+
+  handlePasswordUpdate = password => {
+    this.setState({password})
+  }
+
+  login = async () => {
+    
+    this.props.navigation.navigate('Account')
+    console.log(this.state.username)
+    console.log(this.state.password)
+  }
+
   render() {
     return(
       // <View style={styles.container}>
@@ -24,6 +44,8 @@ export default class LoginScreen extends Component {
             keyboardType='email-address'
             placeholderTextColor='#03a9f4'
             autoFocus={true}
+            value={this.state.username}
+            onChangeText={this.handleUsernameUpdate}
           />
           <TextInput
             style={styles.inputBox}
@@ -31,8 +53,12 @@ export default class LoginScreen extends Component {
             placeholder="password"
             secureTextEntry={true}
             placeholderTextColor='#03a9f4'
+            autoCapitalize='none'
+            autoCorrect={false}
+            value={this.state.password}
+            onChangeText={this.handlePasswordUpdate}
           />
-          <TouchableOpacity style={styles.loginButton} onPress={() => {this.props.navigation.navigate('Account')}}>
+          <TouchableOpacity style={styles.loginButton} onPress={this.login}>
             <Text style={styles.loginButtonText}>login</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={() => console.log('An email with a temporary password has been sent to you.')}>

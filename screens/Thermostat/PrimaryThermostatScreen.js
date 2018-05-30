@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { View, ScrollView, StyleSheet, Text, ImageBackground, Image, Button, TouchableOpacity, TextInput } from 'react-native';
-import { Icon } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import MessageFooter from '../Components/MessageFooter';
+
+import ScalableText from 'react-native-text';
 
 export default class PrimaryThermostatScreen extends Component {
   static navigationOptions = ({ navigation }) => {
@@ -32,9 +34,38 @@ export default class PrimaryThermostatScreen extends Component {
   render() {
     return(
       <View style={styles.container}>
-        <Text style={{color:'white', alignSelf:'center', fontSize:50}}>
-          {this.state.temp}
-        </Text>
+
+        <View >
+          <View style={{}}>
+            <Icon name='fire'
+              size={36}
+              color='#bdbdbd'
+              underlayColor='black'
+              onPress={() => {}}
+            />
+          </View>
+          <View style={{marginLeft:15, marginTop:15, position:'absolute'}}>
+            <Icon name='snowflake'
+              size={36}
+              color='#bdbdbd'
+              underlayColor='black'
+              onPress={() => {}}
+            />
+          </View>
+
+
+        </View>
+        <View style={styles.temperatureContainer}>
+          <Text numberOfLines={1} style={{color:'white', fontSize: 170}}>
+            {this.state.temp}
+          </Text>
+        </View>
+        <View>
+          <Text>
+            ICON
+          </Text>
+        </View>
+
       </View>
     );
   }
@@ -42,47 +73,18 @@ export default class PrimaryThermostatScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'black',
     flex: 1,
-    flexDirection: 'column',
+    backgroundColor: 'black',
+    flexDirection: 'row',
     paddingLeft: 30,
     paddingTop: 30,
+    justifyContent: 'center',
   },
-  inputBox : {
-    paddingVertical: 5,
-    paddingLeft: 10,
-    marginBottom: 10,
-    fontSize: 16,
-  },
-  description: {
-    color: '#bdbdbd',
-    // fontSize: 18,
-    marginBottom: 10,
-  },
-  step: {
+  temperatureContainer: {
+    flex:1,
+    backgroundColor: 'blue',
     flexDirection: 'row',
-    borderTopWidth: 2.5,
-    borderColor: '#bdbdbd',
-    paddingVertical: 5,
+    justifyContent: 'center',
     alignItems: 'center',
-  },
-  stepText: {
-    color: '#bdbdbd',
-    flex: 1,
-    justifyContent: 'space-between',
-  },
-  footer: {
-    flexDirection: 'row',
-  },
-  footerButton: {
-    flex: 1,
-    borderTopWidth: 2,
-    borderColor: '#bdbdbd',
-    paddingVertical: 10,
-  },
-  footerButtonText: {
-    color: '#bdbdbd',
-    alignSelf: 'center',
-  },
-
+  }
 })
