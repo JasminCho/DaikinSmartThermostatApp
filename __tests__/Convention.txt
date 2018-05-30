@@ -1,5 +1,5 @@
 Clone the structure of your app and make tests for every page that needs it
-ex: HomePage.react-test.js
+ex: HomePage.test.js
 
 Run tests with yarn test
 

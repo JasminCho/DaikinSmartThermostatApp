@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "babel-core": "^6.26.3",
     "babel-jest": "^23.0.1",
     "babel-preset-react-native": "^4.0.0",
     "jest": "^22.4.4",
@@ -11,8 +10,7 @@
     "jest-react-native": "^18.0.0",
     "react-native-scripts": "1.11.1",
     "react-test-renderer": "^16.2.0",
-    "redux-devtools": "^3.4.1",
-    "regenerator-runtime": "^0.11.1"
+    "redux-devtools": "^3.4.1"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
@@ -20,12 +18,13 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --coverage"
+    "test": "jest --coverage"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "react-native"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "expo": "^25.0.0",
     "puppeteer": "^1.1.1",
     "react": "16.2.0",
