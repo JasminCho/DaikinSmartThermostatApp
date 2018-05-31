@@ -16,7 +16,7 @@ export default class LoginScreen extends Component {
   }
 
   login = async () => {
-    
+
     this.props.navigation.navigate('Account')
     console.log(this.state.username)
     console.log(this.state.password)
@@ -29,10 +29,10 @@ export default class LoginScreen extends Component {
       //   <Button title="Back" onPress={() => this.props.navigation.navigate('Main')} />
       // </View>
 
-      <ImageBackground source={require('../../images/background_image.jpg')} style={styles.container}>
+      <ImageBackground source={require('../../src/assets/images/background_image.jpg')} style={styles.container}>
         {/* Logo */}
         <View style={styles.logo}>
-          <Image source={require('../../images/daikin-comfort-logo-crop-u1511.png')} />
+          <Image source={require('../../src/assets/images/daikin-comfort-logo-crop-u1511.png')} />
           <Text style={styles.logoText}>smart thermostat</Text>
         </View>
         {/* Buttons */}

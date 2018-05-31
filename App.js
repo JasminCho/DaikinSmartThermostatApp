@@ -305,21 +305,23 @@ const ThermostatTabNavigator = createBottomTabNavigator (
   },
 )
 
-export default class App extends React.Component {
-  render() {
-    return (
-      // <AppNavigator />
-      // Testing
-      // <HomeThermostats />
-      // <ThermostatTabNavigator/>
-      <View>
-        <Text>
-          What
-        </Text>
-      </View>
-    );
-  }
-}
+// export default class App extends React.Component {
+//   render() {
+//     return (
+//       // <AppNavigator />
+//       // Testing
+//       // <HomeThermostats />
+//       // <ThermostatTabNavigator/>
+//       <View>
+//         <Text>
+//           What
+//         </Text>
+//       </View>
+//     );
+//   }
+// }
+
+AppRegistry.registerComponent('DaikinSmartThermostatApp', () => AppNavigator);
 
 const styles = StyleSheet.create({
   container: {
@@ -330,8 +332,3 @@ const styles = StyleSheet.create({
     paddingTop: 30,
   },
 })
-
-
-//
-// AppRegistry.registerComponent('DaikinSmartThermostatApp', () => App);
-//
