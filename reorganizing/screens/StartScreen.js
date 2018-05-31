@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 
-export default class StartScreen extends Component {
+import Start from '../components/Start/index';
+
+class StartScreen extends Component {
   render() {
     return(
-      // Start Component
+      <Start />
     );
   }
 }
+
+export default StartScreen;
