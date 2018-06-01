@@ -325,11 +325,13 @@ Overall App navigation
 
 import React from "react";
 import LoginScreen from './reorganizing/screens/LoginScreen';
+import StartScreen from './reorganizing/screens/StartScreen';
+import AccountOwnerScreen from './reorganizing/screens/AccountOwnerScreen';
 
 export default class App extends React.Component {
   render() {
     return (
-      <LoginScreen />
+      <AccountOwnerScreen />
     );
   }
 }

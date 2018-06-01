@@ -30,7 +30,7 @@ LoginField.propTypes = {
   keyboardType: PropTypes.string,
   focusBool: PropTypes.bool,
   secureBool: PropTypes.bool,
-  value: PropTypes.object,
+  value: PropTypes.string,
   handleValueUpdate: PropTypes.func.isRequired,
 };
 

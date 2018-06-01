@@ -17,13 +17,13 @@ class Start extends Component {
         <View>
           <StartScreenButton
             text="login"
-            handleClick={() => { alert("You touched me!") }}
+            handleClick={() => { alert("Go to login screen") }}
             buttonColor="rgba(250,250,250,0.9)"
             textColor="rgb(3,169,244)"
           />
           <StartScreenButton
             text="create account"
-            handleClick={() => { alert("You also touched me") }}
+            handleClick={() => { alert("Go to create account screen") }}
             buttonColor="rgba(250,250,250,0.9)"
             textColor="rgb(3,169,244)"
           />

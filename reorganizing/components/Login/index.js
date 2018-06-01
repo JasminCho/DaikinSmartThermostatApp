@@ -24,6 +24,10 @@ class Login extends Component {
     alert(`Username: ${this.state.username} Password: ${this.state.password}`)
   }
 
+  handleForgotPassword = () => {
+    alert("An email with a temporary password has been sent to you.")
+  }
+
   render() {
     return(
       <ImageBackground source={image} style={styles.container}>
@@ -31,7 +35,7 @@ class Login extends Component {
         <KeyboardAvoidingView behavior="padding">
           <LoginField
             placeholder="email address"
-            keyboardType="email-address"
+            keyboardType='email-address'
             focusBool={true}
             value={this.state.username}
             handleValueUpdate={(username) => this.setState({username})}
@@ -50,7 +54,7 @@ class Login extends Component {
           />
           <StartScreenButton
             text="forgot password"
-            handleClick={() => { alert("An email with a temporary password has been sent to you.") }}
+            handleClick={this.handleForgotPassword}
             buttonColor="rgba(250,250,250,0.9)"
             textColor="rgb(3,169,244)"
           />
