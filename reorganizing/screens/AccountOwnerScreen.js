@@ -9,6 +9,10 @@ class AccountOwnerScreen extends Component {
       // make this change when in diff stack
       title: "create account",
       subTitle: "account owner",
+      showFooter: true,
+      footerType: "steps",
+      pageNum: 1,
+      totalPages: 4,
     };
   }
 
@@ -17,6 +21,10 @@ class AccountOwnerScreen extends Component {
       <ScreenContainer
         title={this.state.title}
         subTitle={this.state.subTitle}
+        showFooter={this.state.showFooter}
+        footerType={this.state.footerType}
+        pageNum={this.state.pageNum}
+        totalPages={this.state.totalPages}
       />
     );
   }

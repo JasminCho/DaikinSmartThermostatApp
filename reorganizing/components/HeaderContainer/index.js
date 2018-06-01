@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 
 import styles from './styles';
 
-class HeaderBar extends Component {
+class HeaderContainer extends Component {
   render() {
     const { text, textColor, size } = this.props;
     return(
@@ -17,10 +17,10 @@ class HeaderBar extends Component {
   }
 }
 
-HeaderBar.propTypes = {
+HeaderContainer.propTypes = {
   text: PropTypes.string.isRequired,
   textColor: PropTypes.string.isRequired,
   size: PropTypes.number.isRequired,
 };
 
-export default HeaderBar;
+export default HeaderContainer;
