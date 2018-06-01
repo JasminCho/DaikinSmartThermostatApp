@@ -323,7 +323,7 @@ Overall App navigation
 
 // AppRegistry.registerComponent('DaikinSmartThermostatApp', () => AppNavigator);
 
-
+import React from "react";
 import LoginScreen from './reorganizing/screens/LoginScreen';
 
 export default class App extends React.Component {

@@ -27,7 +27,7 @@
     "expo": "^25.0.0",
     "puppeteer": "^1.1.1",
     "react": "16.2.0",
-    "react-native": "0.52.0",
+    "react-native": "^0.54.2",
     "react-native-action-button": "^2.8.4",
     "react-native-code-input": "^1.0.6",
     "react-native-complex-user-register": "^1.0.3",
