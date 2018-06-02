@@ -8,9 +8,9 @@ export default styles = StyleSheet.create({
     borderColor: '#bdbdbd',
     paddingVertical: 10,
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
   },
   text: {
-    color: 'white',
+    color: '#bdbdbd',
   },
 })

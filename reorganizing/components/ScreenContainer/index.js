@@ -12,7 +12,7 @@ import styles from './styles';
 // Container Wrapper for the majority of the app screens
 class ScreenContainer extends Component {
   render() {
-    const { title, subTitle, showFooter, footerType, pageNum, totalPages } = this.props;
+    const { title, subTitle, screen, showFooter, footerType, pageNum, totalPages } = this.props;
     return(
       <View style={styles.container}>
         {/* Title */}
@@ -22,7 +22,7 @@ class ScreenContainer extends Component {
         <HeaderContainer text={subTitle} textColor="white" size={26}/>
 
         {/* Body */}
-        <BodyContainer />
+        <BodyContainer screen={screen}/>
 
         {/* Footer */}
         {
@@ -40,6 +40,7 @@ class ScreenContainer extends Component {
 ScreenContainer.propTypes = {
   title: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,
+  screen: PropTypes.string.isRequired,
   showFooter: PropTypes.bool.isRequired,
   footerType: PropTypes.string,
   pageNum: PropTypes.number,

@@ -327,13 +327,21 @@ import React, { Component } from "react";
 import LoginScreen from './reorganizing/screens/LoginScreen';
 import StartScreen from './reorganizing/screens/StartScreen';
 import AccountOwnerScreen from './reorganizing/screens/AccountOwnerScreen';
+import AccountHomeScreen from './reorganizing/screens/AccountHomeScreen';
+import AccountThermostatScreen from './reorganizing/screens/AccountThermostatScreen';
+import AccountCreatedScreen from './reorganizing/screens/AccountCreatedScreen';
+import AfterCreatedLoginScreen from './reorganizing/screens/AfterCreatedLoginScreen';
 
 export default class App extends Component {
   render() {
     return(
       // <LoginScreen />
       // <StartScreen />
-      <AccountOwnerScreen />
+      // <AccountOwnerScreen />
+      // <AccountHomeScreen />
+      // <AccountThermostatScreen />
+      // <AccountCreatedScreen />
+      <AfterCreatedLoginScreen/>
     );
   }
 }

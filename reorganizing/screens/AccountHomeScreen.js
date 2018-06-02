@@ -2,17 +2,17 @@ import React, { Component } from "react";
 
 import ScreenContainer from '../components/ScreenContainer/index';
 
-class AccountOwnerScreen extends Component {
+class AccountHomeScreen extends Component {
   constructor() {
     super();
     this.state = {
       // make this change when in diff stack
       title: "create account",
-      subTitle: "account owner",
-      screen: "AccountOwnerInfo",
+      subTitle: "home",
+      screen: "AccountHomeInfo",
       showFooter: true,
       footerType: "steps",
-      pageNum: 1,
+      pageNum: 2,
       totalPages: 4,
     };
   }
@@ -32,4 +32,4 @@ class AccountOwnerScreen extends Component {
   }
 }
 
-export default AccountOwnerScreen;
+export default AccountHomeScreen;

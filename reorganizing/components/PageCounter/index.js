@@ -21,7 +21,6 @@ class PageCounter extends Component {
               size={26}
               color="#bdbdbd"
               underlayColor='white'
-              containerStyle={styles.icon}
               onPress={() => alert("This should go back to the previous page")}
             />
           )

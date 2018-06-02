@@ -21,7 +21,7 @@ class StepsFooter extends Component {
             pageNum !== 4,
             <FooterStepButton
               text="next step"
-              iconName='md-arrow-round-forward'
+              iconName='md-arrow-forward'
               handleClick={() => alert("Go to next page")}
             />
           )
@@ -32,7 +32,7 @@ class StepsFooter extends Component {
             pageNum === 4,
             <FooterStepButton
               text="login"
-              iconName='md-arrow-round-back'
+              iconName='md-arrow-forward'
               handleClick={() => alert("Go to agreement page")}
             />
           )

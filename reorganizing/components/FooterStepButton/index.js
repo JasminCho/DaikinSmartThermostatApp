@@ -9,7 +9,7 @@ import styles from './styles';
 
 class FooterStepButton extends Component {
   render() {
-    const { text, iconName, handleClick, } = this.props;
+    const { text, iconName, handleClick } = this.props;
     return(
       <View style={styles.container}>
         <Text style={styles.text}>{text}</Text>
@@ -18,7 +18,6 @@ class FooterStepButton extends Component {
           size={26}
           color='#bdbdbd'
           underlayColor='white'
-          containerStyle={styles.icon}
           onPress={() => handleClick()}
         />
       </View>

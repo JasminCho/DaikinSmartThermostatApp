@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export default styles = StyleSheet.create({
   container: {
-    alignItems: 'flex-end',
-    // backgroundColor: 'blue',
+    flex: 1,
+    justifyContent: 'space-evenly', // says it doesn't work
   },
 })

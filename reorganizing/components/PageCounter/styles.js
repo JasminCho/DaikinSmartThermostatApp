@@ -11,9 +11,6 @@ export default styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-evenly',
   },
-  icon: {
-    paddingRight: 40,
-  },
   text: {
     color: '#bdbdbd',
   },
