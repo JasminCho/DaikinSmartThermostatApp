@@ -9,9 +9,9 @@ import styles from './styles';
 
 class FooterStepButton extends Component {
   render() {
-    const { text, iconName, handleClick } = this.props;
+    const { text, iconName, handleClick, justify } = this.props;
     return(
-      <View style={styles.container}>
+      <View style={[styles.container, {justifyContent: justify}]}>
         <Text style={styles.text}>{text}</Text>
         <Ionicons
           name={iconName}
@@ -29,6 +29,7 @@ FooterStepButton.propTypes = {
   text: PropTypes.string.isRequired,
   iconName: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
+  justify: PropTypes.string,
 };
 
 export default FooterStepButton;

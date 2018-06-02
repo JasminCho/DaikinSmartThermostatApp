@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { View } from 'react-native';
 
-import FooterStepButton from '../FooterStepButton/index';
-
-import { renderIf } from '../../api/helper';
+import FooterButton from '../FooterButton/index';
 
 import styles from './styles';
 
@@ -11,10 +9,12 @@ class MessagesFooter extends Component {
   render() {
     return(
       <View style={styles.container}>
-        <FooterStepButton
+        <FooterButton
           text="messages"
-          iconName='chevron-thin-up'
+          hasIcon={true}
+          iconName='ios-arrow-up'
           handleClick={() => alert("Opens up messages")}
+          justify="space-between"
         />
       </View>
     );
