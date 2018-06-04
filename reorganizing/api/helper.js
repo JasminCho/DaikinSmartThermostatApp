@@ -15,3 +15,8 @@ export function checkNotEntered(element) {
     return false
   }
 };
+
+// function to convert password into dots
+replacePassword = (p) => {
+  return '•'.repeat(p.length)
+}

@@ -11,16 +11,19 @@ export default styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   leftSide: {
-    flex: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
+    // justifyContent: 'flex-start',
     alignItems: 'center',
+    marginRight: 10,
+    // backgroundColor: 'red',
   },
   rightSide: {
-    flex: 1.5,
+    flex: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    paddingLeft: 20,
     alignItems: 'center',
+    justifyContent: 'flex-end',
+    // backgroundColor: 'blue',
   },
   valueNotEntered: {
     color: '#bdbdbd',

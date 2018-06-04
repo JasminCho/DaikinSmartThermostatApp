@@ -50,14 +50,16 @@ class RowItem extends Component {
               </Text>
             )
           }
+          <View>
+            <Ionicons
+              name={rightIconName}
+              size={26}
+              color={rightIconColor}
+              underlayColor='white'
+              onPress={() => handleClick()}
+            />
+          </View>
 
-          <Ionicons
-            name={rightIconName}
-            size={26}
-            color={rightIconColor}
-            underlayColor='white'
-            onPress={() => handleClick()}
-          />
         </View>
       </View>
     );

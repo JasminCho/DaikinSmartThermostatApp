@@ -337,8 +337,8 @@ export default class App extends Component {
     return(
       // <LoginScreen />
       // <StartScreen />
-      <AccountOwnerScreen />
-      // <AccountHomeScreen />
+      // <AccountOwnerScreen />
+      <AccountHomeScreen />
       // <AccountThermostatScreen />
       // <AccountCreatedScreen />
       // <AfterCreatedLoginScreen/>
