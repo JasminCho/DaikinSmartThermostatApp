@@ -11,7 +11,7 @@ class AfterCreatedLoginScreen extends Component {
       subTitle: "login",
       screen: "AfterCreatedLogin",
       showFooter: true,
-      footerType: "messages",
+      footerType: "account-created",
     };
   }
 

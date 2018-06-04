@@ -13,13 +13,11 @@ class AccountCreatedFooter extends Component {
       <View style={styles.container}>
         <FooterButton
           text="cancel"
-          hasIcon={false}
           handleClick={() => alert("You sure you want to cancel?")}
           marginRight={5}
         />
         <FooterButton
           text="i agree"
-          hasIcon={false}
           handleClick={() => alert("Go to My Homes")}
         />
       </View>

@@ -12,6 +12,7 @@ class PageCounter extends Component {
     const { pageNum, totalPages } = this.props;
     return(
       <View style={styles.container}>
+        <View style={[styles.content]}>
         {
           // Back button shows only for steps 2 and 3
           renderIf (
@@ -25,9 +26,10 @@ class PageCounter extends Component {
             />
           )
         }
-        <Text style={styles.text}>
-          {pageNum} of {totalPages}
-        </Text>
+          <Text style={styles.text}>
+            {pageNum} of {totalPages}
+          </Text>
+        </View>
       </View>
     );
   }

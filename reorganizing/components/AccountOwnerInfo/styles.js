@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 export default styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-evenly', // says it doesn't work
+    borderTopWidth: 2,
+    borderColor: '#bdbdbd',
   },
 })

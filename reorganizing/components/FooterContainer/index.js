@@ -11,12 +11,12 @@ import styles from './styles';
 
 class FooterContainer extends Component {
   render() {
-    const { footerType, pageNum, totalPages } = this.props;
+    const { footerType, pageNum, totalPages, messageCount } = this.props;
     return(
       <View style={styles.container}>
         {renderIf(footerType === "steps", <StepsFooter pageNum={pageNum} totalPages={totalPages}/>)}
         {renderIf(footerType === "account-created", <AccountCreatedFooter/>)}
-        {renderIf(footerType === "messages", <MessagesFooter/>)}
+        {renderIf(footerType === "messages", <MessagesFooter messageCount={messageCount}/>)}
 
       </View>
     );
@@ -27,6 +27,7 @@ FooterContainer.propTypes = {
   footerType: PropTypes.string.isRequired,
   pageNum: PropTypes.number,
   totalPages: PropTypes.number,
+  messageCount: PropTypes.number,
 };
 
 export default FooterContainer;

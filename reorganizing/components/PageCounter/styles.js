@@ -6,10 +6,15 @@ export default styles = StyleSheet.create({
     flexDirection: 'row',
     borderTopWidth: 2,
     borderColor: '#bdbdbd',
-    paddingVertical: 10,
+    padding: 10,
     marginRight: 5,
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+  },
+  content: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
   text: {
     color: '#bdbdbd',

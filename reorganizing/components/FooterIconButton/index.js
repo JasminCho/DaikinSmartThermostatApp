@@ -7,29 +7,31 @@ import { renderIf } from '../../api/helper';
 
 import styles from './styles';
 
-class FooterStepButton extends Component {
+class FooterIconButton extends Component {
   render() {
     const { text, iconName, handleClick, justify } = this.props;
     return(
-      <View style={[styles.container, {justifyContent: justify}]}>
-        <Text style={styles.text}>{text}</Text>
-        <Ionicons
-          name={iconName}
-          size={26}
-          color='#bdbdbd'
-          underlayColor='white'
-          onPress={() => handleClick()}
-        />
+      <View style={[styles.container]}>
+        <View style={[styles.content, {justifyContent: justify}]}>
+          <Text style={styles.text}>{text}</Text>
+          <Ionicons
+            name={iconName}
+            size={26}
+            color='#bdbdbd'
+            underlayColor='white'
+            onPress={() => handleClick()}
+          />
+        </View>
       </View>
     );
   }
 }
 
-FooterStepButton.propTypes = {
+FooterIconButton.propTypes = {
   text: PropTypes.string.isRequired,
   iconName: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
   justify: PropTypes.string,
 };
 
-export default FooterStepButton;
+export default FooterIconButton;

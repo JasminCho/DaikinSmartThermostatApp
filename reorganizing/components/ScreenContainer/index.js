@@ -12,7 +12,7 @@ import styles from './styles';
 // Container Wrapper for the majority of the app screens
 class ScreenContainer extends Component {
   render() {
-    const { title, subTitle, screen, showFooter, footerType, pageNum, totalPages } = this.props;
+    const { title, subTitle, screen, showFooter, footerType, pageNum, totalPages, messageCount } = this.props;
     return(
       <View style={styles.container}>
         {/* Title */}
@@ -29,7 +29,7 @@ class ScreenContainer extends Component {
           renderIf(
             // Only show footer if showFooter is true
             showFooter === true,
-            <FooterContainer footerType={footerType} pageNum={pageNum} totalPages={totalPages}/>
+            <FooterContainer footerType={footerType} pageNum={pageNum} totalPages={totalPages} messageCount={messageCount}/>
           )
         }
       </View>
@@ -45,6 +45,7 @@ ScreenContainer.propTypes = {
   footerType: PropTypes.string,
   pageNum: PropTypes.number,
   totalPages: PropTypes.number,
+  messageCount: PropTypes.number,
 };
 
 export default ScreenContainer;

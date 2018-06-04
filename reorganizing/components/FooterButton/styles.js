@@ -7,7 +7,12 @@ export default styles = StyleSheet.create({
     borderTopWidth: 2,
     borderColor: '#bdbdbd',
     paddingVertical: 10,
+    paddingRight: 10,
     alignItems: 'center',
+  },
+  content: {
+    flex: 1,
+    flexDirection: 'row',
     justifyContent: 'center',
   },
   text: {

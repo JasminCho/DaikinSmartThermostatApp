@@ -337,11 +337,11 @@ export default class App extends Component {
     return(
       // <LoginScreen />
       // <StartScreen />
-      // <AccountOwnerScreen />
+      <AccountOwnerScreen />
       // <AccountHomeScreen />
       // <AccountThermostatScreen />
       // <AccountCreatedScreen />
-      <AfterCreatedLoginScreen/>
+      // <AfterCreatedLoginScreen/>
     );
   }
 }

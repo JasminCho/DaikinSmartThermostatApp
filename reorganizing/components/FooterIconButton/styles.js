@@ -6,11 +6,17 @@ export default styles = StyleSheet.create({
     flexDirection: 'row',
     borderTopWidth: 2,
     borderColor: '#bdbdbd',
-    paddingVertical: 10,
+    padding: 10,
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    // backgroundColor: 'blue'
+  },
+  content: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   text: {
     color: 'white',
+    marginRight: 10,
   },
 })
