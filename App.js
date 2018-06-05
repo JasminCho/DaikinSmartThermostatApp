@@ -340,8 +340,8 @@ export default class App extends Component {
       // <AccountOwnerScreen />
       // <AccountHomeScreen />
       // <AccountThermostatScreen />
-      <AccountCreatedScreen />
-      // <AfterCreatedLoginScreen/>
+      // <AccountCreatedScreen />
+      <AfterCreatedLoginScreen/>
     );
   }
 }

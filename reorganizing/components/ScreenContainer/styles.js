@@ -6,7 +6,7 @@ export default styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'black',
     flexDirection: 'column',
-    paddingLeft: 30,
+    // paddingLeft: 30,
     paddingTop: Constants.statusBarHeight,
   },
 })

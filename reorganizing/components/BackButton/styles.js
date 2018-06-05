@@ -2,7 +2,6 @@ import { StyleSheet } from 'react-native';
 
 export default styles = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingLeft: 30,
-  },
+    marginHorizontal: 10,
+  }
 })

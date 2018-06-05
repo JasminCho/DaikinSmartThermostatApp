@@ -15,11 +15,17 @@ class AfterCreatedLoginScreen extends Component {
     };
   }
 
+  handleBack = () => {
+    alert("This should go back to account created page")
+  }
+
   render() {
     return(
       <ScreenContainer
         title={this.state.title}
         subTitle={this.state.subTitle}
+        hasBackButton={true}
+        handleBack={this.handleBack}
         screen={this.state.screen}
         showFooter={this.state.showFooter}
         footerType={this.state.footerType}

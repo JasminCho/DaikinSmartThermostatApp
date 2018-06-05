@@ -17,7 +17,6 @@ class FooterContainer extends Component {
         {renderIf(footerType === "steps", <StepsFooter pageNum={pageNum} totalPages={totalPages}/>)}
         {renderIf(footerType === "account-created", <AccountCreatedFooter/>)}
         {renderIf(footerType === "messages", <MessagesFooter messageCount={messageCount}/>)}
-
       </View>
     );
   }
