@@ -34,7 +34,7 @@ class RowItem extends Component {
               />
             )
           }
-          <Text style={styles.text} numberOfLines={1}>
+          <Text style={(!hasLeftIcon) ? styles.noLeftIcon : styles.hasLeftIcon} numberOfLines={1}>
             {rowElement}
           </Text>
         </View>

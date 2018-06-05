@@ -12,10 +12,8 @@ export default styles = StyleSheet.create({
   },
   leftSide: {
     flexDirection: 'row',
-    // justifyContent: 'flex-start',
     alignItems: 'center',
     marginRight: 10,
-    // backgroundColor: 'red',
   },
   rightSide: {
     flex: 1,
@@ -23,7 +21,6 @@ export default styles = StyleSheet.create({
     paddingLeft: 20,
     alignItems: 'center',
     justifyContent: 'flex-end',
-    // backgroundColor: 'blue',
   },
   valueNotEntered: {
     color: '#bdbdbd',
@@ -33,7 +30,11 @@ export default styles = StyleSheet.create({
     color: 'white',
     marginRight: 5,
   },
-  text: {
+  hasLeftIcon: {
     color: '#bdbdbd',
+    marginLeft: 10,
   },
+  noLeftIcon: {
+    color: '#bdbdbd',
+  }
 })

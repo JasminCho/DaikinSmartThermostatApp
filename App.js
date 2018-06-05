@@ -331,6 +331,7 @@ import AccountHomeScreen from './reorganizing/screens/AccountHomeScreen';
 import AccountThermostatScreen from './reorganizing/screens/AccountThermostatScreen';
 import AccountCreatedScreen from './reorganizing/screens/AccountCreatedScreen';
 import AfterCreatedLoginScreen from './reorganizing/screens/AfterCreatedLoginScreen';
+import HomeScreen from './reorganizing/screens/HomeScreen';
 
 export default class App extends Component {
   render() {
@@ -341,7 +342,8 @@ export default class App extends Component {
       // <AccountHomeScreen />
       // <AccountThermostatScreen />
       // <AccountCreatedScreen />
-      <AfterCreatedLoginScreen/>
+      // <AfterCreatedLoginScreen/>
+      <HomeScreen />
     );
   }
 }

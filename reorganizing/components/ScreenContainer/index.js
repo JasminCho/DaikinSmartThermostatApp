@@ -5,7 +5,6 @@ import { View } from 'react-native';
 import HeaderContainer from '../HeaderContainer/index';
 import BodyContainer from '../BodyContainer/index';
 import FooterContainer from '../FooterContainer/index';
-// import BackButton from '../BackButton/index';
 
 import { renderIf } from '../../api/helper';
 
@@ -21,12 +20,6 @@ class ScreenContainer extends Component {
         <HeaderContainer text={title} textColor="#bdbdbd" size={18}/>
 
         {/* Subtitle */}
-        {/* {
-          renderIf (
-            hasBackButton,
-            <BackButton handleClick={handleBack}/>
-          )
-        } */}
         <HeaderContainer hasBackButton={hasBackButton} handleBack={handleBack} text={subTitle} textColor="white" size={26}/>
 
         {/* Body */}
