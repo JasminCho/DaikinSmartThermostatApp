@@ -1,39 +1,3 @@
-// import React, { Component } from 'react';
-// import { StyleSheet, Text, View, StatusBar, Platform, AppRegistry } from 'react-native';
-// import { StackNavigator } from 'react-navigation';
-//
-// import Login from './src/pages/Login';
-// import Start from './src/pages/Start';
-// import CreateAccount from './src/pages/CreateAccount';
-// import Homes from './src/pages/Homes';
-// import Thermostats from './src/pages/Thermostats';
-
-//Components
-import Name from './src/components/Name';
-import Email from './src/components/Email';
-import Password from './src/components/Password';
-import Messages from './src/components/Messages';
-import AddHome from './src/components/AddHome';
-import HomeName from './src/components/HomeName';
-import Address from './src/components/Address';
-import AddThermostat from './src/components/AddThermostat';
-import ThermostatCode from './src/components/ThermostatCode';
-import CreateAccountOwner from './src/components/CreateAccountOwner';
-import CreateAccountHome from './src/components/CreateAccountHome';
-import CreateAccountThermostat from './src/components/CreateAccountThermostat';
-import AccountCreated from './src/components/AccountCreated';
-import AccountCreatedLogin from './src/components/AccountCreatedLogin';
-
-// export default class App extends React.Component {
-//   render() {
-//     return (
-//       <RootStack/>
-//     );
-//   }
-// }
-//
-// const AppNavigator = StackNavigator
-
 /*
 TODO: Recreate the navigation
 
@@ -107,257 +71,279 @@ Overall App navigation
 */
 
 // TESTING NAVIGATION
-import React from "react";
-import { StatusBar, View, StyleSheet, Text } from "react-native";
-import {
-  createStackNavigator,
-  createSwitchNavigator,
-  createBottomTabNavigator,
-} from "react-navigation";
+// import React from "react";
+// import { StatusBar, View, StyleSheet, Text } from "react-native";
+// import {
+//   createStackNavigator,
+//   createSwitchNavigator,
+//   createBottomTabNavigator,
+// } from "react-navigation";
+//
+// import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+//
+// /* Test Thermostat App Navigation */
+// import StartScreen from './screens/Main/StartScreen';
+// import LoginScreen from './screens/Main/LoginScreen';
+// // Create Account
+//   // Account Owner Info
+// import AccountOwner from './screens/CreateAccount/AccountOwner/AccountOwner';
+// import OwnerName from './screens/CreateAccount/AccountOwner/OwnerName';
+// import AccountEmail from './screens/CreateAccount/AccountOwner/AccountEmail';
+// import AccountPassword from './screens/CreateAccount/AccountOwner/AccountPassword';
+//   // Home Info
+// import HomeInfo from './screens/CreateAccount/Home/HomeInfo';
+// import HomeName from './screens/CreateAccount/Home/HomeName';
+// import HomeAddress from './screens/CreateAccount/Home/HomeAddress';
+// // Connect Thermostat
+// import ConnectThermostat from './screens/CreateAccount/ConnectThermostat/ConnectThermostat';
+// import EnterCode from './screens/CreateAccount/ConnectThermostat/EnterCode';
+// // Account Created
+// import AccountCreated from './screens/CreateAccount/AccountCreated/AccountCreated';
+// import AccountAgreement from './screens/CreateAccount/AccountCreated/AccountAgreement';
+//   // Legal Notices
+// import TermsOfService from './screens/CreateAccount/AccountCreated/TermsOfService';
+// import PrivacyStatement from './screens/CreateAccount/AccountCreated/PrivacyStatement';
+// import OtherNotices from './screens/CreateAccount/AccountCreated/OtherNotices';
+//
+// // Account Homes
+// import AccountHomes from './screens/Homes/AccountHomes';
+//
+// // Testing Footers
+// // import MessageFooter from './screens/Components/MessageFooter';
+// // import AgreeFooter from './screens/Components/AgreeFooter';
+// // import StepsFooter from './screens/Components/StepsFooter';
+//
+// // Testing pages
+// import Messages from './screens/Messages/Messages';
+// import HomeThermostats from './screens/Homes/HomeThermostats';
+//
+// const OwnerStack = createStackNavigator (
+//   {
+//     AccountOwner: AccountOwner,
+//     Name: OwnerName,
+//     Email: AccountEmail,
+//     Password: AccountPassword,
+//   },
+//   {
+//     initialRouteName: "AccountOwner",
+//   }
+// );
+//
+// const HomeInfoStack = createStackNavigator (
+//   {
+//     HomeInfo: HomeInfo,
+//     HomeName: HomeName,
+//     HomeAddress: HomeAddress,
+//   },
+//   {
+//     initialRouteName: "HomeInfo",
+//   }
+// );
+//
+// const ConnectThermostatStack = createStackNavigator (
+//   {
+//     ConnectThermostat: ConnectThermostat,
+//     EnterCode: EnterCode,
+//   },
+//   {
+//     initialRouteName: "ConnectThermostat",
+//   }
+// );
+//
+// const AgreementStack = createStackNavigator (
+//   {
+//     AccountCreated: AccountCreated,
+//     AccountAgreement: AccountAgreement,
+//     TOS: TermsOfService,
+//     PS: PrivacyStatement,
+//     ON: OtherNotices,
+//   }
+// );
+//
+// const LegalNoticesStack = createStackNavigator (
+//   {
+//     TOS: TermsOfService,
+//     PS: PrivacyStatement,
+//     ON: OtherNotices,
+//   },
+//   {
+//     initialRouteName: "TOS",
+//   }
+// )
+//
+// const AccountHomesStack = createStackNavigator (
+//   {
+//     AccountHomes: AccountHomes,
+//     AddHome: HomeInfoStack,
+//   }
+// )
+//
+// // AccountHomeScreen navs to stacks to different homes, add home stack, account stack, and messages stack
+// const AccountStack = createStackNavigator (
+//   {
+//     AccountHomesStack: AccountHomesStack,
+//   },
+//   {
+//     navigationOptions: {
+//       headerTitle: 'Daikin Smart Thermostat',
+//       headerStyle: {
+//         backgroundColor: 'black',
+//         height: 20,
+//       },
+//       headerTintColor: '#bdbdbd',
+//       headerTitleStyle: {
+//         fontSize: 18,
+//       },
+//     },
+//   }
+// )
+//
+// const AccountCreatedStack = createStackNavigator (
+//   {
+//     Agreement: AgreementStack,
+//   },
+//   {
+//     navigationOptions: {
+//       headerTitle: 'Daikin Smart Thermostat',
+//       headerStyle: {
+//         backgroundColor: 'black',
+//         height: 20,
+//       },
+//       headerTintColor: '#bdbdbd',
+//       headerTitleStyle: {
+//         fontSize: 18,
+//       },
+//     },
+//   }
+// );
+//
+// const CreateAccountStack = createStackNavigator (
+//   {
+//     Owner: OwnerStack,
+//     Home: HomeInfoStack,
+//     ConnectThermostat: ConnectThermostatStack,
+//     Agreement: AgreementStack,
+//   },
+//   {
+//     navigationOptions: {
+//       headerTitle: 'create account',
+//       headerStyle: {
+//         backgroundColor: 'black',
+//         height: 20,
+//       },
+//       headerTintColor: '#bdbdbd',
+//       headerTitleStyle: {
+//         fontSize: 18,
+//       },
+//     }
+//   }
+// );
+//
+// const AppNavigator = createStackNavigator(
+//   {
+//     Main: StartScreen,
+//     Login: LoginScreen,
+//     CreateAccount: CreateAccountStack,
+//   },
+//   {
+//     headerMode: 'none',
+//     navigationOptions: {
+//       headerVisible: false,
+//     }
+//   }
+// );
+//
+// import PrimaryThermostatScreen from './screens/Thermostat/PrimaryThermostatScreen';
+// import AdjustThermostatScreen from './screens/Thermostat/AdjustThermostatScreen';
+// import ScheduleThermostatScreen from './screens/Thermostat/ScheduleThermostatScreen';
+// import AwayThermostatScreen from './screens/Thermostat/AwayThermostatScreen';
+// import StatusThermostatScreen from './screens/Thermostat/StatusThermostatScreen';
+//
+// // Testing bottom tab navigation
+// const ThermostatTabNavigator = createBottomTabNavigator (
+//   {
+//     Primary: PrimaryThermostatScreen,
+//     Adjust: AdjustThermostatScreen,
+//     Schedule: ScheduleThermostatScreen,
+//     Away: AwayThermostatScreen,
+//     Status: StatusThermostatScreen,
+//   },
+//   {
+//     navigationOptions: ({ navigation }) => ({
+//       tabBarIcon: ({ focused, tintColor }) => {
+//         const { routeName } = navigation.state;
+//         let iconName;
+//         if (routeName === 'Primary') {
+//           iconName = `home-outline`;
+//         } else if (routeName === 'Adjust') {
+//           iconName = `vanish`;
+//         } else if (routeName === 'Schedule') {
+//           iconName = `calendar-blank`;
+//         } else if (routeName === 'Away') {
+//           iconName = `leaf`;
+//         } else if (routeName === 'Status') {
+//           iconName = `waves`;
+//         }
+//
+//         // You can return any component that you like here! We usually use an
+//         // icon component from react-native-vector-icons
+//         return <Icon name={iconName} size={25} color={tintColor} />;
+//       },
+//     }),
+//     tabBarOptions: {
+//       showLabel: false,
+//       activeTintColor: 'white',
+//       inactiveTintColor: 'gray',
+//       style: {
+//         backgroundColor: 'black',
+//         paddingHorizontal: 60,
+//       },
+//     },
+//   },
+//   {
+//     swipeEnabled: true,
+//   },
+// )
 
-/* Test Thermostat App Navigation */
-import StartScreen from './screens/Main/StartScreen';
-import LoginScreen from './screens/Main/LoginScreen';
-// Create Account
-  // Account Owner Info
-import AccountOwner from './screens/CreateAccount/AccountOwner/AccountOwner';
-import OwnerName from './screens/CreateAccount/AccountOwner/OwnerName';
-import AccountEmail from './screens/CreateAccount/AccountOwner/AccountEmail';
-import AccountPassword from './screens/CreateAccount/AccountOwner/AccountPassword';
-  // Home Info
-import HomeInfo from './screens/CreateAccount/Home/HomeInfo';
-import HomeName from './screens/CreateAccount/Home/HomeName';
-import HomeAddress from './screens/CreateAccount/Home/HomeAddress';
-// Connect Thermostat
-import ConnectThermostat from './screens/CreateAccount/ConnectThermostat/ConnectThermostat';
-import EnterCode from './screens/CreateAccount/ConnectThermostat/EnterCode';
-// Account Created
-import AccountCreated from './screens/CreateAccount/AccountCreated/AccountCreated';
-import AccountAgreement from './screens/CreateAccount/AccountCreated/AccountAgreement';
-  // Legal Notices
-import TermsOfService from './screens/CreateAccount/AccountCreated/TermsOfService';
-import PrivacyStatement from './screens/CreateAccount/AccountCreated/PrivacyStatement';
-import OtherNotices from './screens/CreateAccount/AccountCreated/OtherNotices';
+// export default class App extends React.Component {
+//   render() {
+//     return (
+//       // <AppNavigator />
+//       // Testing
+//       // <HomeThermostats />
+//       // <ThermostatTabNavigator/>
+//       <View>
+//         <Text>
+//           What
+//         </Text>
+//       </View>
+//     );
+//   }
+// }
 
-// Account Homes
-import AccountHomes from './screens/Homes/AccountHomes';
+// AppRegistry.registerComponent('DaikinSmartThermostatApp', () => AppNavigator);
 
-// Testing Footers
-// import MessageFooter from './screens/Components/MessageFooter';
-// import AgreeFooter from './screens/Components/AgreeFooter';
-// import StepsFooter from './screens/Components/StepsFooter';
+import React, { Component } from "react";
+import LoginScreen from './reorganizing/screens/LoginScreen';
+import StartScreen from './reorganizing/screens/StartScreen';
+import AccountOwnerScreen from './reorganizing/screens/AccountOwnerScreen';
+import AccountHomeScreen from './reorganizing/screens/AccountHomeScreen';
+import AccountThermostatScreen from './reorganizing/screens/AccountThermostatScreen';
+import AccountCreatedScreen from './reorganizing/screens/AccountCreatedScreen';
+import AfterCreatedLoginScreen from './reorganizing/screens/AfterCreatedLoginScreen';
+import HomeScreen from './reorganizing/screens/HomeScreen';
 
-const OwnerStack = createStackNavigator (
-  {
-    AccountOwner: AccountOwner,
-    Name: OwnerName,
-    Email: AccountEmail,
-    Password: AccountPassword,
-  },
-  {
-    initialRouteName: "AccountOwner",
-  }
-);
-
-const HomeInfoStack = createStackNavigator (
-  {
-    HomeInfo: HomeInfo,
-    HomeName: HomeName,
-    HomeAddress: HomeAddress,
-  },
-  {
-    initialRouteName: "HomeInfo",
-  }
-);
-
-const ConnectThermostatStack = createStackNavigator (
-  {
-    ConnectThermostat: ConnectThermostat,
-    EnterCode: EnterCode,
-  },
-  {
-    initialRouteName: "ConnectThermostat",
-  }
-);
-
-const AgreementStack = createStackNavigator (
-  {
-    AccountCreated: AccountCreated,
-    AccountAgreement: AccountAgreement,
-    TOS: TermsOfService,
-    PS: PrivacyStatement,
-    ON: OtherNotices,
-  }
-);
-
-const LegalNoticesStack = createStackNavigator (
-  {
-    TOS: TermsOfService,
-    PS: PrivacyStatement,
-    ON: OtherNotices,
-  },
-  {
-    initialRouteName: "TOS",
-  }
-)
-
-const AccountHomesStack = createStackNavigator (
-  {
-    AccountHomes: AccountHomes,
-    AddHome: HomeInfoStack,
-  }
-)
-
-// AccountHomeScreen navs to stacks to different homes, add home stack, account stack, and messages stack
-const AccountStack = createStackNavigator (
-  {
-    AccountHomesStack: AccountHomesStack,
-  },
-  {
-    navigationOptions: {
-      headerTitle: 'Daikin Smart Thermostat',
-      headerStyle: {
-        backgroundColor: 'black',
-        height: 20,
-      },
-      headerTintColor: '#bdbdbd',
-      headerTitleStyle: {
-        fontSize: 18,
-      },
-    },
-  }
-)
-
-const AccountCreatedStack = createStackNavigator (
-  {
-    Agreement: AgreementStack,
-  },
-  {
-    navigationOptions: {
-      headerTitle: 'Daikin Smart Thermostat',
-      headerStyle: {
-        backgroundColor: 'black',
-        height: 20,
-      },
-      headerTintColor: '#bdbdbd',
-      headerTitleStyle: {
-        fontSize: 18,
-      },
-    },
-  }
-);
-
-const CreateAccountStack = createStackNavigator (
-  {
-    Owner: OwnerStack,
-    Home: HomeInfoStack,
-    ConnectThermostat: ConnectThermostatStack,
-    Agreement: AgreementStack,
-  },
-  {
-    navigationOptions: {
-      headerTitle: 'create account',
-      headerStyle: {
-        backgroundColor: 'black',
-        height: 20,
-      },
-      headerTintColor: '#bdbdbd',
-      headerTitleStyle: {
-        fontSize: 18,
-      },
-    }
-  }
-);
-
-const AppNavigator = createStackNavigator(
-  {
-    Main: StartScreen,
-    Login: LoginScreen,
-    CreateAccount: CreateAccountStack,
-    // AccountCreated: AccountCreatedStack,
-    Account: AccountStack,
-  },
-  {
-    headerMode: 'none',
-    navigationOptions: {
-      headerVisible: false,
-    }
-  }
-);
-
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
-    return (
-      <AppNavigator />
-
-
-// Testing
-  // <AccountHomesStack />
-// <AccountCreatedStack />
-// <PrivacyStatement />
-      // <View style={styles.container}>
-      //   <View style={{flex:1,}}>
-      //     <Text style={{color:'white'}}>Howdy</Text>
-      //   </View>
-      //
-      //   <StepsFooter/>
-      //
-      //   <MessageFooter />
-      //
-      //   <AgreeFooter/>
-      //
-      // </View>
+    return(
+      // <LoginScreen />
+      // <StartScreen />
+      // <AccountOwnerScreen />
+      // <AccountHomeScreen />
+      // <AccountThermostatScreen />
+      // <AccountCreatedScreen />
+      // <AfterCreatedLoginScreen/>
+      <HomeScreen />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'black',
-    flex: 1,
-    flexDirection: 'column',
-    paddingLeft: 30,
-    paddingTop: 30,
-  },
-})
-
-
-
-// const RootStack = StackNavigator({
-//   Start: { screen: Start },
-//   Login: { screen: Login },
-//   CreateAccount: { screen: CreateAccount },
-//   CreateAccountOwner: { screen: CreateAccountOwner },
-//   CreateAccountHome: { screen: CreateAccountHome },
-//   CreateAccountThermostat: { screen: CreateAccountThermostat },
-//   AccountCreated: { screen: AccountCreated },
-//   AccountCreatedLogin: { screen: AccountCreatedLogin },
-//   Homes: { screen: Homes },
-//   NamePage: { screen: Name },
-//   EmailPage: { screen: Email },
-//   Password: { screen: Password },
-//   Messages: { screen: Messages },
-//   AddHome: { screen: AddHome },
-//   HomeName: { screen: HomeName },
-//   Address: { screen: Address },
-//   Thermostats: { screen: Thermostats },
-//   AddThermostat: { screen: AddThermostat },
-//   ThermostatCode: { screen: ThermostatCode }},
-//   { headerMode: 'none' }
-// );
-//
-// AppRegistry.registerComponent('testProject', () => RootStack);
-//
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: 'black',
-//   },
-//   statusBar: {
-//     height: (Platform.OS === 'ios') ? 20 : 0,
-//     height: (Platform.OS === 'android') ? 24 : 0,
-//   },
-//   content: {
-//     flex:1,
-//   },
-// });
