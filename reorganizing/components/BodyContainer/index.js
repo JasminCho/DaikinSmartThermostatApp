@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
 // Create Account
-import AccountOwnerInfo from '../AccountOwnerInfo/index';
-import AccountHomeInfo from '../AccountHomeInfo/index';
-import AccountThermostatInfo from '../AccountThermostatInfo/index';
-import AccountCreatedInfo from '../AccountCreatedInfo';
-import AfterCreatedLogin from '../AfterCreatedLogin';
+import AccountOwnerInfo from '../../containers/AccountOwnerInfo/index';
+import AccountHomeInfo from '../../containers/AccountHomeInfo/index';
+import AccountThermostatInfo from '../../AccountThermostatInfo/index';
+import AccountCreatedInfo from '../../AccountCreatedInfo/index';
+import AfterCreatedLogin from '../../AfterCreatedLogin/index';
 // ------------
 // Main Application
-import Home from '../Home';
+import Home from '../Home/index';
 // ------------
 
 import styles from './styles';

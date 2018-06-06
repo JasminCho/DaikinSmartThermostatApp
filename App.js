@@ -326,24 +326,28 @@ Overall App navigation
 import React, { Component } from "react";
 import LoginScreen from './reorganizing/screens/LoginScreen';
 import StartScreen from './reorganizing/screens/StartScreen';
-import AccountOwnerScreen from './reorganizing/screens/AccountOwnerScreen';
-import AccountHomeScreen from './reorganizing/screens/AccountHomeScreen';
-import AccountThermostatScreen from './reorganizing/screens/AccountThermostatScreen';
+// Create Account Screens
+import CreateAcctOwnerScreen from './reorganizing/screens/CreateAcctOwnerScreen';
+import CreateAcctHomeScreen from './reorganizing/screens/CreateAcctHomeScreen';
+import CreateAcctThermostatScreen from './reorganizing/screens/CreateAcctThermostatScreen';
 import AccountCreatedScreen from './reorganizing/screens/AccountCreatedScreen';
 import AfterCreatedLoginScreen from './reorganizing/screens/AfterCreatedLoginScreen';
+// Main App Screens
 import HomeScreen from './reorganizing/screens/HomeScreen';
+import AddHomeScreen from './reorganizing/screens/AddHomeScreen';
 
 export default class App extends Component {
   render() {
     return(
       // <LoginScreen />
       // <StartScreen />
-      // <AccountOwnerScreen />
-      // <AccountHomeScreen />
-      // <AccountThermostatScreen />
+      <CreateAcctOwnerScreen />
+      // <CreateAcctHomeScreen />
+      // <CreateAcctThermostatScreen />
       // <AccountCreatedScreen />
       // <AfterCreatedLoginScreen/>
-      <HomeScreen />
+      // <HomeScreen />
+      // <AddHomeScreen/>
     );
   }
 }

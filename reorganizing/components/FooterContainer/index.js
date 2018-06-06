@@ -23,7 +23,7 @@ class FooterContainer extends Component {
 }
 
 FooterContainer.propTypes = {
-  footerType: PropTypes.string.isRequired,
+  footerType: PropTypes.string,
   pageNum: PropTypes.number,
   totalPages: PropTypes.number,
   messageCount: PropTypes.number,
