@@ -11,11 +11,6 @@ export const updateLastName = lastName => ({
   payload: lastName,
 })
 
-export const updateName = name => ({
-  type: actionTypes.UPDATE_NAME,
-  payload: name,
-})
-
 export const updateUsername = username => ({
   type: actionTypes.UPDATE_USERNAME,
   payload: username,

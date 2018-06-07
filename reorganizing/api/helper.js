@@ -16,16 +16,15 @@ export function checkNotEntered(element) {
   }
 };
 
-// function that returns some value if entered
-export function notEntered(notEntered, entered) {
-  if (notEntered) {
-    return "not entered";
-  } else {
-    return entered;
-  }
-}
-
 // function to convert password into dots
 replacePassword = (p) => {
   return '•'.repeat(p.length)
+}
+
+export function match(a, b) {
+  if (a === b) {
+    return true
+  } else {
+    return false
+  }
 }
