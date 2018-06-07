@@ -11,6 +11,7 @@ import AfterCreatedLogin from '../../containers/AfterCreatedLogin/index';
 // ------------
 // Owner Info
 import OwnerName from '../../containers/OwnerName/index';
+import OwnerEmail from '../../containers/OwnerEmail/index';
 // ------------
 // Main Application
 import Home from '../../containers/Home/index';
@@ -33,6 +34,8 @@ class BodyContainer extends Component {
         return <AfterCreatedLogin/>
       case 'OwnerName':
         return <OwnerName/>
+      case 'OwnerEmail':
+        return <OwnerEmail/>
       case 'Home':
         return <Home/>
       default:

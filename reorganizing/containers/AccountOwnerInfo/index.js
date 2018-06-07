@@ -24,8 +24,8 @@ class AccountOwnerInfo extends Component {
   }
 
   navEmail = () => {
-    alert("Go to Email page")
-    // this.props.navigation.navigate('Email')
+    // alert("Go to Email page")
+    this.props.navigation.navigate('Email')
   }
 
   navPassword = () => {
@@ -35,6 +35,8 @@ class AccountOwnerInfo extends Component {
 
   render() {
     const name = store.getState().ownerInfo.name
+    const username = store.getState().ownerInfo.username
+    const password = store.getState().ownerInfo.password
     return(
       <View style={styles.container}>
         {/* Owner Name */}
@@ -53,8 +55,8 @@ class AccountOwnerInfo extends Component {
           hasLeftIcon={false}
           rowElement="email"
           hasValue={true}
-          notEntered={checkNotEntered(this.state.username)}
-          rowValue={this.state.username}
+          notEntered={checkNotEntered(`${username.username}`)}
+          rowValue={`${username.username}`}
           handleClick={this.navEmail}
           rightIconName="ios-arrow-forward"
           rightIconColor='#bdbdbd'
@@ -64,8 +66,8 @@ class AccountOwnerInfo extends Component {
           hasLeftIcon={false}
           rowElement="account password"
           hasValue={true}
-          notEntered={checkNotEntered(this.state.password)}
-          rowValue={this.state.password}
+          notEntered={checkNotEntered(`${password.password}`)}
+          rowValue={`${password.password}`}
           handleClick={this.navPassword}
           rightIconName="ios-arrow-forward"
           rightIconColor='#bdbdbd'
