@@ -1,9 +1,9 @@
-import { UPDATE_USERNAME } from '../actions/actionTypes';
+import { actionTypes } from '../actions/actionTypes';
 
-const usernameReducer = (state = {username:'not entered'}, action) => {
+const usernameReducer = (state = '', action) => {
   switch (action.type) {
-    case UPDATE_USERNAME:
-      return {...state, username: action.payload}
+    case actionTypes.UPDATE_USERNAME:
+      return {...state, ...action.payload}
     default:
       return state
   }

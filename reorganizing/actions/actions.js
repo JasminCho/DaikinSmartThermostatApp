@@ -1,27 +1,27 @@
-import {
-  UPDATE_FIRSTNAME,
-  UPDATE_LASTNAME,
-  UPDATE_USERNAME,
-  UPDATE_PASSWORD,
- } from './actionTypes';
+import { actionTypes } from './actionTypes';
 
 //action creators
 export const updateFirstName = firstName => ({
-  type: UPDATE_FIRSTNAME,
+  type: actionTypes.UPDATE_FIRSTNAME,
   payload: firstName,
 })
 
 export const updateLastName = lastName => ({
-  type: UPDATE_LASTNAME,
+  type: actionTypes.UPDATE_LASTNAME,
   payload: lastName,
 })
 
+export const updateName = name => ({
+  type: actionTypes.UPDATE_NAME,
+  payload: name
+})
+
 export const updateUsername = username => ({
-  type: UPDATE_USERNAME,
+  type: actionTypes.UPDATE_USERNAME,
   payload: username,
 })
 
 export const updatePassword = password => ({
-  type: UPDATE_PASSWORD,
+  type: actionTypes.UPDATE_PASSWORD,
   payload: password,
 })

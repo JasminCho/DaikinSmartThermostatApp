@@ -1,22 +1,22 @@
 import React, { Component } from "react";
 import { View } from 'react-native';
 import { withNavigation } from 'react-navigation';
+import { connect } from 'react-redux';
 
 import styles from './styles';
 
-import store from '../../store';
-import { checkNotEntered } from '../../api/helper';
+import { checkNotEntered, notEntered } from '../../api/helper';
 import RowItem from '../../components/RowItem/index';
 
 class AccountOwnerInfo extends Component {
-  constructor() {
-    super();
-    this.state = {
-      ownerName: "not entered",
-      username: "not entered",
-      password: "not entered",
-    };
-  }
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     ownerName: "not entered",
+  //     username: "not entered",
+  //     password: "not entered",
+  //   };
+  // }
 
   navName = () => {
     // alert("Go to Name page")
@@ -34,9 +34,6 @@ class AccountOwnerInfo extends Component {
   }
 
   render() {
-    const name = store.getState().ownerInfo.name
-    const username = store.getState().ownerInfo.username
-    const password = store.getState().ownerInfo.password
     return(
       <View style={styles.container}>
         {/* Owner Name */}
@@ -44,8 +41,8 @@ class AccountOwnerInfo extends Component {
           hasLeftIcon={false}
           rowElement="name"
           hasValue={true}
-          notEntered={checkNotEntered(`${name.firstName} ${name.lastName}`)}
-          rowValue={`${name.firstName} ${name.lastName}`}
+          notEntered={checkNotEntered(`${this.props.firstName} ${this.props.lastName}`)}
+          rowValue={`${this.props.firstName} ${this.props.lastName}`}
           handleClick={this.navName}
           rightIconName="ios-arrow-forward"
           rightIconColor='#bdbdbd'
@@ -55,8 +52,8 @@ class AccountOwnerInfo extends Component {
           hasLeftIcon={false}
           rowElement="email"
           hasValue={true}
-          notEntered={checkNotEntered(`${username.username}`)}
-          rowValue={`${username.username}`}
+          notEntered={checkNotEntered(this.props.username)}
+          rowValue={this.props.username}
           handleClick={this.navEmail}
           rightIconName="ios-arrow-forward"
           rightIconColor='#bdbdbd'
@@ -66,8 +63,8 @@ class AccountOwnerInfo extends Component {
           hasLeftIcon={false}
           rowElement="account password"
           hasValue={true}
-          notEntered={checkNotEntered(`${password.password}`)}
-          rowValue={`${password.password}`}
+          notEntered={checkNotEntered(this.props.password)}
+          rowValue={this.props.password}
           handleClick={this.navPassword}
           rightIconName="ios-arrow-forward"
           rightIconColor='#bdbdbd'
@@ -77,4 +74,12 @@ class AccountOwnerInfo extends Component {
   }
 }
 
-export default withNavigation(AccountOwnerInfo);
+const mapStateToProps = state => ({
+  name: state.name,
+  firstName: state.firstName,
+  lastName: state.lastName,
+  username: state.username,
+  password: state.password,
+})
+
+export default withNavigation(connect(mapStateToProps)(AccountOwnerInfo));

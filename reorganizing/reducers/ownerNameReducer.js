@@ -1,10 +1,10 @@
-import { UPDATE_FIRSTNAME, UPDATE_LASTNAME, GET_NAME } from '../actions/actionTypes';
+import { actionTypes } from '../actions/actionTypes';
 
-const ownerNameReducer = (state = {firstName:'not', lastName:'entered'}, action) => {
+const ownerNameReducer = (state = {firstName:'not entered'}, action) => {
   switch (action.type) {
-    case UPDATE_FIRSTNAME:
+    case actionTypes.UPDATE_FIRSTNAME:
       return {...state, firstName: action.payload}
-    case UPDATE_LASTNAME:
+    case actionTypes.UPDATE_LASTNAME:
       return {...state, lastName: action.payload}
     default:
       return state

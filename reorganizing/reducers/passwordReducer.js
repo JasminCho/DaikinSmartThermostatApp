@@ -1,9 +1,9 @@
-import { UPDATE_PASSWORD } from '../actions/actionTypes';
+import { actionTypes } from '../actions/actionTypes';
 
-const passwordReducer = (state = {password:'not entered'}, action) => {
+const passwordReducer = (state = '', action) => {
   switch (action.type) {
-    case UPDATE_PASSWORD:
-      return {...state, password: action.payload}
+    case actionTypes.UPDATE_PASSWORD:
+      return {...state, ...action.payload}
     default:
       return state
   }

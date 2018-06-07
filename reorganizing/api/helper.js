@@ -9,12 +9,21 @@ export function renderIf(condition, content) {
 
 // function for checking if a field has been entered
 export function checkNotEntered(element) {
-  if (element === "not entered") {
+  if (element === "") {
     return true
   } else {
     return false
   }
 };
+
+// function that returns some value if entered
+export function notEntered(notEntered, entered) {
+  if (notEntered) {
+    return "not entered";
+  } else {
+    return entered;
+  }
+}
 
 // function to convert password into dots
 replacePassword = (p) => {
