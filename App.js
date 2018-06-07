@@ -4,7 +4,7 @@ import { AppRegistry } from 'react-native';
 // import LoginScreen from './reorganizing/screens/LoginScreen';
 // import StartScreen from './reorganizing/screens/StartScreen';
 // // Create Account Screens
-// import CreateAcctOwnerScreen from './reorganizing/screens/CreateAcctOwnerScreen';
+// import CreateAcctOwnerScreen from './reorganizing/screens/CreateAccount/CreateAcctOwnerScreen';
 // import CreateAcctHomeScreen from './reorganizing/screens/CreateAcctHomeScreen';
 // import CreateAcctThermostatScreen from './reorganizing/screens/CreateAcctThermostatScreen';
 // import AccountCreatedScreen from './reorganizing/screens/AccountCreatedScreen';

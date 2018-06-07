@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import ScreenContainer from '../components/ScreenContainer/index';
+import ScreenContainer from '../../components/ScreenContainer/index';
 
 class AfterCreatedLoginScreen extends Component {
   constructor() {

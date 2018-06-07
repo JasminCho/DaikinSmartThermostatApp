@@ -10,8 +10,8 @@ const AppNavigator = createStackNavigator(
   {
     Start: StartScreen,
     Login: LoginScreen,
-    CreateAccount: CreateAccountNavigator,
-    MainApplication: MainApplicationNavigator,
+    CreateAccountNavigator: CreateAccountNavigator,
+    MainApplicationNavigator: MainApplicationNavigator,
   },
   {
     headerMode: 'none',

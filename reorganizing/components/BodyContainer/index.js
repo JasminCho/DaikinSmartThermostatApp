@@ -9,6 +9,9 @@ import AccountThermostatInfo from '../../containers/AccountThermostatInfo/index'
 import AccountCreatedInfo from '../../containers/AccountCreatedInfo/index';
 import AfterCreatedLogin from '../../containers/AfterCreatedLogin/index';
 // ------------
+// Owner Info
+import OwnerName from '../../containers/OwnerName/index';
+// ------------
 // Main Application
 import Home from '../../containers/Home/index';
 // ------------
@@ -16,7 +19,6 @@ import Home from '../../containers/Home/index';
 import styles from './styles';
 
 class BodyContainer extends Component {
-
   renderSwitch(screen) {
     switch(screen) {
       case 'AccountOwnerInfo':
@@ -29,6 +31,8 @@ class BodyContainer extends Component {
         return <AccountCreatedInfo/>
       case 'AfterCreatedLogin':
         return <AfterCreatedLogin/>
+      case 'OwnerName':
+        return <OwnerName/>
       case 'Home':
         return <Home/>
       default:

@@ -27,7 +27,7 @@ class FieldInput extends Component {
   }
 
   render() {
-    const { placeholder, secureTextEntry, autoFocus, keyboardType, } = this.props;
+    const { placeholder, secureTextEntry, autoFocus, keyboardType, onChangeText } = this.props;
     return(
       <TextInput
         onFocus={() => this.onFocus()}
@@ -39,6 +39,7 @@ class FieldInput extends Component {
         secureTextEntry={secureTextEntry}
         autoFocus={autoFocus}
         keyboardType={keyboardType}
+        onChangeText={onChangeText}
       />
     );
   }
@@ -49,6 +50,7 @@ FieldInput.propTypes = {
   secureTextEntry: PropTypes.bool,
   autoFocus: PropTypes.bool,
   keyboardType: PropTypes.string,
+  onChangeText: PropTypes.func.isRequired,
 };
 
 export default FieldInput;

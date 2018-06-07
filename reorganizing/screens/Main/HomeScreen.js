@@ -1,19 +1,17 @@
 import React, { Component } from "react";
 
-import ScreenContainer from '../components/ScreenContainer/index';
+import ScreenContainer from '../../components/ScreenContainer/index';
 
-class AccountThermostatScreen extends Component {
+class HomeScreen extends Component {
   constructor() {
     super();
     this.state = {
       // make this change when in diff stack
-      title: "create account",
-      subTitle: "account created",
-      screen: "AccountCreatedInfo",
+      title: "Daikin Smart Thermostat",
+      subTitle: "my homes",
+      screen: "Home",
       showFooter: true,
-      footerType: "steps",
-      pageNum: 4,
-      totalPages: 4,
+      footerType: "messages",
     };
   }
 
@@ -25,11 +23,9 @@ class AccountThermostatScreen extends Component {
         screen={this.state.screen}
         showFooter={this.state.showFooter}
         footerType={this.state.footerType}
-        pageNum={this.state.pageNum}
-        totalPages={this.state.totalPages}
       />
     );
   }
 }
 
-export default AccountThermostatScreen;
+export default HomeScreen;

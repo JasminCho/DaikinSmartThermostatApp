@@ -18,7 +18,7 @@ class Start extends Component {
 
   navCreateAcct = () => {
     // alert("Go to create account screen")
-    this.props.navigation.navigate('CreateAccount')
+    this.props.navigation.navigate('CreateAccountNavigator')
   }
 
   render() {
