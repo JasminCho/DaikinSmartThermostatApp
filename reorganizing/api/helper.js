@@ -9,7 +9,7 @@ export function renderIf(condition, content) {
 
 // function for checking if a field has been entered
 export function checkNotEntered(element) {
-  if (element === "") {
+  if (element === "not entered") {
     return true
   } else {
     return false

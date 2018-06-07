@@ -4,6 +4,8 @@ import { TextInput } from 'react-native';
 
 import styles from './styles';
 
+import { onFocus, onBlur } from '../../api/helper';
+
 class FieldInput extends Component {
   constructor(props) {
     super(props)
@@ -13,14 +15,12 @@ class FieldInput extends Component {
   }
 
   onFocus() {
-    console.log('this is focusing')
     this.setState({
       inputBoxColor: 'white'
     })
   }
 
   onBlur() {
-    console.log('this is blurring')
     this.setState({
       inputBoxColor: '#b3b3b3'
     })

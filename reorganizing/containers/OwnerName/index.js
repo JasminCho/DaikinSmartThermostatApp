@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import styles from './styles';
 
-import * as actions from '../../actions';
+import { updateFirstName, updateLastName } from '../../actions/actions';
 import RowItem from '../../components/RowItem/index';
 import FieldInput from '../../components/FieldInput/index';
 
@@ -29,4 +29,4 @@ class OwnerName extends Component {
   }
 }
 
-export default connect(null, {updateFirstName: actions.updateFirstName, updateLastName: actions.updateLastName})(OwnerName);
+export default connect(null, {updateFirstName: updateFirstName, updateLastName: updateLastName})(OwnerName);

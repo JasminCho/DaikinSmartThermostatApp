@@ -1,4 +1,4 @@
-import { actionTypes } from './actionTypes';
+import { actionTypes } from './index';
 
 //action creators
 export const updateFirstName = firstName => ({
@@ -13,7 +13,7 @@ export const updateLastName = lastName => ({
 
 export const updateName = name => ({
   type: actionTypes.UPDATE_NAME,
-  payload: name
+  payload: name,
 })
 
 export const updateUsername = username => ({

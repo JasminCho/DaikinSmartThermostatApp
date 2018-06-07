@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavigationActions } from 'react-navigation';
 
 import ScreenContainer from '../../components/ScreenContainer/index';
 
@@ -14,9 +15,7 @@ class NameScreen extends Component {
     };
   }
 
-  handleBack = () => {
-    alert("This should go back to account owner screen")
-  }
+  handleBack = () => {this.props.navigation.dispatch(NavigationActions.back())}
 
   render() {
     return(

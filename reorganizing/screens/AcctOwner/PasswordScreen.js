@@ -3,14 +3,14 @@ import { NavigationActions } from 'react-navigation';
 
 import ScreenContainer from '../../components/ScreenContainer/index';
 
-class EmailScreen extends Component {
+class PasswordScreen extends Component {
   constructor() {
     super();
     this.state = {
       // make this change when in diff stack
       title: "create account",
-      subTitle: "email",
-      screen: "OwnerEmail",
+      subTitle: "account password",
+      screen: "OwnerPassword",
       showFooter: false,
     };
   }
@@ -31,4 +31,4 @@ class EmailScreen extends Component {
   }
 }
 
-export default EmailScreen;
+export default PasswordScreen;
