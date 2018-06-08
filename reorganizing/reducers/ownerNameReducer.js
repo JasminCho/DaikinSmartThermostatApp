@@ -1,6 +1,11 @@
 import { actionTypes } from '../actions/index';
 
-const ownerNameReducer = (state = {firstName:'not',lastName:'entered'}, action) => {
+const initialState = {
+  firstName:'not',
+  lastName:'entered'
+}
+
+const ownerNameReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.UPDATE_FIRSTNAME:
       return {...state, ...{firstName: action.payload}}
