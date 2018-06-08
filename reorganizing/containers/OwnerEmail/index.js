@@ -45,13 +45,13 @@ class OwnerEmail extends Component {
           onChangeText={(text) => this.confirmEmail(text)}
         />
         {
-          renderIf(match(this.state.value, this.props.username),
+          renderIf(match(this.state.value, this.props.email),
           <Text style={{color:'green'}}>
             Emails match
           </Text>)
         }
         {
-          renderIf(!match(this.state.value, this.props.username),
+          renderIf(!match(this.state.value, this.props.email),
           <Text style={{color:'red'}}>
             Emails don't match
           </Text>)
@@ -63,7 +63,7 @@ class OwnerEmail extends Component {
 }
 
 const mapStateToProps = state => ({
-  username: state.ownerInfo.username.email,
+  email: state.account.accountOwner.email,
 })
 
 export default connect(mapStateToProps, {updateUsername: updateUsername})(OwnerEmail);

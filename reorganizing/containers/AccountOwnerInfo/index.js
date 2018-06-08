@@ -32,8 +32,8 @@ class AccountOwnerInfo extends Component {
           hasLeftIcon={false}
           rowElement="email"
           hasValue={true}
-          notEntered={checkNotEntered(`${this.props.username}`)}
-          rowValue={`${this.props.username}`}
+          notEntered={checkNotEntered(`${this.props.email}`)}
+          rowValue={`${this.props.email}`}
           handleClick={this.navEmail}
           rightIconName="ios-arrow-forward"
           rightIconColor='#bdbdbd'
@@ -55,9 +55,9 @@ class AccountOwnerInfo extends Component {
 }
 
 const mapStateToProps = state => ({
-  name: state.ownerInfo.name,
-  username: state.ownerInfo.username.email,
-  password: state.ownerInfo.password.password,
+  name: state.account.accountOwner.name,
+  email: state.account.accountOwner.email,
+  password: state.account.accountOwner.password,
 })
 
 export default withNavigation(connect(mapStateToProps)(AccountOwnerInfo));

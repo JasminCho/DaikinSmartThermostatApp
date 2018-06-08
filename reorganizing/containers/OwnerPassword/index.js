@@ -8,6 +8,8 @@ import { updatePassword } from '../../actions/actions';
 import { renderIf, match } from '../../api/helper';
 import RowItem from '../../components/RowItem/index';
 import FieldInput from '../../components/FieldInput/index';
+import CheckBoxRowItem from '../../components/CheckBoxRowItem/index';
+import RadioBoxRowItem from '../../components/RadioBoxRowItem/index';
 
 class OwnerPassword extends Component {
   constructor() {
@@ -42,25 +44,38 @@ class OwnerPassword extends Component {
           value={this.state.value}
           onChangeText={(text) => this.confirmPassword(text)}
         />
-        {
-          renderIf(match(this.state.value, this.props.password),
-          <Text style={{color:'green'}}>
-            Passwords match
-          </Text>)
-        }
-        {
-          renderIf(!match(this.state.value, this.props.password),
-          <Text style={{color:'red'}}>
-            Passwords don't match
-          </Text>)
-        }
+        <View style={styles.container}>
+          <CheckBoxRowItem
+            rowElement="show text"
+            isChecked={this.props.checked}
+            handleChecked={() => alert("This should show text for password")}
+          />
+          <RadioBoxRowItem
+            rowElement="show text with radio"
+            isChecked={this.props.checked}
+            handleChecked={() => alert("This should show text for password")}
+          />
+          {
+            renderIf(match(this.state.value, this.props.password),
+            <Text style={{color:'green'}}>
+              Passwords match
+            </Text>)
+          }
+          {
+            renderIf(!match(this.state.value, this.props.password),
+            <Text style={{color:'red'}}>
+              Passwords don't match
+            </Text>)
+          }
+        </View>
+
       </View>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  password: state.ownerInfo.password.password,
+  password: state.account.accountOwner.password,
 })
 
 export default connect(mapStateToProps, {updatePassword: updatePassword})(OwnerPassword);

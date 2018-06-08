@@ -1,20 +1,51 @@
 import React, { Component } from "react";
-import { AppRegistry } from 'react-native';
+import { Font, AppLoading } from 'expo';
+import { View, Text, AppRegistry } from 'react-native';
 import { Provider } from 'react-redux';
 
 import store from './reorganizing/store/index';
 
+import LoadingScreen from './reorganizing/screens/LoadingScreen';
 import AppNavigator from './reorganizing/navigation/AppNavigator';
 
-export default class App extends Component {
-  render() {
-    return(
-      <Provider store={store}>
-        <AppNavigator />
-      </Provider>
+import CheckBoxRowItem from './reorganizing/components/CheckBoxRowItem/index';
 
-    );
+// import FontAwesome from './node_modules/@expo/vector-icons/fonts/FontAwesome.ttf';
+// import MaterialIcons from './node_modules/@expo/vector-icons/fonts/MaterialIcons.ttf';
+// import Ionicons from './node_modules/@expo/vector-icons/fonts/Ionicons.ttf';
+
+import { FontAwesome, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+
+export default class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      fontsLoaded: false
+    }
+  }
+
+  async componentWillMount() {
+    await Font.loadAsync({
+      'Material Icons': require('@expo/vector-icons/fonts/MaterialIcons.ttf'),
+      'FontAwesome': require('@expo/vector-icons/fonts/FontAwesome.ttf'),
+      'Ionicons': require('@expo/vector-icons/fonts/Ionicons.ttf'),
+    })
+    this.setState({ fontsLoaded: true })
+  }
+
+  render() {
+    if(this.state.fontsLoaded) {
+      return(
+        <Provider store={store}>
+          <AppNavigator />
+        </Provider>
+      )
+    } else {
+      return (
+        null
+      )
+    }
   }
 }
 
-AppRegistry.registerComponent('DaikinSmartThermostatApp', () => AppNavigator);
+// AppRegistry.registerComponent('DaikinSmartThermostatApp', () => AppNavigator);
