@@ -9,7 +9,7 @@ import styles from './styles';
 
 class PageCounter extends Component {
   render() {
-    const { pageNum, totalPages } = this.props;
+    const { pageNum, totalPages, handleBack } = this.props;
     return(
       <View style={styles.container}>
         <View style={[styles.content]}>
@@ -22,7 +22,7 @@ class PageCounter extends Component {
               size={26}
               color="#bdbdbd"
               underlayColor='white'
-              onPress={() => alert("This should go back to the previous page")}
+              onPress={() => handleBack()}
             />
           )
         }
@@ -38,6 +38,7 @@ class PageCounter extends Component {
 PageCounter.propTypes = {
   pageNum: PropTypes.number.isRequired,
   totalPages: PropTypes.number.isRequired,
+  handleBack: PropTypes.func,
 };
 
 export default PageCounter;

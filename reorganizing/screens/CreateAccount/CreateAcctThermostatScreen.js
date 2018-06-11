@@ -17,6 +17,8 @@ class CreateAcctThermostatScreen extends Component {
     };
   }
 
+  // handleNext = () => {this.props.navigation.navigate('AcctCreatedStack')}
+
   render() {
     return(
       <ScreenContainer
@@ -27,6 +29,7 @@ class CreateAcctThermostatScreen extends Component {
         footerType={this.state.footerType}
         pageNum={this.state.pageNum}
         totalPages={this.state.totalPages}
+        // goToNext={this.handleNext}
       />
     );
   }

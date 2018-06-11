@@ -9,23 +9,31 @@ import { renderIf, match } from '../../api/helper';
 import RowItem from '../../components/RowItem/index';
 import FieldInput from '../../components/FieldInput/index';
 import CheckBoxRowItem from '../../components/CheckBoxRowItem/index';
-import RadioBoxRowItem from '../../components/RadioBoxRowItem/index';
+
+import { CheckBox } from 'react-native-elements';
 
 class OwnerPassword extends Component {
   constructor() {
     super();
     this.state = {
       value: "",
+      checked: false,
+      secureText: true,
     };
   }
 
   // TODO: Need to make where they can't go back unless it's confirmed
   confirmPassword(input) {
-    this.setState(
-      {
+    this.setState ({
         value:input
-      }
-    )
+      })
+  }
+
+  toggleSecureText = () => {
+    this.setState({
+      checked: !this.state.checked,
+      secureText: !this.state.secureText,
+    })
   }
 
   render() {
@@ -33,13 +41,13 @@ class OwnerPassword extends Component {
       <View style={styles.content}>
         <FieldInput
           placeholder="password"
-          secureTextEntry={true}
+          secureTextEntry={this.state.secureText}
           autoFocus={true}
           onChangeText={(text) => this.props.updatePassword(text)}
         />
         <FieldInput
           placeholder="confirm password"
-          secureTextEntry={true}
+          secureTextEntry={this.state.secureText}
           autoFocus={false}
           value={this.state.value}
           onChangeText={(text) => this.confirmPassword(text)}
@@ -47,13 +55,8 @@ class OwnerPassword extends Component {
         <View style={styles.container}>
           <CheckBoxRowItem
             rowElement="show text"
-            isChecked={this.props.checked}
-            handleChecked={() => alert("This should show text for password")}
-          />
-          <RadioBoxRowItem
-            rowElement="show text with radio"
-            isChecked={this.props.checked}
-            handleChecked={() => alert("This should show text for password")}
+            checked={this.state.checked}
+            handleChecked={this.toggleSecureText}
           />
           {
             renderIf(match(this.state.value, this.props.password),
@@ -68,7 +71,6 @@ class OwnerPassword extends Component {
             </Text>)
           }
         </View>
-
       </View>
     );
   }

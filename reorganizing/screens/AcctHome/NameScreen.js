@@ -3,22 +3,18 @@ import { NavigationActions } from 'react-navigation';
 
 import ScreenContainer from '../../components/ScreenContainer/index';
 
-class CreateAcctHomeScreen extends Component {
+class NameScreen extends Component {
   constructor() {
     super();
     this.state = {
       // make this change when in diff stack
       title: "create account",
-      subTitle: "home",
-      screen: "AccountHomeInfo",
-      showFooter: true,
-      footerType: "steps",
-      pageNum: 2,
-      totalPages: 4,
+      subTitle: "home name",
+      screen: "HomeName",
+      showFooter: false,
     };
   }
 
-  // handleNext = () => {this.props.navigation.navigate('ConnectThermostatStack')}
   handleBack = () => {this.props.navigation.dispatch(NavigationActions.back())}
 
   render() {
@@ -26,16 +22,13 @@ class CreateAcctHomeScreen extends Component {
       <ScreenContainer
         title={this.state.title}
         subTitle={this.state.subTitle}
+        hasBackButton={true}
+        handleBack={this.handleBack}
         screen={this.state.screen}
         showFooter={this.state.showFooter}
-        footerType={this.state.footerType}
-        pageNum={this.state.pageNum}
-        totalPages={this.state.totalPages}
-        // goToNext={this.handleNext}
-        prevStep={this.handleBack}
       />
     );
   }
 }
 
-export default CreateAcctHomeScreen;
+export default NameScreen;

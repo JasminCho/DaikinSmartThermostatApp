@@ -10,7 +10,7 @@ class CheckBoxRowItem extends Component {
   render() {
     const {
       rowElement,
-      isChecked,
+      checked,
       handleChecked,
     } = this.props;
     return(
@@ -22,7 +22,7 @@ class CheckBoxRowItem extends Component {
         </View>
         <View style={styles.rightSide}>
           <CustomCheckBox
-            checked={isChecked}
+            checked={checked}
             checkedIcon='ios-checkbox-outline'
             uncheckedIcon='ios-square-outline'
             handleChecked={() => handleChecked()}
@@ -35,8 +35,8 @@ class CheckBoxRowItem extends Component {
 
 CheckBoxRowItem.propTypes = {
   rowElement: PropTypes.string,
-  isChecked: PropTypes.bool.isRequired,
-  handleChecked: PropTypes.func.isRequired,
+  checked: PropTypes.bool,
+  handleChecked: PropTypes.func,
 };
 
 export default CheckBoxRowItem;

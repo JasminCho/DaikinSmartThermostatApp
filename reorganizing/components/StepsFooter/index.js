@@ -11,10 +11,10 @@ import styles from './styles';
 
 class StepsFooter extends Component {
   render() {
-    const { pageNum, totalPages } = this.props;
+    const { pageNum, totalPages, goToNext, handleBack } = this.props;
     return(
       <View style={styles.container}>
-        <PageCounter pageNum={pageNum} totalPages={totalPages}/>
+        <PageCounter pageNum={pageNum} totalPages={totalPages} handleBack={() => handleBack()}/>
         {
           // From page 1-3, next button shows
           renderIf (
@@ -22,7 +22,7 @@ class StepsFooter extends Component {
             <FooterIconButton
               text="next step"
               iconName='md-arrow-forward'
-              handleClick={() => alert("Go to next page")}
+              handleClick={() => goToNext()}
               justify='flex-end'
             />
           )
@@ -34,7 +34,7 @@ class StepsFooter extends Component {
             <FooterIconButton
               text="login"
               iconName='md-arrow-forward'
-              handleClick={() => alert("Go to agreement page")}
+              handleClick={() => goToNext()}
               justify='flex-end'
             />
           )
@@ -47,6 +47,8 @@ class StepsFooter extends Component {
 StepsFooter.propTypes = {
   pageNum: PropTypes.number,
   totalPages: PropTypes.number,
+  goToNext: PropTypes.func,
+  handleBack: PropTypes.func,
 };
 
 export default StepsFooter;

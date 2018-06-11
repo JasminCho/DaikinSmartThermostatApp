@@ -7,7 +7,7 @@ import styles from './styles';
 class CustomCheckBox extends Component {
   render() {
     const {
-      isChecked,
+      checked,
       checkedIcon,
       uncheckedIcon,
       handleChecked,
@@ -15,7 +15,7 @@ class CustomCheckBox extends Component {
     return(
       <CheckBox
         iconType="ionicon"
-        checked={isChecked}
+        checked={checked}
         checkedIcon={checkedIcon}
         uncheckedIcon={uncheckedIcon}
         onIconPress={() => handleChecked()}
@@ -28,10 +28,10 @@ class CustomCheckBox extends Component {
 }
 
 CustomCheckBox.propTypes = {
-  isChecked: PropTypes.bool.isRequired,
-  checkedIcon: PropTypes.string.isRequired,
-  uncheckedIcon: PropTypes.string.isRequired,
-  handleChecked: PropTypes.func.isRequired,
+  checked: PropTypes.bool,
+  checkedIcon: PropTypes.string,
+  uncheckedIcon: PropTypes.string,
+  handleChecked: PropTypes.func,
 };
 
 export default CustomCheckBox;

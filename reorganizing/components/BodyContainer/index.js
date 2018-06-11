@@ -14,6 +14,10 @@ import OwnerName from '../../containers/OwnerName/index';
 import OwnerEmail from '../../containers/OwnerEmail/index';
 import OwnerPassword from '../../containers/OwnerPassword/index';
 // ------------
+// Home Home Info
+import HomeName from '../../containers/HomeName/index';
+import HomeAddress from '../../containers/HomeAddress/index';
+// ------------
 // Main Application
 import Home from '../../containers/Home/index';
 // ------------
@@ -39,6 +43,10 @@ class BodyContainer extends Component {
         return <OwnerEmail/>
       case 'OwnerPassword':
         return <OwnerPassword/>
+      case 'HomeName':
+        return <HomeName/>
+      case 'HomeAddress':
+        return <HomeAddress/>
       case 'Home':
         return <Home/>
       default:

@@ -10,7 +10,7 @@ class RadioBoxRowItem extends Component {
   render() {
     const {
       rowElement,
-      isChecked,
+      checked,
       handleChecked,
     } = this.props;
     return(
@@ -22,7 +22,7 @@ class RadioBoxRowItem extends Component {
         </View>
         <View style={styles.rightSide}>
           <CustomCheckBox
-            checked={isChecked}
+            checked={checked}
             checkedIcon='ios-radio-button-on-outline'
             uncheckedIcon='ios-radio-button-off-outline'
             handleChecked={() => handleChecked()}
@@ -35,8 +35,8 @@ class RadioBoxRowItem extends Component {
 
 RadioBoxRowItem.propTypes = {
   rowElement: PropTypes.string,
-  isChecked: PropTypes.bool.isRequired,
-  handleChecked: PropTypes.func.isRequired,
+  checked: PropTypes.bool,
+  handleChecked: PropTypes.func,
 };
 
 export default RadioBoxRowItem;

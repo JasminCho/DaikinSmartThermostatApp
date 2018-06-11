@@ -10,10 +10,6 @@ import AppNavigator from './reorganizing/navigation/AppNavigator';
 
 import CheckBoxRowItem from './reorganizing/components/CheckBoxRowItem/index';
 
-// import FontAwesome from './node_modules/@expo/vector-icons/fonts/FontAwesome.ttf';
-// import MaterialIcons from './node_modules/@expo/vector-icons/fonts/MaterialIcons.ttf';
-// import Ionicons from './node_modules/@expo/vector-icons/fonts/Ionicons.ttf';
-
 import { FontAwesome, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default class App extends Component {
