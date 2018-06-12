@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View } from 'react-native';
 import { connect } from 'react-redux';
-
+import CodeInput from 'react-native-code-input';
 import styles from './styles';
 
 import { updateFirstName, updateLastName } from '../../actions/actions';
@@ -12,6 +12,15 @@ class EnterCode extends Component {
   render() {
     return(
       <View style={styles.content}>
+        <CodeInput
+          inputPosition="left"
+          keyboardType="numeric"
+          codeLength={6}
+          borderType="square"
+          autoFocus={true}
+          codeInputStyle={{color:'black', backgroundColor:'gray'}}
+          containerStyle={{}}
+        />
         <View style={styles.container}>
           <RowItem
             hasLeftIcon={false}

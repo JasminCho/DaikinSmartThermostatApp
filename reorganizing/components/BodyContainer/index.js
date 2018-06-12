@@ -19,7 +19,7 @@ import HomeName from '../../containers/HomeName/index';
 import HomeAddress from '../../containers/HomeAddress/index';
 // ------------
 // Thermostat Info
-// import EnterCode from '../../containers/EnterCode/index';
+import EnterCode from '../../containers/EnterCode/index';
 // ------------
 // Main Application
 import Home from '../../containers/Home/index';
@@ -50,8 +50,8 @@ class BodyContainer extends Component {
         return <HomeName/>
       case 'HomeAddress':
         return <HomeAddress/>
-      // case 'EnterCode':
-        // return <EnterCode/>
+      case 'EnterCode':
+        return <EnterCode/>
       case 'Home':
         return <Home/>
       default:
