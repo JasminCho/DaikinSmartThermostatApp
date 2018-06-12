@@ -1,25 +1,11 @@
-import { actionTypes } from '../actions/index';
+import { combineReducers } from 'redux'
 
-import homeThermostatsReducer from './homeThermostatsReducer';
+import homeInfoReducer from './homeInfoReducer';
+import thermostatsReducer from './thermostatsReducer';
 
-const initialState = {
-  homeName:'not entered',
-  street:'not entered',
-  zipcode:'not entered',
-  thermostats: homeThermostatsReducer,
-}
-
-const homeReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case actionTypes.UPDATE_HOMENAME:
-      return {...state, homeName: action.payload}
-    case actionTypes.UPDATE_STREET:
-      return {...state, street: action.payload}
-    case actionTypes.UPDATE_ZIPCODE:
-      return {...state, zipcode: action.payload}
-    default:
-      return state
-  }
-}
+const homeReducer = combineReducers({
+  homeInfo: homeInfoReducer,
+  thermostats: thermostatsReducer,
+})
 
 export default homeReducer

@@ -32,8 +32,8 @@ class AccountOwnerInfo extends Component {
           hasLeftIcon={false}
           rowElement="email"
           hasValue={true}
-          notEntered={checkNotEntered(`${this.props.email}`)}
-          rowValue={`${this.props.email}`}
+          notEntered={checkNotEntered(this.props.email)}
+          rowValue={this.props.email}
           handleClick={this.navEmail}
           rightIconName="ios-arrow-forward"
           rightIconColor='#bdbdbd'
@@ -43,8 +43,8 @@ class AccountOwnerInfo extends Component {
           hasLeftIcon={false}
           rowElement="account password"
           hasValue={true}
-          notEntered={checkNotEntered(`${this.props.password}`)}
-          rowValue={`${this.props.password}`}
+          notEntered={checkNotEntered(this.props.password)}
+          rowValue={this.props.password}
           handleClick={this.navPassword}
           rightIconName="ios-arrow-forward"
           rightIconColor='#bdbdbd'
