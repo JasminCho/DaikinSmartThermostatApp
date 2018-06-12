@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import { createStackNavigator } from "react-navigation";
 
-import AccountCreatedScreen from '../screens/CreateAccount/AccountCreatedScreen';
-import AfterCreatedLoginScreen from '../screens/CreateAccount/AfterCreatedLoginScreen';
+import LegalNoticesScreen from '../screens/LegalNotices/LegalNoticesScreen';
 import TermsOfServiceScreen from '../screens/LegalNotices/TermsOfServiceScreen';
 import PrivacyStatementScreen from '../screens/LegalNotices/PrivacyStatementScreen';
 import OtherNoticesStack from './OtherNoticesStack';
 
-const AcctCreatedStack = createStackNavigator(
+const LegalNoticesStack = createStackNavigator(
   {
-    AcctCreated: AccountCreatedScreen,
-    AfterCreatedLogin: AfterCreatedLoginScreen,
+    LegalNotices: LegalNoticesScreen,
     TermsOfService: TermsOfServiceScreen,
     PrivacyStatement: PrivacyStatementScreen,
     OtherNoticesStack: OtherNoticesStack,
@@ -23,4 +21,4 @@ const AcctCreatedStack = createStackNavigator(
   }
 );
 
-export default AcctCreatedStack;
+export default LegalNoticesStack;

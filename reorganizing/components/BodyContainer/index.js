@@ -21,6 +21,12 @@ import HomeAddress from '../../containers/HomeAddress/index';
 // Thermostat Info
 import EnterCode from '../../containers/EnterCode/index';
 // ------------
+// Legal Notices
+import LegalNotices from '../../containers/LegalNotices/index';
+import TermsOfService from '../../containers/TermsOfService/index';
+import PrivacyStatement from '../../containers/PrivacyStatement/index';
+import OtherNotices from '../../containers/OtherNotices/index';
+// ------------
 // Main Application
 import Home from '../../containers/Home/index';
 // ------------
@@ -52,6 +58,14 @@ class BodyContainer extends Component {
         return <HomeAddress/>
       case 'EnterCode':
         return <EnterCode/>
+      case 'LegalNotices':
+        return <LegalNotices/>
+      case 'TermsOfService':
+        return <TermsOfService/>
+      case 'PrivacyStatement':
+        return <PrivacyStatement/>
+      case 'OtherNotices':
+        return <OtherNotices/>
       case 'Home':
         return <Home/>
       default:

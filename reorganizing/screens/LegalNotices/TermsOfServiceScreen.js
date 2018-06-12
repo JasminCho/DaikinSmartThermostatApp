@@ -3,15 +3,16 @@ import { NavigationActions } from 'react-navigation';
 
 import ScreenContainer from '../../components/ScreenContainer/index';
 
-class AddressScreen extends Component {
+class TermsOfServiceScreen extends Component {
   constructor() {
     super();
     this.state = {
       // make this change when in diff stack
-      title: "create account",
-      subTitle: "address",
-      screen: "HomeAddress",
-      showFooter: false,
+      title: "Daikin Smart Thermostat",
+      subTitle: "terms of service",
+      screen: "TermsOfService",
+      showFooter: true,
+      footerType: "messages",
     };
   }
 
@@ -26,9 +27,10 @@ class AddressScreen extends Component {
         handleBack={this.handleBack}
         screen={this.state.screen}
         showFooter={this.state.showFooter}
+        footerType={this.state.footerType}
       />
     );
   }
 }
 
-export default AddressScreen;
+export default TermsOfServiceScreen;
