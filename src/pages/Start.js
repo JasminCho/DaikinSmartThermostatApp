@@ -3,16 +3,20 @@ import { StyleSheet, Text, View, StatusBar, ImageBackground } from 'react-native
 import Logo from '../components/Logo';
 import StartForm from '../components/StartForm';
 
-export default class Start extends Component<{}> {
+import { StackNavigator } from 'react-navigation';
+
+class Start extends React.Component {
   render() {
-    return(
+    return (
       <ImageBackground source={require('../images/background_image.jpg')} style={styles.container}>
         <Logo />
-        <StartForm/>
+        <StartForm navigation={this.props.navigation}/>
       </ImageBackground>
-    )
+    );
   }
 }
+
+export default Start;
 
 const styles = StyleSheet.create({
   container: {
