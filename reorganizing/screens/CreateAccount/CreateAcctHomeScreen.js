@@ -18,7 +18,7 @@ class CreateAcctHomeScreen extends Component {
     };
   }
 
-  // handleNext = () => {this.props.navigation.navigate('ConnectThermostatStack')}
+  handleNext = () => {this.props.navigation.navigate('ConnectThermostatStack')}
   handleBack = () => {this.props.navigation.dispatch(NavigationActions.back())}
 
   render() {
@@ -31,7 +31,7 @@ class CreateAcctHomeScreen extends Component {
         footerType={this.state.footerType}
         pageNum={this.state.pageNum}
         totalPages={this.state.totalPages}
-        // goToNext={this.handleNext}
+        goToNext={this.handleNext}
         prevStep={this.handleBack}
       />
     );

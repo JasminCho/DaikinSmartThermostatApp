@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavigationActions } from 'react-navigation';
 
 import ScreenContainer from '../../components/ScreenContainer/index';
 
@@ -18,6 +19,7 @@ class CreateAcctThermostatScreen extends Component {
   }
 
   // handleNext = () => {this.props.navigation.navigate('AcctCreatedStack')}
+  handleBack = () => {this.props.navigation.dispatch(NavigationActions.back())}
 
   render() {
     return(
@@ -30,6 +32,7 @@ class CreateAcctThermostatScreen extends Component {
         pageNum={this.state.pageNum}
         totalPages={this.state.totalPages}
         // goToNext={this.handleNext}
+        prevStep={this.handleBack}
       />
     );
   }
