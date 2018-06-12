@@ -3,20 +3,28 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
 // Create Account
-import AccountOwnerInfo from '../AccountOwnerInfo/index';
-import AccountHomeInfo from '../AccountHomeInfo/index';
-import AccountThermostatInfo from '../AccountThermostatInfo/index';
-import AccountCreatedInfo from '../AccountCreatedInfo';
-import AfterCreatedLogin from '../AfterCreatedLogin';
+import AccountOwnerInfo from '../../containers/AccountOwnerInfo/index';
+import AccountHomeInfo from '../../containers/AccountHomeInfo/index';
+import AccountThermostatInfo from '../../containers/AccountThermostatInfo/index';
+import AccountCreatedInfo from '../../containers/AccountCreatedInfo/index';
+import AfterCreatedLogin from '../../containers/AfterCreatedLogin/index';
+// ------------
+// Owner Info
+import OwnerName from '../../containers/OwnerName/index';
+import OwnerEmail from '../../containers/OwnerEmail/index';
+import OwnerPassword from '../../containers/OwnerPassword/index';
+// ------------
+// Home Home Info
+import HomeName from '../../containers/HomeName/index';
+import HomeAddress from '../../containers/HomeAddress/index';
 // ------------
 // Main Application
-import Home from '../Home';
+import Home from '../../containers/Home/index';
 // ------------
 
 import styles from './styles';
 
 class BodyContainer extends Component {
-
   renderSwitch(screen) {
     switch(screen) {
       case 'AccountOwnerInfo':
@@ -29,6 +37,16 @@ class BodyContainer extends Component {
         return <AccountCreatedInfo/>
       case 'AfterCreatedLogin':
         return <AfterCreatedLogin/>
+      case 'OwnerName':
+        return <OwnerName/>
+      case 'OwnerEmail':
+        return <OwnerEmail/>
+      case 'OwnerPassword':
+        return <OwnerPassword/>
+      case 'HomeName':
+        return <HomeName/>
+      case 'HomeAddress':
+        return <HomeAddress/>
       case 'Home':
         return <Home/>
       default:
