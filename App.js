@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import { Font, AppLoading } from 'expo';
-import { View, Text, AppRegistry } from 'react-native';
+import { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux';
 
 import store from './reorganizing/store/index';
 
-import LoadingScreen from './reorganizing/screens/LoadingScreen';
 import AppNavigator from './reorganizing/navigation/AppNavigator';
-
-import CheckBoxRowItem from './reorganizing/components/CheckBoxRowItem/index';
 
 import { FontAwesome, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 

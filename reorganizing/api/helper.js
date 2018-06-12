@@ -16,11 +16,12 @@ export function checkNotEntered(element) {
   }
 };
 
-// function to convert password into dots
-replacePassword = (p) => {
+// function to convert text into dots
+export function secureText(p) {
   return '•'.repeat(p.length)
 }
 
+// function for matching
 export function match(a, b) {
   if (a === b) {
     return true

@@ -17,14 +17,7 @@ class OwnerEmail extends Component {
     };
   }
 
-  // TODO: Need to make where they can't go back unless it's confirmed and validated as email
-  confirmEmail(input) {
-    this.setState(
-      {
-        value:input
-      }
-    )
-  }
+  // TODO: Form validation
 
   render() {
     return(
@@ -42,7 +35,7 @@ class OwnerEmail extends Component {
           autoFocus={false}
           keyboardType="email-address"
           value={this.state.value}
-          onChangeText={(text) => this.confirmEmail(text)}
+          onChangeText={(text) => this.setState({value:text})}
         />
         {
           renderIf(match(this.state.value, this.props.email),
@@ -56,7 +49,6 @@ class OwnerEmail extends Component {
             Emails don't match
           </Text>)
         }
-
       </View>
     );
   }
