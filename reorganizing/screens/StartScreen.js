@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Start from '../components/Start/index';
+import Start from '../containers/Start/index';
 
 class StartScreen extends Component {
   render() {

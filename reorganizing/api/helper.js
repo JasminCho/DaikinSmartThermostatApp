@@ -20,3 +20,11 @@ export function checkNotEntered(element) {
 replacePassword = (p) => {
   return '•'.repeat(p.length)
 }
+
+export function match(a, b) {
+  if (a === b) {
+    return true
+  } else {
+    return false
+  }
+}

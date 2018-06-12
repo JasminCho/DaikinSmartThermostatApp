@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Login from '../components/Login/index';
+import Login from '../containers/Login/index';
 
 class LoginScreen extends Component {
   render() {
