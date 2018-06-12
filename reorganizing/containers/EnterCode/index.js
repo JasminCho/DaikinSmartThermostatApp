@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
+import { withNavigation } from 'react-navigation';
 import CodeInput from 'react-native-code-input';
+
 import styles from './styles';
 
 import { updateCode } from '../../actions/actions';
 import RowItem from '../../components/RowItem/index';
 
 class EnterCode extends Component {
-  navAccountCreated = () => {alert(`Send ${this.props.code} and link to account`)}
+  navAccountCreated = () => {this.props.navigation.navigate('AcctCreatedStack')}
   render() {
     return(
       <View style={styles.content}>
@@ -42,4 +44,4 @@ const mapStateToProps = state => ({
   code: state.account.accountHomes.home.thermostats.thermostatInfo.code,
 })
 
-export default connect(mapStateToProps, {updateCode: updateCode})(EnterCode);
+export default withNavigation(connect(mapStateToProps, {updateCode: updateCode})(EnterCode));

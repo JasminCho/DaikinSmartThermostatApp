@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { NavigationActions } from 'react-navigation';
 
 import ScreenContainer from '../../components/ScreenContainer/index';
 
-class AccountThermostatScreen extends Component {
+class AccountCreatedScreen extends Component {
   constructor() {
     super();
     this.state = {
@@ -17,6 +18,8 @@ class AccountThermostatScreen extends Component {
     };
   }
 
+  handleNext = () => {this.props.navigation.navigate('AfterCreatedLogin')}
+
   render() {
     return(
       <ScreenContainer
@@ -27,9 +30,10 @@ class AccountThermostatScreen extends Component {
         footerType={this.state.footerType}
         pageNum={this.state.pageNum}
         totalPages={this.state.totalPages}
+        goToNext={this.handleNext}
       />
     );
   }
 }
 
-export default AccountThermostatScreen;
+export default AccountCreatedScreen;

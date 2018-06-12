@@ -4,14 +4,14 @@ import { createStackNavigator } from "react-navigation";
 import OwnerInfoStack from './OwnerInfoStack';
 import HomeInfoStack from './HomeInfoStack';
 import ConnectThermostatStack from './ConnectThermostatStack';
-// import AcctCreatedStack from './AcctCreatedStack';
+import AcctCreatedStack from './AcctCreatedStack';
 
 const CreateAccountNavigator = createStackNavigator(
   {
     OwnerInfoStack: OwnerInfoStack,
     HomeInfoStack: HomeInfoStack,
     ConnectThermostatStack: ConnectThermostatStack,
-    // AcctCreatedStack: AcctCreatedStack,
+    AcctCreatedStack: AcctCreatedStack,
   },
   {
     headerMode: 'none',

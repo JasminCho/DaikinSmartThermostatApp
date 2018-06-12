@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavigationActions } from 'react-navigation';
 
 import ScreenContainer from '../../components/ScreenContainer/index';
 
@@ -15,9 +16,7 @@ class AfterCreatedLoginScreen extends Component {
     };
   }
 
-  handleBack = () => {
-    alert("This should go back to account created page")
-  }
+  handleBack = () => {this.props.navigation.dispatch(NavigationActions.back())}
 
   render() {
     return(
