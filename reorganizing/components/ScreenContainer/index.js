@@ -13,7 +13,22 @@ import styles from './styles';
 // Container Wrapper for the majority of the app screens
 class ScreenContainer extends Component {
   render() {
-    const { title, subTitle, hasBackButton, handleBack, screen, showFooter, footerType, pageNum, totalPages, messageCount, goToNext, prevStep } = this.props;
+    const {
+      title,
+      subTitle,
+      hasBackButton,
+      handleBack,
+      screen,
+      showFooter,
+      footerType,
+      pageNum,
+      totalPages,
+      messageCount,
+      goToNext,
+      prevStep,
+      backToStart,
+      navToMainApp,
+     } = this.props;
     return(
       <View style={styles.container}>
         {/* Title */}
@@ -30,7 +45,16 @@ class ScreenContainer extends Component {
           renderIf(
             // Only show footer if showFooter is true
             showFooter === true,
-            <FooterContainer footerType={footerType} pageNum={pageNum} totalPages={totalPages} messageCount={messageCount} goToNext={() => goToNext()} handleBack={() => prevStep()}/>
+            <FooterContainer
+              footerType={footerType}
+              pageNum={pageNum}
+              totalPages={totalPages}
+              messageCount={messageCount}
+              goToNext={() => goToNext()}
+              handleBack={() => prevStep()}
+              backToStart={() => backToStart()}
+              navToMainApp={() => navToMainApp()}
+            />
           )
         }
       </View>
@@ -51,6 +75,8 @@ ScreenContainer.propTypes = {
   goToNext: PropTypes.func,
   prevStep: PropTypes.func,
   messageCount: PropTypes.number,
+  backToStart: PropTypes.func,
+  navToMainApp: PropTypes.func,
 };
 
 export default ScreenContainer;

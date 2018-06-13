@@ -11,11 +11,11 @@ import styles from './styles';
 
 class FooterContainer extends Component {
   render() {
-    const { footerType, pageNum, totalPages, messageCount, goToNext, handleBack } = this.props;
+    const { footerType, pageNum, totalPages, messageCount, goToNext, handleBack, backToStart, navToMainApp } = this.props;
     return(
       <View style={styles.container}>
         {renderIf(footerType === "steps", <StepsFooter pageNum={pageNum} totalPages={totalPages} goToNext={() => goToNext()} handleBack={() => handleBack()}/>)}
-        {renderIf(footerType === "account-created", <AccountCreatedFooter/>)}
+        {renderIf(footerType === "account-created", <AccountCreatedFooter backToStart={() => backToStart()} navToMainApp={() => navToMainApp()}/>)}
         {renderIf(footerType === "messages", <MessagesFooter messageCount={messageCount}/>)}
       </View>
     );
@@ -29,6 +29,8 @@ FooterContainer.propTypes = {
   goToNext: PropTypes.func,
   handleBack: PropTypes.func,
   messageCount: PropTypes.number,
+  backToStart: PropTypes.func,
+  navToMainApp: PropTypes.func,
 };
 
 export default FooterContainer;
