@@ -27,7 +27,7 @@ class MessagesFooter extends Component {
               }
               <Ionicons
                 name='ios-arrow-up'
-                size={26}
+                size={32}
                 color='#bdbdbd'
               />
             </View>

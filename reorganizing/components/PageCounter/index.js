@@ -19,7 +19,7 @@ class PageCounter extends Component {
             pageNum === 2 || pageNum === 3,
             <Ionicons
               name="md-arrow-back"
-              size={26}
+              size={32}
               color="#bdbdbd"
               underlayColor='white'
               onPress={() => handleBack()}

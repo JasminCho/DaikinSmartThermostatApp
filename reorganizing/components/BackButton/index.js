@@ -12,7 +12,7 @@ class BackButton extends Component {
       <View style={styles.container}>
         <Ionicons
           name="ios-arrow-back"
-          size={26}
+          size={32}
           color='#bdbdbd'
           underlayColor='white'
           onPress={() => handleClick()}

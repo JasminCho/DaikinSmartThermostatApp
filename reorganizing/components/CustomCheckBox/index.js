@@ -22,6 +22,7 @@ class CustomCheckBox extends Component {
         checkedColor='white'
         uncheckedColor='white'
         containerStyle={styles.checkBox}
+        size={32}
       />
     );
   }
