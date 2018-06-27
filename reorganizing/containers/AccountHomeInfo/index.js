@@ -24,8 +24,8 @@ class AccountHomeInfo extends Component {
             hasLeftIcon={false}
             rowElement="name"
             hasValue={true}
-            notEntered={checkNotEntered(`${this.props.name}`)}
-            rowValue={`${this.props.name}`}
+            notEntered={checkNotEntered(this.props.name)}
+            rowValue={this.props.name}
             handleClick={this.navName}
             rightIconName="ios-arrow-forward"
             rightIconColor='#bdbdbd'
@@ -35,8 +35,8 @@ class AccountHomeInfo extends Component {
             hasLeftIcon={false}
             rowElement="street"
             hasValue={true}
-            notEntered={checkNotEntered(`${this.props.street}`)}
-            rowValue={`${this.props.street}`}
+            notEntered={checkNotEntered(this.props.street)}
+            rowValue={this.props.street}
             handleClick={this.navAddress}
             rightIconName="ios-arrow-forward"
             rightIconColor='#bdbdbd'
@@ -46,8 +46,8 @@ class AccountHomeInfo extends Component {
             hasLeftIcon={false}
             rowElement="zip code"
             hasValue={true}
-            notEntered={checkNotEntered(`${this.props.zipcode}`)}
-            rowValue={`${this.props.zipcode}`}
+            notEntered={checkNotEntered(this.props.zipcode)}
+            rowValue={this.props.zipcode}
             handleClick={this.navAddress}
             rightIconName="ios-arrow-forward"
             rightIconColor='#bdbdbd'
@@ -59,9 +59,9 @@ class AccountHomeInfo extends Component {
 }
 
 const mapStateToProps = state => ({
-  name: state.account.accountHomes.home.homeName,
-  street: state.account.accountHomes.home.street,
-  zipcode: state.account.accountHomes.home.zipcode,
+  name: state.account.accountHomes.home.homeInfo.homeName,
+  street: state.account.accountHomes.home.homeInfo.street,
+  zipcode: state.account.accountHomes.home.homeInfo.zipcode,
 })
 
 export default withNavigation(connect(mapStateToProps)(AccountHomeInfo));

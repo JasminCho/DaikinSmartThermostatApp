@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import { View, TouchableHighlight, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { Icon } from 'react-native-elements';
 
 import { renderIf } from '../../api/helper';
 
@@ -28,7 +29,7 @@ class RowItem extends Component {
               hasLeftIcon,
               <Ionicons
                 name={leftIconName}
-                size={26}
+                size={32}
                 color='#bdbdbd'
                 underlayColor='white'
               />
@@ -53,7 +54,7 @@ class RowItem extends Component {
           <View>
             <Ionicons
               name={rightIconName}
-              size={26}
+              size={30}
               color={rightIconColor}
               underlayColor='white'
               onPress={() => handleClick()}

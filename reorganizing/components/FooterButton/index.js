@@ -22,7 +22,7 @@ class FooterButton extends Component {
 
 FooterButton.propTypes = {
   text: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired,
+  handleClick: PropTypes.func,
   marginRight: PropTypes.number,
 };
 

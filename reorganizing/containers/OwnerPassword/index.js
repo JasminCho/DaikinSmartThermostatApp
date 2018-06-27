@@ -22,13 +22,6 @@ class OwnerPassword extends Component {
     };
   }
 
-  // TODO: Need to make where they can't go back unless it's confirmed
-  confirmPassword(input) {
-    this.setState ({
-        value:input
-      })
-  }
-
   toggleSecureText = () => {
     this.setState({
       checked: !this.state.checked,
@@ -50,7 +43,7 @@ class OwnerPassword extends Component {
           secureTextEntry={this.state.secureText}
           autoFocus={false}
           value={this.state.value}
-          onChangeText={(text) => this.confirmPassword(text)}
+          onChangeText={(text) => this.setState({value:text})}
         />
         <View style={styles.container}>
           <CheckBoxRowItem

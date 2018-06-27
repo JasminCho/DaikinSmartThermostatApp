@@ -16,7 +16,7 @@ class FooterIconButton extends Component {
           <Text style={styles.text}>{text}</Text>
           <Ionicons
             name={iconName}
-            size={26}
+            size={32}
             color='#bdbdbd'
             underlayColor='white'
             onPress={() => handleClick()}

@@ -3,37 +3,34 @@ import { NavigationActions } from 'react-navigation';
 
 import ScreenContainer from '../../components/ScreenContainer/index';
 
-class AccountCreatedScreen extends Component {
+class OtherNoticesScreen extends Component {
   constructor() {
     super();
     this.state = {
       // make this change when in diff stack
-      title: "create account",
-      subTitle: "account created",
-      screen: "AccountCreatedInfo",
+      title: "Daikin Smart Thermostat",
+      subTitle: "other notices",
+      screen: "OtherNotices",
       showFooter: true,
-      footerType: "steps",
-      pageNum: 4,
-      totalPages: 4,
+      footerType: "messages",
     };
   }
 
-  handleNext = () => {this.props.navigation.navigate('AfterCreatedLogin')}
+  handleBack = () => {this.props.navigation.dispatch(NavigationActions.back())}
 
   render() {
     return(
       <ScreenContainer
         title={this.state.title}
         subTitle={this.state.subTitle}
+        hasBackButton={true}
+        handleBack={this.handleBack}
         screen={this.state.screen}
         showFooter={this.state.showFooter}
         footerType={this.state.footerType}
-        pageNum={this.state.pageNum}
-        totalPages={this.state.totalPages}
-        goToNext={this.handleNext}
       />
     );
   }
 }
 
-export default AccountCreatedScreen;
+export default OtherNoticesScreen;

@@ -36,6 +36,11 @@ export const updateZipcode = zipcode => ({
   payload: zipcode,
 })
 
+export const updateCode = code => ({
+  type: actionTypes.UPDATE_CODE,
+  payload: code,
+})
+
 export const addThermostat = thermostat => ({
   type: actionTypes.ADD_THERMOSTAT,
   payload: thermostat,

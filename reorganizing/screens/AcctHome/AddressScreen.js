@@ -3,7 +3,7 @@ import { NavigationActions } from 'react-navigation';
 
 import ScreenContainer from '../../components/ScreenContainer/index';
 
-class EmailScreen extends Component {
+class AddressScreen extends Component {
   constructor() {
     super();
     this.state = {
@@ -31,4 +31,4 @@ class EmailScreen extends Component {
   }
 }
 
-export default EmailScreen;
+export default AddressScreen;

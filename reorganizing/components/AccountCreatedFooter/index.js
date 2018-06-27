@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
 import FooterButton from '../FooterButton/index';
@@ -9,20 +10,26 @@ import styles from './styles';
 
 class AccountCreatedFooter extends Component {
   render() {
+    const { backToStart, navToMainApp } = this.props;
     return(
       <View style={styles.container}>
         <FooterButton
           text="cancel"
-          handleClick={() => alert("You sure you want to cancel?")}
+          handleClick={() => backToStart()}
           marginRight={5}
         />
         <FooterButton
           text="i agree"
-          handleClick={() => alert("Go to My Homes")}
+          handleClick={() => navToMainApp()}
         />
       </View>
     );
   }
+}
+
+AccountCreatedFooter.propTypes = {
+  backToStart: PropTypes.func,
+  navToMainApp: PropTypes.func,
 }
 
 export default AccountCreatedFooter;

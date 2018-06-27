@@ -1,15 +1,15 @@
 {
-  "name": "DaikinSmartThermostatApp",
+  "name": "daikinsmartthermostatapp",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
     "babel-jest": "^23.0.1",
     "babel-preset-react-native": "^4.0.0",
     "jest": "^22.4.4",
-    "jest-expo": "25.0.0",
+    "jest-expo": "~27.0.0",
     "jest-react-native": "^18.0.0",
-    "react-native-scripts": "^1.14.1",
-    "react-test-renderer": "^16.2.0",
+    "react-native-scripts": "^1.14.0",
+    "react-test-renderer": "^16.4.1",
     "redux-devtools": "^3.4.1"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
@@ -25,21 +25,26 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^6.3.1",
-    "expo": "^25.0.0",
-    "puppeteer": "^1.1.1",
-    "react": "16.2.0",
-    "react-native": "^0.55.4",
-    "react-native-action-button": "^2.8.4",
+    "expo": "^27.0.1",
+    "puppeteer": "^1.5.0",
+    "react": "^16.3.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-27.0.0.tar.gz",
     "react-native-code-input": "^1.0.6",
-    "react-native-complex-user-register": "^1.0.3",
     "react-native-elements": "^0.19.1",
-    "react-native-email": "^1.0.1",
-    "react-native-hide-show-password-input": "^1.0.7",
-    "react-native-page-control": "^1.1.1",
-    "react-native-pages": "^0.7.0",
     "react-native-vector-icons": "^4.6.0",
-    "react-navigation": "^2.0.2",
+    "react-navigation": "^2.3.1",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasminCho/DaikinSmartThermostatApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasminCho/DaikinSmartThermostatApp/issues"
+  },
+  "homepage": "https://github.com/JasminCho/DaikinSmartThermostatApp#readme"
 }
